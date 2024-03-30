@@ -32,7 +32,7 @@ export default function BottomNavOverwhelm() {
             }}
           >
             [tour home]
-            <BottomNavigationAction label="" icon={<Link href={"./"}><RouteTwoToneIcon /></Link>} />
+            <BottomNavigationAction label="Back to tours" icon={<Link href={"./"}><RouteTwoToneIcon /></Link>} />
 
             [weather]
             <BottomNavigationAction label="" icon={<WbSunnyTwoToneIcon />} />

@@ -13,7 +13,7 @@ export default function Overwhelm() {
     <Box xs={{ flexgrow: 1, bgcolor: "#cfe8fc", height: "100vh" }}>
       <Container maxWidth="sm"></Container>
       <Grid container rowSpacing={4} justifyContent="center">
-        <Grid item xs={12} container justifyContent="center" rowSpacing={-2}>
+        <Grid item xs={12} container justifyContent="center" rowSpacing={-3}>
           <UpTopMenu />
         </Grid>
         <Grid item xs={12} container justifyContent="center" rowSpacing={3}>
