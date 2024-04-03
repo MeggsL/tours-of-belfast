@@ -1,5 +1,5 @@
 import React from "react";
-import MapOfLandmarks from "./landmarks-map";
+import PurpleMapOfBuildings from "./PurpleBuildingsMap";
 import "../../globals.css";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
@@ -8,7 +8,8 @@ import Grid from "@mui/material/Grid";
 import BottomNavOverwhelm from "../../../components/BottomNavOverwhelm.js";
 import UpTopMenu from "../../../components/TopMenu.js";
 
-export default function Statues() {
+
+export default function PurpleBuildings() {
   return (
     <Box xs={{ flexgrow: 1, bgcolor: "#cfe8fc", height: "100vh" }}>
       <Container maxWidth="sm"></Container>
@@ -18,7 +19,7 @@ export default function Statues() {
         </Grid>
         <Grid item xs={12} container justifyContent="center" rowSpacing={3}>
           <Container fixed>
-            <MapOfLandmarks/>
+      <PurpleMapOfBuildings />
           </Container>
         </Grid>
         <Grid item xs={12} container justifyContent="center" rowSpacing={4}>

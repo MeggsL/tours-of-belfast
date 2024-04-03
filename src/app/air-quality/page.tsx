@@ -1,24 +1,30 @@
-"use client";
+import React from "react";
+//import "../../globals.css";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+//import Paper from "@mui/material/Paper";
+import Grid from "@mui/material/Grid";
+//import AirQuality from "../api/AirQuality.js";
+import GetAirQuality from "../../components/AirQuality";
 
-import React from 'react';
-import Popup from 'reactjs-popup';
-import 'reactjs-popup/dist/index.css';
-//import DataFetcher from '../../components/AirQualityDataFetch.js';
-//import Handler from '../../components/AirQualityDataFetchCors.js';
-import AirQuality from '../../components/AirQualityDataFetchAxios.js';
-
-/*
-export default function PopUp(){
+export default function AirQuality() {
   return (
-  <Popup trigger={<button> Trigger</button>} position="right center">
-    <div><AirQuality /></div>
-  </Popup>
-  )
-};
-*/
+    <Box xs={{ flexgrow: 1, bgcolor: "#cfe8fc", height: "100vh" }}>
+      <Container maxWidth="sm"></Container>
+      <Grid container rowSpacing={4} justifyContent="center">
+        <Grid item xs={12} container justifyContent="center" rowSpacing={-3}>
+<GetAirQuality />
+        </Grid>
+        <Grid item xs={12} container justifyContent="center" rowSpacing={3}>
+          <Container fixed>
+    
+          </Container>
+        </Grid>
+        <Grid item xs={12} container justifyContent="center" rowSpacing={4}>
 
-export default function PopUp(){
-  return (
-    <div><AirQuality /></div>
-  )
-};
+        </Grid>
+      </Grid>
+      <Container />
+    </Box>
+  );
+}
