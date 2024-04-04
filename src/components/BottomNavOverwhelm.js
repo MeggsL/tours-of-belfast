@@ -23,7 +23,7 @@ export default function BottomNavOverwhelm() {
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="sm">
-        <Box sx={{ bgcolor: "#6a5579", height: "6vh" }}>
+        <Box sx={{ bgcolor: "#6a5579", height: "5vh" }}>
           <BottomNavigation
             showLabels
             value={value}

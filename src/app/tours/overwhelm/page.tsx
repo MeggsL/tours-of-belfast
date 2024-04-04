@@ -1,5 +1,4 @@
 import React from "react";
-import MapOfQuietSpots from "./overwhelm-map";
 import "../../globals.css";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
@@ -7,6 +6,7 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import BottomNavOverwhelm from "../../../components/BottomNavOverwhelm.js";
 import UpTopMenu from "../../../components/TopMenu.js";
+import GreyMapOfQuietSpots from "../(tour-components)/GreyMapOfQuietSpots";
 
 export default function Overwhelm() {
   return (
@@ -18,7 +18,7 @@ export default function Overwhelm() {
         </Grid>
         <Grid item xs={12} container justifyContent="center" rowSpacing={3}>
           <Container fixed>
-            <MapOfQuietSpots />
+<GreyMapOfQuietSpots />
           </Container>
         </Grid>
         <Grid item xs={12} container justifyContent="center" rowSpacing={4}>

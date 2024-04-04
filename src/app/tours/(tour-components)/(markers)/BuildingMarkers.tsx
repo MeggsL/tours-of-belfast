@@ -6,7 +6,7 @@ import {
   InfoWindow,
 } from "@vis.gl/react-google-maps";
 
-import buildings from "../../data/buildings";
+import buildings from "../../../data/buildings";
 import { useState } from "react";
 
 type Point = google.maps.LatLngLiteral & { key: string } & { name: string } & {

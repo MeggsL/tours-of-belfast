@@ -16,7 +16,7 @@ export default function MapOfQuietSpots() {
   return (
     <APIProvider apiKey={"AIzaSyBtYriy63SzVW7FgSa9vz1iSMCAkhirzBQ"}>
       <div style={{ height: "100vh", width: "100" }}>
-        <Map zoom={15} center={position} mapId={"c18fb97b8c0aa847"}>
+        <Map defaultZoom={15} defaultCenter={position} mapId={"c18fb97b8c0aa847"}>
           <Markers points={spots} />
         </Map>
       </div>

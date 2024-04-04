@@ -1,29 +1,13 @@
 "use client";
 
 import {
-  APIProvider,
-  Map,
   useAdvancedMarkerRef,
   AdvancedMarker,
   InfoWindow,
 } from "@vis.gl/react-google-maps";
 
-import buildings from "../../data/buildings";
+import landmarks from "../../../data/landmarks";
 import { useState } from "react";
-
-export default function BlueMapOfBuildings() {
-  const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
-
-  return (
-    <APIProvider apiKey={"AIzaSyBtYriy63SzVW7FgSa9vz1iSMCAkhirzBQ"}>
-      <div style={{ height: "100vh", width: "100" }}>
-        <Map zoom={15} center={position} mapId={"9efae32f7fd65c2"}>
-          <Markers points={buildings} />
-        </Map>
-      </div>
-    </APIProvider>
-  );
-}
 
 type Point = google.maps.LatLngLiteral & { key: string } & { name: string } & {
   info: string;
@@ -31,11 +15,13 @@ type Point = google.maps.LatLngLiteral & { key: string } & { name: string } & {
 type Props = { points: Point[] };
 
 const Markers = ({ points }: Props) => {
-  const [markerRef, marker] = useAdvancedMarkerRef();
+  //const [open, setOpen] = useState(false);
+  const [markerRef] = useAdvancedMarkerRef();
   const [infowindowShown, setInfowindowShown] = useState(false);
 
   const toggleInfoWindow = () =>
     setInfowindowShown((previousState) => !previousState);
+
   const closeInfoWindow = () => setInfowindowShown(false);
 
   return (
@@ -47,7 +33,7 @@ const Markers = ({ points }: Props) => {
           key={point.key}
           onClick={toggleInfoWindow}
         >
-          <span style={{ fontSize: "2rem" }}>🏛️</span>
+          <span style={{ fontSize: "2rem" }}>🕋</span>
           {infowindowShown && (
             <InfoWindow
               onCloseClick={closeInfoWindow}
@@ -61,3 +47,10 @@ const Markers = ({ points }: Props) => {
     </>
   );
 };
+export { Markers };
+
+function LandmarkMarkers() {
+  return <Markers points={landmarks} />;
+};
+
+export default LandmarkMarkers;
