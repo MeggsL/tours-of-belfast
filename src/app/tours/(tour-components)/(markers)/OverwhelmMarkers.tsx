@@ -6,7 +6,7 @@ import {
   InfoWindow,
 } from "@vis.gl/react-google-maps";
 
-import overwhelm from "../../../data/overwhelm";
+import overwhelm from "../../../apis/overwhelm";
 import { useState } from "react";
 
 type Point = google.maps.LatLngLiteral & { key: string } & { name: string } & {

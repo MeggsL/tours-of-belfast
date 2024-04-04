@@ -8,7 +8,7 @@ import {
 } from "@vis.gl/react-google-maps";
 
 //import { useEffect, useState, useRef } from "react";
-import spots from "../../data/overwhelm";
+import spots from "../../apis/overwhelm";
 
 export default function MapOfQuietSpots() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
