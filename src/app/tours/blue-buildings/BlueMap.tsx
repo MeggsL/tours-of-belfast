@@ -4,6 +4,7 @@ import {
   APIProvider,
   Map,
 } from "@vis.gl/react-google-maps";
+import BuildingMarkers from "./BuildingMarkers";
 
 
 function BlueMap() {
@@ -12,8 +13,8 @@ function BlueMap() {
   return (
     <APIProvider apiKey={"AIzaSyBtYriy63SzVW7FgSa9vz1iSMCAkhirzBQ"}>
       <div style={{ height: "100vh", width: "100" }}>
-        <Map zoom={15} center={position} mapId={"9efae32f7fd65c2"}>
-   
+        <Map defaultZoom={15} defaultCenter={position} mapId={"9efae32f7fd65c2"}>
+
         </Map>
       </div>
     </APIProvider>

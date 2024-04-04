@@ -14,9 +14,6 @@ type Point = google.maps.LatLngLiteral & { key: string } & { name: string } & {
 };
 type Props = { points: Point[] };
 
-
-function BuildingMarkers() {
-
 const Markers = ({ points }: Props) => {
   //const [open, setOpen] = useState(false);
   const [markerRef] = useAdvancedMarkerRef();
@@ -50,6 +47,10 @@ const Markers = ({ points }: Props) => {
     </>
   );
 };
-<Markers points={buildings}/>
+export { Markers };
+
+function BuildingMarkers() {
+  return <Markers points={buildings} />;
 };
+
 export default BuildingMarkers;

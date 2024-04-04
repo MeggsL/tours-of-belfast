@@ -7,6 +7,7 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import BottomNavOverwhelm from "../../../components/BottomNavOverwhelm.js";
 import UpTopMenu from "../../../components/TopMenu.js";
+import BlueMapBuildings from "./BlueMapBuildings";
 
 
 export default function BlueBuildings() {
@@ -19,7 +20,7 @@ export default function BlueBuildings() {
         </Grid>
         <Grid item xs={12} container justifyContent="center" rowSpacing={3}>
           <Container fixed>
-     <BlueMapOfBuildings />
+<BlueMapBuildings />
           </Container>
         </Grid>
         <Grid item xs={12} container justifyContent="center" rowSpacing={4}>
