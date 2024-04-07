@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/components/OpenWeather.js"  ],
+, "src/components/OpenWeather.js", "src/app/apis/GetWeather.ts", "src/app/apis/GetWeather-2.js"  ],
   "exclude": [
     "node_modules"
   ]

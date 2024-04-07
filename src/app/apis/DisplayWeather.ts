@@ -5,34 +5,19 @@ import Container from "@mui/material/Container";
 import Alert from "@mui/material/Alert";
 import Stack from "@mui/material/Stack";
 import Grid from "@mui/material/Grid";
+import { stringify } from "querystring";
 
-function GetWeather() {
-  const url =
-    "https://api.openweathermap.org/data/2.5/weather?lat=54.5967&lon=-5.9300&appid=708e98ba900f0f0b00a0560aaa10ae72";
+import setData from "./apis/OpenWeatherAxios";
 
-  const [data, setData] = useState([]);
+function DisplayWeather() {
 
-  useEffect(() => {
-    function Fetch() {
-      url
+  return(
 
-        .then((res) => {
-          return res.json();
-        })
-        .then((data) => {
-          setData(data);
-          console.log(data);
-        });
-    }
-  }, []);
-
-  return (
-    <>
       <Container sx={{ width: "70%" }}>
         <Alert variant="outlined" severity="info">
           {data.map(
-            (weather) => (
-              //<div key={item.weather}>
+            (item) => (
+              <div key={item.weather}>
               (<h2>Current Conditions</h2>),
               (<p>{weather.id}</p>),
               (<p>{weather.main}</p>),
@@ -43,8 +28,7 @@ function GetWeather() {
           )}
         </Alert>
       </Container>
-    </>
-  );
-}
+  )
+            };
 
-export default GetWeather;
+export default DisplayWeather;
