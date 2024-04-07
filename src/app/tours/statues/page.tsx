@@ -5,8 +5,8 @@ import Container from "@mui/material/Container";
 //import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import UpTopMenu from "../../../components/TopMenu.js";
-import PinkMapOfStatues from "../(tour-components)/PinkMapOfStatues";
 import BottomNavTours from "../../../components/BottomNavTours";
+import BlueMapOfStatues from "../(tour-components)/BlueMapOfStatues";
 
 export default function PinkStatues() {
   return (
@@ -18,7 +18,7 @@ export default function PinkStatues() {
         </Grid>
         <Grid item xs={12} container justifyContent="center" rowSpacing={3}>
           <Container fixed>
-           <PinkMapOfStatues />
+           <BlueMapOfStatues />
           </Container>
         </Grid>
         <Grid item xs={12} container justifyContent="center" rowSpacing={4}>

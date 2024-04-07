@@ -26,7 +26,7 @@ const StyledAvatar = styled(Avatar)`
   })};
   &:hover {
     background-color: ${theme.palette.secondary.main};
-    transform: scale(2.5);
+    transform: scale(2.4);
   }
   `}
 `;
@@ -34,7 +34,7 @@ const StyledAvatar = styled(Avatar)`
 export default function TransitionHover() {
   return (
     <ThemeProvider theme={customTheme}>
-      <StyledAvatar>GO</StyledAvatar>
+      <StyledAvatar>Go</StyledAvatar>
     </ThemeProvider>
   );
 }

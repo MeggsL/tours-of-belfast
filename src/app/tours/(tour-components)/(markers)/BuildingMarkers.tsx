@@ -8,6 +8,7 @@ import {
 
 import buildings from "../../../apis/buildings";
 import { useState } from "react";
+import "./markers.css";
 
 type Point = google.maps.LatLngLiteral & { key: string } & { name: string } & {
   info: string;
@@ -35,12 +36,14 @@ const Markers = ({ points }: Props) => {
         >
           <span style={{ fontSize: "2rem" }}>🏛️</span>
           {infowindowShown && (
+            <div className="infowindow">
             <InfoWindow
               onCloseClick={closeInfoWindow}
               content={point.name + point.info}
               position={point}
               key={point.key}
             ></InfoWindow>
+            </div>
           )}
         </AdvancedMarker>
       ))}

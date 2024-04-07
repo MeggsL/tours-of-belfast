@@ -4,7 +4,8 @@ import {
   APIProvider,
   Map,
 } from "@vis.gl/react-google-maps";
-import StatueMarkers from "./(markers)/StatueMarkers";
+//import StatueMarkers from "./(markers)/StatueMarkers";
+import StatueDirections from "./(directions)/StatueDirections";
 
 
 function BlueMapOfStatues() {
@@ -14,7 +15,8 @@ function BlueMapOfStatues() {
     <APIProvider apiKey={"AIzaSyBtYriy63SzVW7FgSa9vz1iSMCAkhirzBQ"}>
       <div style={{ height: "100vh", width: "100" }}>
         <Map defaultZoom={15} defaultCenter={position} mapId={"9efae32f7fd65c2"}>
-   <StatueMarkers />
+   <StatueDirections />
+
         </Map>
       </div>
     </APIProvider>
