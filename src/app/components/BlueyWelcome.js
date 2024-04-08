@@ -3,14 +3,14 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { styled } from "@mui/material/styles";
-import "../app/globals.css";
-import "../app/page.module.css";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import TransitionHover from "./StyledAvatarButton.js";
 //import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
+import "../blueygrey/blueygrey.css";
+import Button from "@mui/material/Button";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 // children components
 
@@ -18,7 +18,7 @@ const Title = () => {
   return (
     <Image
       //className={styles.logo}
-      src="/bg-welcome.png"
+      src="/img/bg-welcome.png"
       alt="Tour of Belfast"
       width={356}
       height={360}
@@ -40,7 +40,32 @@ const BothCranes = () => {
   );
 };
 
-export { Title, BothCranes };
+//the button for the cooling blues experience
+function BlueyButton() {
+  const ButtonColor = createTheme({
+    palette: {
+      primary: {
+        main: "#8bd6f3",
+      },
+      secondary: {
+        main: "#8bd6f3",
+      },
+    },
+  });
+
+  return (
+    <ThemeProvider theme={ButtonColor}>
+      <Button
+        variant="contained"
+        size="large"
+      >
+ Choose Tour
+      </Button>
+    </ThemeProvider>
+  );
+}
+
+export { Title, BothCranes, BlueyButton };
 
 export default function BlueyWelcome() {
   return (
@@ -54,11 +79,7 @@ export default function BlueyWelcome() {
           <BothCranes />
         </Grid>
         <Grid item xs={12} container justifyContent="center" rowSpacing={-2}>
-          {" "}
-          <Link href="/tours">
-            {" "}
-            <TransitionHover />
-          </Link>
+  <BlueyButton />
         </Grid>
         <Grid
           item

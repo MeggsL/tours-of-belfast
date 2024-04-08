@@ -22,8 +22,9 @@ export default function BottomNavTours() {
   return (
     <React.Fragment>
       <CssBaseline />
+      <Box sx={{ height: "5vh" }}>
       <Container maxWidth="sm">
-        <Box sx={{ bgcolor: "#6a5579", height: "5vh" }}>
+
           <BottomNavigation
             showLabels
             value={value}
@@ -42,8 +43,9 @@ export default function BottomNavTours() {
             <BottomNavigationAction label="" icon={<Link href={"/tours/overwhelm"}>{<DoNotDisturbOnTotalSilenceTwoToneIcon />}</Link>} />
 
           </BottomNavigation>
-        </Box>
+
       </Container>
+      </Box>
     </React.Fragment>
   );
 }

@@ -1,27 +1,21 @@
-
-import Homepage from "../components/Homepage.js";
-
-
-
+import React from "react";
+import ToursOfBelfast from "./components/Homepage.js";
+import "./globals.css";
 
 <html lang="en">
-<head>
-<meta name="viewport" content="initial-scale=1, width=device-width" />
-  <title>Tours of Belfast</title>
-</head>
-<body>
+  <head>
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>Tours of Belfast</title>
+  </head>
+  <body></body>
+</html>;
 
-</body>
-</html>
-
-
-
-export default function Home() {
+export default function PickYourColour() {
   return (
-  
+    <main>
       <div>
-        <Homepage />
+        <ToursOfBelfast />
       </div>
-
+    </main>
   );
 }

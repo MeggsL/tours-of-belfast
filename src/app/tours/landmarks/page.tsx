@@ -5,8 +5,8 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 //import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
-import UpTopMenu from "../../../components/TopMenu.js";
-import BottomNavTours from "../../../components/BottomNavTours";
+import UpTopMenu from "../../components/TopMenu.js";
+import BottomNavTours from "../../components/BottomNavTours";
 
 export default function PurpleLandmarks() {
   return (

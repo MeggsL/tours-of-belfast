@@ -1,6 +1,6 @@
 
-import BlueyWelcome from "../../components/BlueyWelcome.js";
-import "./blueygrey.css";
+import BlueyWelcome from "../components/BlueyWelcome.js";
+import "../blueygrey/blueygrey.css";
 
 
 

@@ -3,13 +3,16 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import "../app/globals.css";
-import "../app/page.module.css";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import TransitionHover from "./StyledAvatarButton.js";
 //import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
+import "../purple/purple.css";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import Button from "@mui/material/Button";
+import SelfImprovementTwoToneIcon from "@mui/icons-material/SelfImprovementTwoTone";
+
 
 // children components
 
@@ -17,7 +20,7 @@ const Title = () => {
   return (
     <Image
       //className={styles.logo}
-      src="/purple-welcome.png"
+      src="/img/purple-welcome.png"
       alt="Tour of Belfast"
       width={356}
       height={360}
@@ -39,7 +42,33 @@ const BothCranes = () => {
   );
 };
 
-export { Title, BothCranes };
+//the button for the soothing lilac experience
+function PurpleButton() {
+  const ButtonColor = createTheme({
+    palette: {
+      primary: {
+        main: "#e0c6e7",
+      },
+      secondary: {
+        main: "#e0c6e7",
+      },
+    },
+  });
+
+  return (
+    <ThemeProvider theme={ButtonColor}>
+      <Button
+        variant="contained"
+        size="large"
+
+      >
+       Choose Tour
+      </Button>
+    </ThemeProvider>
+  );
+}
+
+export { Title, BothCranes, PurpleButton };
 
 export default function PurpleWelcome() {
   return (
@@ -53,11 +82,7 @@ export default function PurpleWelcome() {
           <BothCranes />
         </Grid>
         <Grid item xs={12} container justifyContent="center" rowSpacing={-2}>
-          {" "}
-          <Link href="/tours">
-            {" "}
-            <TransitionHover />
-          </Link>
+    <PurpleButton />
         </Grid>
         <Grid
           item

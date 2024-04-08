@@ -1,4 +1,4 @@
-import PurpleWelcome from "../../components/PurpleWelcome.js";
+import PurpleWelcome from "../components/PurpleWelcome.js";
 import "./purple.css";
 
 
