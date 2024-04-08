@@ -1,9 +1,6 @@
-import React, { lazy } from "react";
-import IntroTable from "../components/Homepage.js";
-import "@fontsource/roboto/300.css";
-import "@fontsource/roboto/400.css";
-import "@fontsource/roboto/500.css";
-import "@fontsource/roboto/700.css";
+
+import BlueyWelcome from "../../components/BlueyWelcome.js";
+import "./blueygrey.css";
 
 
 
@@ -23,7 +20,7 @@ export default function Home() {
   return (
   
       <div>
-        <IntroTable />
+        <BlueyWelcome />
       </div>
 
   );

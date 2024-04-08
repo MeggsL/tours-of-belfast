@@ -1,9 +1,5 @@
-import PurpleHomepage from "../../components/PurpleHomepage.js";
-import "@fontsource/roboto/300.css";
-import "@fontsource/roboto/400.css";
-import "@fontsource/roboto/500.css";
-import "@fontsource/roboto/700.css";
-
+import PurpleWelcome from "../../components/PurpleWelcome.js";
+import "./purple.css";
 
 
 <html lang="en">
@@ -22,7 +18,7 @@ export default function Home() {
   return (
   
       <div>
-        <PurpleHomepage />
+        <PurpleWelcome />
       </div>
 
   );

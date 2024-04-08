@@ -3,12 +3,11 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { styled } from "@mui/material/styles";
 import "../app/globals.css";
 import "../app/page.module.css";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import TransitionHover from "../components/StyledAvatarButton.js";
+import TransitionHover from "./StyledAvatarButton.js";
 //import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 
@@ -18,7 +17,7 @@ const Title = () => {
   return (
     <Image
       //className={styles.logo}
-      src="/home-title-pink-356x360.png"
+      src="/purple-welcome.png"
       alt="Tour of Belfast"
       width={356}
       height={360}
@@ -42,7 +41,7 @@ const BothCranes = () => {
 
 export { Title, BothCranes };
 
-export default function PeachyHomepage() {
+export default function PurpleWelcome() {
   return (
     <Box xs={{ flexgrow: 1, bgcolor: "#cfe8fc", height: "100vh" }}>
       <Container maxWidth="sm"></Container>
