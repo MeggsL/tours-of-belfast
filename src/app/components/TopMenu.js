@@ -44,7 +44,7 @@ export default function UpTopMenu() {
           color: '#482880'
         }}
       >
-       Handy Info
+       Change Colour
       </Button>
       <Menu
         id="demo-positioned-menu"
@@ -61,9 +61,9 @@ export default function UpTopMenu() {
           horizontal: 'left',
         }}
       >
-        <MenuItem onClick={handleClose}>Weather</MenuItem>
-        <MenuItem onClick={handleClose}>Air Quality</MenuItem>
-        <MenuItem onClick={handleClose}>Pollen Count</MenuItem>
+        <MenuItem onClick={handleClose}>Cooling Blues</MenuItem>
+        <MenuItem onClick={handleClose}>Peachy Pink</MenuItem>
+        <MenuItem onClick={handleClose}>Soothing Lilac</MenuItem>
       </Menu>
       </Container>
       </Box>

@@ -13,7 +13,6 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import SelfImprovementTwoToneIcon from "@mui/icons-material/SelfImprovementTwoTone";
 
-
 // children components
 
 const Title = () => {
@@ -57,12 +56,8 @@ function PurpleButton() {
 
   return (
     <ThemeProvider theme={ButtonColor}>
-      <Button
-        variant="contained"
-        size="large"
-
-      >
-       Choose Tour
+      <Button variant="contained" size="large">
+        Choose Your Tour
       </Button>
     </ThemeProvider>
   );
@@ -82,7 +77,9 @@ export default function PurpleWelcome() {
           <BothCranes />
         </Grid>
         <Grid item xs={12} container justifyContent="center" rowSpacing={-2}>
-    <PurpleButton />
+        <Link href="/tours">
+          <PurpleButton />
+          </Link>
         </Grid>
         <Grid
           item

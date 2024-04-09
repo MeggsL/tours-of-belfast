@@ -55,11 +55,8 @@ function BlueyButton() {
 
   return (
     <ThemeProvider theme={ButtonColor}>
-      <Button
-        variant="contained"
-        size="large"
-      >
- Choose Tour
+      <Button variant="contained" size="large">
+        Choose Your Tour
       </Button>
     </ThemeProvider>
   );
@@ -79,7 +76,9 @@ export default function BlueyWelcome() {
           <BothCranes />
         </Grid>
         <Grid item xs={12} container justifyContent="center" rowSpacing={-2}>
-  <BlueyButton />
+        <Link href="/tours">
+          <BlueyButton />
+          </Link>
         </Grid>
         <Grid
           item

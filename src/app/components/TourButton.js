@@ -27,7 +27,7 @@ function TButton() {
       <Button
         variant="outlined"
         size="large"
-        startIcon={<RocketLaunchTwoToneIcon />}
+       // startIcon={<RocketLaunchTwoToneIcon />}
       >
         Start Tour
       </Button>

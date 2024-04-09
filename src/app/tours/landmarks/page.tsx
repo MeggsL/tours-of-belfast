@@ -6,7 +6,7 @@ import Container from "@mui/material/Container";
 //import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import UpTopMenu from "../../components/TopMenu.js";
-import BottomNavTours from "../../components/BottomNavTours";
+import BottomNavMaps from "../../components/BottomNavMaps";
 
 export default function PurpleLandmarks() {
   return (
@@ -22,7 +22,7 @@ export default function PurpleLandmarks() {
           </Container>
         </Grid>
         <Grid item xs={12} container justifyContent="center" rowSpacing={4}>
-        <BottomNavTours />
+        <BottomNavMaps/>
         </Grid>
       </Grid>
       <Container />

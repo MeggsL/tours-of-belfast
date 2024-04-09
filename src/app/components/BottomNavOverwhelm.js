@@ -36,10 +36,10 @@ export default function BottomNavOverwhelm() {
 
             [weather]
             <BottomNavigationAction label="" icon={<WbSunnyTwoToneIcon />} />
-
+{/*}
             [where am i?]
             <BottomNavigationAction label="" icon={<WhereToVoteTwoToneIcon />} />
-   
+          */}
 
           </BottomNavigation>
         </Box>

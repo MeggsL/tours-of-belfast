@@ -13,7 +13,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import FilterVintageTwoToneIcon from "@mui/icons-material/FilterVintageTwoTone";
 //import BottomNavTours from "./BottomNavTours.js";
-import ".././peachypink/peachypink.css";
+import "../peachypink/peachypink.css";
 
 // children components
 
@@ -63,7 +63,7 @@ function PeachyButton() {
         size="large"
         startIcon={<FilterVintageTwoToneIcon />}
       >
-  Choose Tour
+        Choose Your Tour
       </Button>
     </ThemeProvider>
   );

@@ -18,7 +18,7 @@ const ImgOne = () => {
   return (
     <Image
       //className={styles.logo}
-      src="/buildings-tour.png"
+      src="/img/historic-buildings-tour.png"
       alt="Buildings Tour"
       width={300}
       height={310}
@@ -31,7 +31,7 @@ const ImgTwo = () => {
   return (
     <Image
       //className={styles.logo}
-      src="/landmarks-tour.png"
+      src="/img/landmarks-monuments-tour.png"
       alt="Landmarks Tour"
       width={300}
       height={310}
@@ -44,7 +44,7 @@ const ImgThree = () => {
   return (
     <Image
       //className={styles.logo}
-      src="/statues-tour.png"
+      src="/img/statues-artwork-tour.png"
       alt="Statues Tour"
       width={300}
       height={310}

@@ -12,7 +12,7 @@ import "./globals.css";
 
 export default function PickYourColour() {
   return (
-    <main>
+    <main className="main">
       <div>
         <ToursOfBelfast />
       </div>

@@ -123,7 +123,7 @@ export default function ToursOfBelfast() {
           <h2>Please select your colour experience.</h2>
         </Grid>
         <Grid item xs={12} container justifyContent="center" rowSpacing={-5}>
-          <Link href="/peachypink">
+          <Link href="/purple">
             <PurpleButton />
           </Link>
         </Grid>

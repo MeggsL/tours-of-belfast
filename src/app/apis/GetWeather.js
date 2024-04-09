@@ -51,6 +51,8 @@ function App() {
   }, []);
   // }
 
+
+  
   return (
 
     <Box height={300}
@@ -61,52 +63,83 @@ function App() {
     gap={4}
     p={2}
    sx={{ border: "20x solid grey" }}>
-    <div className="App">
-      <div className="weather-app">
-        <div className="loading">
-          {weather.loading && (
-            <Oval type="Oval" color="green" height={70} width={70}></Oval>
-          )}
-        </div>
+   
+   <div>
+   {weather.map((data) => {
+    return (
+      <li className="app" key={data.id}>{data.weather.main}</li>
+    )
+   })}
+   
+   
+   </div>
 
-        {weather.error && (
-          <div className="error-message">
-            <span>What the...</span>
-          </div>
-        )}
 
-        {weather && weather.data && weather.data.main && (
-          <div>
-            <div className="city-name">
-              <h2>
-                {weather.data.name},<span>{weather.data.sys.country}</span>
-              </h2>
-            </div>
 
-           {/*} <div className="icon-temp">
-              <img
-                src={
-                  "https://openweathermap.org/img/wn/${weather.data.weather[0].icon}@2x.png"
-                }
-                alt=""
-              ></img>
-            </div>
-              */}
-
-            <div className="temp">
-              {Math.round(weather.data.main.temp)}
-              <sup className="deg">°C</sup>
-            </div>
-
-            <div className="feels-like">
-              <p>Feels like: {weather.data.main.feels_like}</p>
-            </div>
-          </div>
-        )}
-      </div>
-    </div>
     </Box>
   );
 };
 
 export default App;
+
+{/*}
+return (
+
+  <Box height={300}
+  width={400}
+  my={4}
+  display="flex"
+  alignItems="center"
+  gap={4}
+  p={2}
+ sx={{ border: "20x solid grey" }}>
+  <div className="App">
+    <div className="weather-app">
+  {/*}    <div className="loading">
+        {weather.loading && (
+          <Oval type="Oval" color="green" height={70} width={70}></Oval>
+        )}
+      </div>
+
+      {weather.error && (
+        <div className="error-message">
+          <span>What the...</span>
+        </div>
+      )}
+
+      {weather && weather.data && weather.data.main && (
+        <div>
+          <div className="city-name">
+            <h2>
+              {weather.data.name},<span>{weather.data.sys.country}</span>
+            </h2>
+          </div>
+
+         {/*} <div className="icon-temp">
+            <img
+              src={
+                "https://openweathermap.org/img/wn/${weather.data.weather[0].icon}@2x.png"
+              }
+              alt=""
+            ></img>
+          </div>
+            
+
+          <div className="temp">
+            {Math.round(weather.data.main.temp)}
+            <sup className="deg">°C</sup>
+          </div>
+
+          <div className="feels-like">
+            <p>Feels like: {weather.data.main.feels_like}</p>
+          </div>
+        </div>
+      )}
+    </div>
+  </div>
+  </Box>
+);
+};
+
+export default App;
+*/}
