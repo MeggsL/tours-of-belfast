@@ -87,14 +87,20 @@ function StatueDirections() {
         origin: "Europa Buscentre, Belfast UK",
 
         waypoints: [
-          { location: "Queen's Arcade, Belfast UK" }, //the masts
-          { location: "Spirit of Belfast, Belfast UK" },
-          { location: "The Speaker, Belfast UK" },
-          { location: "The Big Fish, Belfast UK" },
-          { location: "Beacon of Hope, Belfast UK" },
-          { location: "The Speaker, Belfast UK" },
-          //   { location: "Queen Victoria Memorial, Belfast UK" },
-          //  { location: "Edward James Harland Statue, Belfast UK" },
+          {
+            location:
+              "Crumlin Road Gaol Visitor Attraction and Conference Centre, Belfast UK",
+          }, 
+          { location: "Crumlin Road Courthouse, Belfast UK" },
+          { location: "Belfast Cathedral, Belfast UK" },
+          //{ location: "The Merchant Hotel, Belfast UK" },
+          { location: "Custom House, Belfast UK" },
+        //  { location: "St George's Market, Belfast UK" },
+  
+          { location: "Riddell Hall, Belfast UK" },
+          { location: "The Lanyon Building, Belfast UK" },
+          { location: "The Ulster Hall, Belfast UK" },
+          { location: "The Linen Hall, Belfast UK" },
         ],
         destination: "Front of Belfast City Hall, Belfast UK",
         travelMode: google.maps.TravelMode.WALKING,
@@ -109,6 +115,7 @@ function StatueDirections() {
   useEffect(() => {
     if (!directionsRenderer) return;
     directionsRenderer.setRouteIndex(routeIndex);
+    suppressMarkers: true;
   }, [routeIndex, directionsRenderer]);
 
   console.log(routes);
@@ -119,7 +126,8 @@ function StatueDirections() {
 
   return null;
 
-    {/*}
+  {
+    /*}
     <div className="alertbox">
       <Box maxWidth={"80%"}>
         <Collapse in={open}>
@@ -172,8 +180,18 @@ function StatueDirections() {
         </ThemeProvider>
       </Box>
     </div>
-          */}
+          */
+  }
+}
 
+function setMapOnAll(map) {
+  for (let i = 0; i < markers.length; i++) {
+    markers[i].setMap(map);
+  }
+}
+
+function hideMarkers() {
+  setMapOnAll(null);
 }
 
 export default StatueDirections;

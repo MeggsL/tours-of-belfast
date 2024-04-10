@@ -11,6 +11,7 @@ import Container from "@mui/material/Container";
 //import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import BottomNavTours from "./BottomNavTours.js";
+import BottomNavMaps from "./BottomNavMaps.js";
 
 
 // children components of images and buttons
@@ -89,8 +90,8 @@ export {
 
 export default function TourTable() {
   return (
-    <Box xs={{ flexgrow: 1, bgcolor: "#cfe8fc", height: "100vh" }}>
-      <Container maxWidth="sm"></Container>
+    <Box xs={{ flexgrow: 1, height: "98vh" }}>
+
       <Grid container rowSpacing={4} justifyContent="center">
         <Grid item xs={12} container justifyContent="center">
         <ImgOne />
@@ -110,11 +111,11 @@ export default function TourTable() {
         <Grid item xs={12} container justifyContent="center" rowSpacing={-2}>
         <StartStatuesTour />
         </Grid>
-        <Grid item xs={12} container justifyContent="center" rowSpacing={-2}>
-<BottomNavTours />
+        <Grid item xs={12} container justifyContent="center" rowSpacing={-2} position={"fixed"}>
+
         </Grid>
       </Grid>
-      <Container />
+
     </Box>
   );
 }

@@ -13,7 +13,7 @@ import { useState } from "react";
 
 const crumlinRoadGaol = { lat: 54.609589686911356, lng: -5.942150323272715 };
 
-function CrumlinRoadGaolMarker() {
+function GaolMarker() {
   const [open, setOpen] = useState(false);
 
   return (
@@ -25,7 +25,7 @@ function CrumlinRoadGaolMarker() {
               background={"white"}
               borderColor={"black"}
               glyphColor={"black"}
-              glyph={"Gaol"}
+            //  glyph={"Gaol"}
               scale={1.7}
             />
           </AdvancedMarker>
@@ -46,4 +46,4 @@ function CrumlinRoadGaolMarker() {
   );
 }
 
-export default CrumlinRoadGaolMarker;
+export default GaolMarker;

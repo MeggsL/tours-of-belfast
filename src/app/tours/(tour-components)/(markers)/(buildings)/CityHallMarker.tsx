@@ -11,9 +11,9 @@ import {
 
 import { useState } from "react";
 
-const cityHall = { lat: 54.596747841427444, lng: -5.930042284658504 };
+const cityHall = { lat: 54.596617288210005, lng: -5.930042286615252 };
 
-function BelfastCityHallMarker() {
+function CityHallMarker() {
   const [open, setOpen] = useState(false);
 
   return (
@@ -25,7 +25,7 @@ function BelfastCityHallMarker() {
               background={"white"}
               borderColor={"black"}
               glyphColor={"black"}
-              glyph={"City Hall"}
+          //    glyph={""}
               scale={1.7}
             />
           </AdvancedMarker>
@@ -47,4 +47,4 @@ function BelfastCityHallMarker() {
   );
 }
 
-export default BelfastCityHallMarker;
+export default CityHallMarker;

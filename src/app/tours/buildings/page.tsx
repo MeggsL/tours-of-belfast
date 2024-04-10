@@ -26,7 +26,7 @@ export default function BlueBuildings() {
         justifyContent="center"
         rowSpacing={0}
         padding={0}
-        position={"fixed"}
+      
       >
         <BottomNavMaps />
       </Grid>

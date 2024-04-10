@@ -26,7 +26,7 @@ export default function BottomNavMaps() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Box sx={{ height: "5vh" }} position={""}>
+      <Box sx={{ height: "5vh" }} position={"fixed"} alignContent={"center"} alignItems={"center"} >
         <BottomNavigation
           showLabels
           value={value}
@@ -66,7 +66,7 @@ export default function BottomNavMaps() {
               label=""
               icon={
                 <Link  href={""}>
-                  <Image width={50} height={50} src="/img/break-time.png" alt="break time!" />
+                  <Image width={48} height={48} src="/img/break-time.png" alt="break time!" />
                 </Link>
               }
 

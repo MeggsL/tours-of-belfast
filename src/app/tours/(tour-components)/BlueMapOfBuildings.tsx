@@ -3,13 +3,21 @@
 import { APIProvider, Map } from "@vis.gl/react-google-maps";
 //import BuildingMarkers from "./(markers)/BuildingMarkers";
 //import ClickableMarkers from "../buildings/ClickableMarkers.jsx";
-import BuildingMarkers from "./(markers)/BelfastCityHallMarker";
+import BuildingMarkers from "./(markers)/(buildings)/CityHallMarker";
 import Container from "@mui/material/Container";
-import BelfastCityHallMarker from "./(markers)/BelfastCityHallMarker";
-import CrumlinRoadGaolMarker from "./(markers)/CrumRoadGaolMarker";
+
 import FloatingButton from "../../components/FloatingButton";
 import Grid from "@mui/material/Grid";
-import StatueDirections from "../(tour-components)/(directions)/StatueDirections";
+import BuildingsDirections from "../(tour-components)/(directions)/BuildingsDirections";
+import CityHallMarker from "./(markers)/(buildings)/CityHallMarker";
+import LinenHallMarker from "./(markers)/(buildings)/LinenHallMarker";
+import GaolMarker from "./(markers)/(buildings)/GaolMarker";
+import RiddellHallMarker from "./(markers)/(buildings)/RiddellHallMarker";
+import CustomHouseMarker from "./(markers)/(buildings)/CustomHouseMarker";
+import CourthouseMarker from "./(markers)/(buildings)/CourthouseMarker";
+import LanyonMarker from "./(markers)/(buildings)/LanyonMarker";
+import UlsterHallMarker from "./(markers)/(buildings)/UlsterHallMarker";
+import CathedralMarker from "./(markers)/(buildings)/CathedralMarker";
 
 function BlueMapOfBuildings() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
@@ -23,9 +31,16 @@ function BlueMapOfBuildings() {
             defaultCenter={position}
             mapId={"9efae32f7fd65c2"}
           >
-            <StatueDirections />
-            <BelfastCityHallMarker />
-            <CrumlinRoadGaolMarker />
+            <BuildingsDirections />
+            <CityHallMarker />
+            <LinenHallMarker />
+            <GaolMarker />
+            <RiddellHallMarker />
+            <CustomHouseMarker />
+            <CourthouseMarker />
+            <LanyonMarker />
+            <UlsterHallMarker />
+            <CathedralMarker />
           </Map>
         </div>
       </Container>
