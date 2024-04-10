@@ -18,7 +18,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Link from '@mui/material/Link';
 //import ThemeProvider from "@mui/material/styles";
 import WeekendIcon from '@mui/icons-material/Weekend';
-import { Image } from "@mui/icons-material";
+import Image from 'next/image';
 
 export default function BottomNavMaps() {
   const [value, setValue] = React.useState(0);
@@ -66,7 +66,7 @@ export default function BottomNavMaps() {
               label=""
               icon={
                 <Link  href={""}>
-                  <Image src="/public/img/break-time.png" alt="break time!"/>
+                  <Image width={50} height={50} src="/img/break-time.png" alt="break time!" />
                 </Link>
               }
 
