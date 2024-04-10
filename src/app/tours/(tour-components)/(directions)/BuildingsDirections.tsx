@@ -96,7 +96,6 @@ function StatueDirections() {
           //{ location: "The Merchant Hotel, Belfast UK" },
           { location: "Custom House, Belfast UK" },
         //  { location: "St George's Market, Belfast UK" },
-  
           { location: "Riddell Hall, Belfast UK" },
           { location: "The Lanyon Building, Belfast UK" },
           { location: "The Ulster Hall, Belfast UK" },
@@ -184,14 +183,5 @@ function StatueDirections() {
   }
 }
 
-function setMapOnAll(map) {
-  for (let i = 0; i < markers.length; i++) {
-    markers[i].setMap(map);
-  }
-}
-
-function hideMarkers() {
-  setMapOnAll(null);
-}
 
 export default StatueDirections;

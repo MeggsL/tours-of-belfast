@@ -36,7 +36,7 @@ function PurpleButton() {
       <Button
         variant="contained"
         size="large"
-        startIcon={<SelfImprovementTwoToneIcon />}
+   //     startIcon={<SelfImprovementTwoToneIcon />}
       >
         Soothing Lilacs
       </Button>
@@ -62,7 +62,7 @@ function PeachyButton() {
       <Button
         variant="contained"
         size="large"
-        startIcon={<FilterVintageTwoToneIcon />}
+   //     startIcon={<FilterVintageTwoToneIcon />}
       >
         Peachy Pinks
       </Button>
@@ -88,7 +88,7 @@ function BlueyButton() {
       <Button
         variant="contained"
         size="large"
-        startIcon={<AcUnitTwoToneIcon />}
+      //  startIcon={<AcUnitTwoToneIcon />}
       >
         Cooling Blues
       </Button>
@@ -100,7 +100,7 @@ export { PurpleButton, PeachyButton, BlueyButton };
 
 export default function ToursOfBelfast() {
   return (
-    <Box xs={{ flexgrow: 1, bgcolor: "#cfe8fc", height: "100%" }}>
+    <Box xs={{ flexgrow: 1, height: "100%" }}>
       <Container maxWidth="sm">
         <Grid
           container
@@ -108,6 +108,7 @@ export default function ToursOfBelfast() {
           rowSpacing={3}
           item
           xs={12}
+          paddingTop={12}
           justifyContent="center"
         >
           <Image
@@ -119,10 +120,10 @@ export default function ToursOfBelfast() {
             priority
           />
         </Grid>
-        <Grid item xs={12} container justifyContent="center" rowSpacing={-5}>
-          <h2>Please select your colour experience.</h2>
+        <Grid item xs={12} container justifyContent="center" rowSpacing={-5} paddingTop={3}>
+          <h2 align="center ">Please select your colour experience.</h2>
         </Grid>
-        <Grid item xs={12} container justifyContent="center" rowSpacing={-5}>
+        <Grid item xs={12} container justifyContent="center" rowSpacing={-5} paddingTop={6}>
           <Link href="/purple">
             <PurpleButton />
           </Link>

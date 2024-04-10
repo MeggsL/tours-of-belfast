@@ -11,7 +11,8 @@ import Grid from "@mui/material/Grid";
 import "../purple/purple.css";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Button from "@mui/material/Button";
-import SelfImprovementTwoToneIcon from "@mui/icons-material/SelfImprovementTwoTone";
+
+//import SelfImprovementTwoToneIcon from "@mui/icons-material/SelfImprovementTwoTone";
 
 // children components
 
@@ -67,16 +68,16 @@ export { Title, BothCranes, PurpleButton };
 
 export default function PurpleWelcome() {
   return (
-    <Box xs={{ flexgrow: 1, bgcolor: "#cfe8fc", height: "100vh" }}>
-      <Container maxWidth="sm"></Container>
+    <Box xs={{ flexgrow: 1,  height: "100%" }}>
+      <Container maxWidth="sm">
       <Grid container rowSpacing={4} justifyContent="center">
-        <Grid item xs={12} container justifyContent="center">
+        <Grid item xs={12} container justifyContent="center" paddingTop={10}>
           <Title />
         </Grid>
-        <Grid item xs={12} container justifyContent="center" rowSpacing={-1}>
+        <Grid item xs={12} container justifyContent="center" rowSpacing={0} paddingTop={5}>
           <BothCranes />
         </Grid>
-        <Grid item xs={12} container justifyContent="center" rowSpacing={-2}>
+        <Grid item xs={12} container justifyContent="center" rowSpacing={0} paddingTop={5}>
         <Link href="/tours">
           <PurpleButton />
           </Link>
@@ -89,7 +90,7 @@ export default function PurpleWelcome() {
           rowSpacing={-5}
         ></Grid>
       </Grid>
-      <Container />
+      </Container>
     </Box>
   );
 }
