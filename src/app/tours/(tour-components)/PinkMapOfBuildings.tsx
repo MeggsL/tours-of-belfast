@@ -4,7 +4,7 @@ import {
   APIProvider,
   Map,
 } from "@vis.gl/react-google-maps";
-import BuildingMarkers from "./(markers)/BuildingMarkers";
+import BuildingMarkers from "./(markers)/BelfastCityHallMarker";
 
 
 function PinkMapOfBuildings() {

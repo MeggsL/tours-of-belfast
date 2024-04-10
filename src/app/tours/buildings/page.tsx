@@ -1,5 +1,5 @@
 import React from "react";
-import BlueMapOfBuildings from "../(tour-components)/BlueMapOfBuildings";
+//import BlueMapOfBuildings from "../(tour-components)/BlueMapOfBuildings";
 import "../../globals.css";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
@@ -7,26 +7,28 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import UpTopMenu from "../../components/TopMenu.js";
 import BottomNavMaps from "../../components/BottomNavMaps";
+import FixedBottomNavigation from "../../components/BottomNavFixed";
+
+import BlueMapOfBuildings from "../(tour-components)/BlueMapOfBuildings";
 
 export default function BlueBuildings() {
   return (
-    <Box xs={{ flexgrow: 1, bgcolor: "#cfe8fc", height: "100vh" }}>
-      <Container maxWidth="sm"></Container>
-      <Grid container rowSpacing={4} justifyContent="center">
-        <Grid item xs={12} container justifyContent="center" rowSpacing={-3}>
-          <UpTopMenu />
-          
-        </Grid>
-        <Grid item xs={12} container justifyContent="center" rowSpacing={3}>
-          <Container fixed>
-            <BlueMapOfBuildings />
-          </Container>
-        </Grid>
-        <Grid item xs={12} container justifyContent="center" rowSpacing={4}>
-        <BottomNavMaps />
-        </Grid>
+    <Box>
+      <Grid item md={12} container rowSpacing={-1}>
+
+        <BlueMapOfBuildings />
       </Grid>
-      <Container />
+      <Grid
+
+        item
+        md={12}
+        container
+        justifyContent="center"
+        rowSpacing={0}
+        padding={0}
+      >
+<BottomNavMaps />
+      </Grid>
     </Box>
   );
 }

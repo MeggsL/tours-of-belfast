@@ -22,7 +22,7 @@ export default function BottomNavMaps() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Box sx={{ height: "5vh" }}>
+      <Box sx={{ height: "5vh" }} position={"fixed"}>
         <Container maxWidth="sm">
           <BottomNavigation
             showLabels

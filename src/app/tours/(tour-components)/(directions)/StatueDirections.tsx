@@ -45,7 +45,6 @@ function StatueDirections() {
   const [routeIndex, setRouteIndex] = useState(0);
   const selected = routes[routeIndex];
   const leg = selected?.legs[0];
-
   const [open, setOpen] = useState(true);
   //const [directionsWaypoint, setDirectionsWaypoint] = useState<google.maps.DirectionsWaypoint[]>([]);
 
@@ -113,6 +112,10 @@ function StatueDirections() {
   console.log(routes);
   if (!leg) return null;
 
+  //for (let i = 0; i < selected.leg.length; i++) {
+  //  const selectedSegment = i + 1;
+
+
   return (
     
     <div className="alertbox">
@@ -142,7 +145,6 @@ function StatueDirections() {
             </p>
             <p>Distance: {leg.distance?.text}</p>
             <p>Duration: {leg.duration?.text}</p>
-            
 
             {/*<h2>Other Routes</h2>
             <ul>
