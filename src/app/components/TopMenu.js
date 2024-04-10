@@ -13,7 +13,9 @@ import Alert from "@mui/material/Alert";
 import Collapse from "@mui/material/Collapse";
 import { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
-
+import Link from "next/link";
+import WeekendIcon from '@mui/icons-material/Weekend';
+import FloatingButton from "./FloatingButton";
 // Using the MUI Positioned Menu component with modifications
 
 const ButtonColor = () =>
@@ -57,22 +59,10 @@ export default function UpTopMenu() {
     <div className="alertbox">
       <Box maxWidth={"50%"}>
         <Collapse in={open}>
-          <ThemeProvider theme={AlertBoxColour}>
-            <Menu
-              id="demo-positioned-menu"
-              aria-labelledby="demo-positioned-button"
-              anchorEl={anchorEl}
-              open={open}
-              onClose={handleClose}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-            >
+        <ThemeProvider theme={AlertBoxColour}>
+          <Alert
+            severity="info"
+            action={
               <IconButton
                 aria-label="close"
                 color="inherit"
@@ -83,11 +73,13 @@ export default function UpTopMenu() {
               >
                 <CloseIcon fontSize="inherit" />
               </IconButton>
-    
-              <MenuItem onClick={handleClose}>Cooling Blues</MenuItem>
-              <MenuItem onClick={handleClose}>Peachy Pink</MenuItem>
-              <MenuItem onClick={handleClose}>Soothing Lilac</MenuItem>
-            </Menu>
+            }
+            sx={{ mb: 2 }}
+          >
+            <h2>Need a break?</h2>
+      
+      
+            </Alert>
           </ThemeProvider>
         </Collapse>
         <ThemeProvider theme={ButtonColor}>

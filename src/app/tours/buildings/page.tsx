@@ -8,26 +8,27 @@ import Grid from "@mui/material/Grid";
 import UpTopMenu from "../../components/TopMenu.js";
 import BottomNavMaps from "../../components/BottomNavMaps";
 import FixedBottomNavigation from "../../components/BottomNavFixed";
+import FloatingButton from "../../components/FloatingButton";
 
 import BlueMapOfBuildings from "../(tour-components)/BlueMapOfBuildings";
 
 export default function BlueBuildings() {
   return (
     <Box>
-      <Grid item md={12} container rowSpacing={-1}>
-
+      <Grid item container rowSpacing={0} padding={0}>
         <BlueMapOfBuildings />
       </Grid>
-      <Grid
 
+      <Grid
         item
-        md={12}
-        container
+        xs={12}
+        sm={6}
         justifyContent="center"
         rowSpacing={0}
         padding={0}
+        position={"fixed"}
       >
-<BottomNavMaps />
+        <BottomNavMaps />
       </Grid>
     </Box>
   );

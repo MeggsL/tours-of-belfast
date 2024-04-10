@@ -15,7 +15,8 @@ import { Alert, Box, IconButton, Collapse, Button } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-{/*}
+{
+  /*}
 function BlueMapWithRoutes() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
 
@@ -32,7 +33,8 @@ function BlueMapWithRoutes() {
       </div>
     </APIProvider>
   );
-*/}
+*/
+}
 
 function StatueDirections() {
   const map = useMap();
@@ -45,7 +47,7 @@ function StatueDirections() {
   const [routeIndex, setRouteIndex] = useState(0);
   const selected = routes[routeIndex];
   const leg = selected?.legs[0];
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   //const [directionsWaypoint, setDirectionsWaypoint] = useState<google.maps.DirectionsWaypoint[]>([]);
 
   const ButtonColor = createTheme({
@@ -115,38 +117,34 @@ function StatueDirections() {
   //for (let i = 0; i < selected.leg.length; i++) {
   //  const selectedSegment = i + 1;
 
-
   return (
-    
     <div className="alertbox">
-      <Box maxWidth={"50%"}>
+      <Box maxWidth={"80%"}>
         <Collapse in={open}>
-        <ThemeProvider theme={AlertBoxColour}>
-          <Alert
-            severity="info"
-            action={
-              <IconButton
-                aria-label="close"
-                color="inherit"
-                size="small"
-                onClick={() => {
-                  setOpen(false);
-                }}
-              >
-                <CloseIcon fontSize="inherit" />
-              </IconButton>
-            }
-            sx={{ mb: 2 }}
-          >
-            <h2>{selected.summary}</h2>
-            <p>
-              {leg.start_address.split(",")[0]} to{" "}
-              {leg.end_address.split(",")[0]}
-            </p>
-            <p>Distance: {leg.distance?.text}</p>
-            <p>Duration: {leg.duration?.text}</p>
+          <ThemeProvider theme={AlertBoxColour}>
+            <Alert
+              severity="info"
+              action={
+                <IconButton
+                  aria-label="close"
+                  color="inherit"
+                  size="small"
+                  onClick={() => {
+                    setOpen(false);
+                  }}
+                >
+                  <CloseIcon fontSize="inherit" />
+                </IconButton>
+              }
+              sx={{ mb: 2 }}
+            >
+              <h2>What kind of break?</h2>
+              <p>Bench</p>
+              <p>Coffee</p>
+              <p>Water</p>
+              <p>Toilet</p>
 
-            {/*<h2>Other Routes</h2>
+              {/*<h2>Other Routes</h2>
             <ul>
               {routes.map((route, index) => (
                 <li key={route.summary}>
@@ -156,7 +154,7 @@ function StatueDirections() {
                 </li>
               ))}
             </ul>*/}
-          </Alert>
+            </Alert>
           </ThemeProvider>
         </Collapse>
         <ThemeProvider theme={ButtonColor}>
@@ -167,7 +165,7 @@ function StatueDirections() {
               setOpen(true);
             }}
           >
-            Route Info
+            Need a Break
           </Button>
         </ThemeProvider>
       </Box>
