@@ -1,5 +1,11 @@
+import React from "react";
 import PurpleWelcome from "../components/PurpleWelcome.js";
 import "./purple.css";
+
+import "../page.module.css";
+import Grid from "@mui/material/Unstable_Grid2";
+import Box from "@mui/material/Box";
+import BottomNavMaps from "../components/BottomNavMaps.js";
 
 <html lang="en">
   <head>
@@ -11,10 +17,22 @@ import "./purple.css";
 
 export default function Home() {
   return (
-    <main className="main">
-    <div>
-      <PurpleWelcome />
-    </div>
-    </main>
+    <Box>
+      <Grid item container rowSpacing={0} padding={0}>
+        <PurpleWelcome />
+      </Grid>
+
+      <Grid
+        item
+        xs={12}
+        sm={6}
+        justifyContent="center"
+        rowSpacing={0}
+        padding={0}
+        position={"fixed"}
+      >
+        <BottomNavMaps />
+      </Grid>
+    </Box>
   );
 }

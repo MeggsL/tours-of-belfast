@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -13,7 +13,6 @@ import Grid from "@mui/material/Grid";
 import BottomNavTours from "./BottomNavTours.js";
 import BottomNavMaps from "./BottomNavMaps.js";
 
-
 // children components of images and buttons
 const ImgOne = () => {
   return (
@@ -21,8 +20,8 @@ const ImgOne = () => {
       //className={styles.logo}
       src="/img/historic-buildings-tour.png"
       alt="Buildings Tour"
-      width={300}
-      height={310}
+      width={255}
+      height={210}
       priority
     />
   );
@@ -34,8 +33,8 @@ const ImgTwo = () => {
       //className={styles.logo}
       src="/img/landmarks-monuments-tour.png"
       alt="Landmarks Tour"
-      width={300}
-      height={310}
+      width={255}
+      height={210}
       priority
     />
   );
@@ -47,8 +46,8 @@ const ImgThree = () => {
       //className={styles.logo}
       src="/img/statues-artwork-tour.png"
       alt="Statues Tour"
-      width={300}
-      height={310}
+      width={255}
+      height={210}
       priority
     />
   );
@@ -79,7 +78,7 @@ const StartStatuesTour = () => {
 };
 
 export {
- // Item,
+  // Item,
   ImgOne,
   ImgTwo,
   ImgThree,
@@ -90,31 +89,93 @@ export {
 
 export default function TourTable() {
   return (
-    <Box xs={{ flexgrow: 1, height: "98vh" }}>
+    <Box xs={{ flexgrow: 1, height: "100%" }}>
 
-      <Grid container rowSpacing={4} justifyContent="center">
-        <Grid item xs={12} container justifyContent="center">
-        <ImgOne />
+        <Grid
+          item
+          xs={12}
+          container
+          spacing={2}
+          justifyContent="center"
+          rowSpacing={0}
+          paddingTop={2}
+        >
+          <Grid
+            container
+            spacing={2}
+            rowSpacing={-2}
+            item
+            xs={12}
+            paddingTop={4}
+            justifyContent="center"
+          >
+            <ImgOne />
+          </Grid>
+       {/*}   <Grid
+            container
+            spacing={2}
+            rowSpacing={3}
+            item
+            xs={12}
+            paddingTop={6}
+            justifyContent="center"
+          >
+            <StartBuildingsTour />
+  </Grid> */}
+          <Grid
+            container
+            spacing={2}
+            rowSpacing={-2}
+            item
+            xs={12}
+            paddingTop={8}
+            justifyContent="center"
+          >
+            <ImgTwo />
+          </Grid>
+         {/*} <Grid
+            container
+            spacing={2}
+            rowSpacing={3}
+            item
+            xs={12}
+            paddingTop={6}
+            justifyContent="center"
+          >
+            <StartLandmarksTour />
+  </Grid> */}
+          <Grid
+            container
+            spacing={2}
+            rowSpacing={-2}
+            item
+            xs={12}
+            paddingTop={8}
+            justifyContent="center"
+          >
+            <ImgThree />
+          </Grid>
+         {/*} <Grid
+            container
+            spacing={2}
+            rowSpacing={3}
+            item
+            xs={12}
+            paddingTop={6}
+            justifyContent="center"
+          >
+            <StartStatuesTour />
+</Grid> */}
+ 
+          <Grid
+            item
+            xs={12}
+            container
+            justifyContent="center"
+            rowSpacing={0}
+            paddingTop={0}
+          ></Grid>
         </Grid>
-        <Grid item xs={12} container justifyContent="center" rowSpacing={-1}>
-        <StartBuildingsTour />
-        </Grid>
-        <Grid item xs={12} container justifyContent="center" rowSpacing={-2}>
-        <ImgTwo />
-        </Grid>
-        <Grid item xs={12} container justifyContent="center" rowSpacing={-2}>
-        <StartLandmarksTour />
-        </Grid>
-        <Grid item xs={12} container justifyContent="center" rowSpacing={-2}>
-        <ImgThree />
-        </Grid>
-        <Grid item xs={12} container justifyContent="center" rowSpacing={-2}>
-        <StartStatuesTour />
-        </Grid>
-        <Grid item xs={12} container justifyContent="center" rowSpacing={-2} position={"fixed"}>
-
-        </Grid>
-      </Grid>
 
     </Box>
   );

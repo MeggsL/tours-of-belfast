@@ -93,7 +93,7 @@ export default function PurpleWelcome() {
           <BothCranes />
         </Grid>
         <Grid item xs={12} container justifyContent="center" rowSpacing={-4} paddingTop={3} >
-        <Link href="/tours">
+        <Link href="/purple/purple-tours">
           <PurpleButton />
           </Link>
         </Grid>

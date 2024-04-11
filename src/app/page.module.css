@@ -14,6 +14,13 @@
   position: sticky;
 }
 
+.MuiBottomNavigation-root {
+  display: flex;
+  align-items: center;
+  background: none;
+
+}
+
 .description {
   display: inherit;
   justify-content: inherit;

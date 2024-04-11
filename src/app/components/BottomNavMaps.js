@@ -9,6 +9,7 @@ import WbSunnyTwoToneIcon from "@mui/icons-material/WbSunnyTwoTone";
 import DoNotDisturbOnTotalSilenceTwoToneIcon from "@mui/icons-material/DoNotDisturbOnTotalSilenceTwoTone";
 import RouteTwoToneIcon from "@mui/icons-material/RouteTwoTone";
 import HomeTwoToneIcon from "@mui/icons-material/HomeTwoTone";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 //import WhereToVoteTwoToneIcon from "@mui/icons-material/WhereToVoteTwoTone";
 //import WcTwoToneIcon from '@mui/icons-material/WcTwoTone';
 //import AirTwoToneIcon from '@mui/icons-material/AirTwoTone';
@@ -23,12 +24,31 @@ import Image from 'next/image';
 export default function BottomNavMaps() {
   const [value, setValue] = React.useState(0);
 
+  const theme = createTheme({
+    components: {
+      BottomNavigation,
+      MuiButton: {
+        styleOverrides: {
+          root: ({ ownerState }) => ({
+            ...(ownerState.variant === 'contained' &&
+              ownerState.color === 'primary' && {
+                backgroundColor: "transparent",
+                color: '#fff',
+              }),
+          }),
+        },
+      },
+    },
+  });
+
+
   return (
     <React.Fragment>
       <CssBaseline />
-      <Box sx={{ height: "5vh" }} position={"fixed"} alignContent={"center"} alignItems={"center"} >
+      <Box sx={{ height: "5vh" }} alignContent={"center"} alignItems={"center"} >
         <BottomNavigation
           showLabels
+          className={"MuiBottomNavigation-root"}
           value={value}
           onChange={(event, newValue) => {
             setValue(newValue);

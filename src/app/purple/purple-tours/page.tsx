@@ -1,12 +1,12 @@
 import React from "react";
-import TourTable from "../components/TourTable.js";
+import TourTable from "../../components/TourTable.js";
 //import BottomNavTours from "../components/BottomNavTours.js";
-
-import "../globals.css";
-import "../page.module.css";
+import styles from "../page.module.css";
+import "../purple.css";
+import "../../page.module.css";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import BottomNavMaps from "../components/BottomNavMaps.js";
+import BottomNavMaps from "../../components/BottomNavMaps.js";
 
 export default function Home() {
   return (

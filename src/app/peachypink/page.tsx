@@ -1,5 +1,12 @@
-import PeachyWelcome from "../components/PeachyWelcome.js";
-import "./peachypink.css";
+import React from "react";
+import PeachyWelcome from "./peachy-components/PeachyWelcome.js";
+import ".//peachypink.css";
+import "../page.module.css";
+//import Grid from "@mui/material/Unstable_Grid2";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import BottomNavMaps from "../components/BottomNavMaps.js";
 
 <html lang="en">
   <head>
@@ -11,10 +18,19 @@ import "./peachypink.css";
 
 export default function PeachyHome() {
   return (
-    <main className="grid">
-      <div>
+    <div>
+      <Grid
+        item
+        xs={12}
+        container
+        justifyContent="center"
+        rowSpacing={0}
+        paddingTop={5}
+        paddingBottom={8}
+      >
         <PeachyWelcome />
-      </div>
-    </main>
+        <BottomNavMaps />
+      </Grid>
+    </div>
   );
 }
