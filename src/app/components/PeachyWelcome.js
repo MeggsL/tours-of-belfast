@@ -3,12 +3,11 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-//import Box from "@mui/material/Box";
-//import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
 //import TransitionHover from "./StyledAvatarButton.js";
 //import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Unstable_Grid2"; // Grid version 2
-import "../peachypink/peachypink.css";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import FilterVintageTwoToneIcon from "@mui/icons-material/FilterVintageTwoTone";
@@ -22,9 +21,9 @@ const Title = () => {
     <Image
       //className={styles.logo}
       src="/img/pp-welcome.png"
-      alt="Tour of Belfast"
-      width={356}
-      height={360}
+      alt="Welcome"
+      width={300}
+      height={427}
       priority
     />
   );
@@ -34,8 +33,8 @@ const BothCranes = () => {
   return (
     <Image
       // className={styles.logo}
-      src="/cranes800x435.png"
-      alt="Tours of Belfast"
+      src="/img/cranes800x435.png"
+      alt="Samson and Goliath"
       width={400}
       height={218}
       priority
@@ -61,7 +60,7 @@ function PeachyButton() {
       <Button
         variant="contained"
         size="large"
-        startIcon={<FilterVintageTwoToneIcon />}
+      //  startIcon={<FilterVintageTwoToneIcon />}
       >
         Choose Your Tour
       </Button>
@@ -73,33 +72,46 @@ export { Title, BothCranes, PeachyButton };
 
 export default function PeachyWelcome() {
   return (
-    <Grid
-      item
-      xs={12}
-      container
-      spacing={2}
-      justifyContent="center"
-      rowSpacing={-2}
-    >
-      <Grid item xs={12} container justifyContent="center" rowSpacing={-4}>
-        <Title />
-      </Grid>
-      <Grid item xs={12} container justifyContent="center" rowSpacing={-1}>
-        <BothCranes />
-      </Grid>
-      <Grid item xs={12} container justifyContent="center" rowSpacing={-4}>
-        <Link href="/tours">
-          <PeachyButton />
-        </Link>
-      </Grid>
+    <Box xs={{ flexgrow: 1, height: "100%" }}>
+      <Container maxWidth="sm">
+        <Grid
+          item
+          xs={12}
+          container
+          spacing={2}
+          justifyContent="center"
+          rowSpacing={0}
+          paddingTop={4}
+        >
+          <Grid
+            item
+            xs={12}
+            container
+            justifyContent="center"
+            rowSpacing={-4}
+            paddingTop={3}
+          >
+            <Title />
+          </Grid>
+          <Grid item xs={12} container justifyContent="center" rowSpacing={-1} paddingTop={2}>
+            <BothCranes />
+          </Grid>
+          <Grid item xs={12} container justifyContent="center" rowSpacing={-4} paddingTop={3} >
+            <Link href="/tours">
+              <PeachyButton />
+            </Link>
+          </Grid>
 
-      <Grid
-        item
-        xs={12}
-        container
-        justifyContent="center"
-        rowSpacing={-1}
-      ></Grid>
-    </Grid>
+          <Grid
+            item
+            xs={12}
+            container
+            justifyContent="center"
+            rowSpacing={0}
+            paddingTop={8}
+          ></Grid>
+        </Grid>
+      </Container>
+    </Box>
   );
 }

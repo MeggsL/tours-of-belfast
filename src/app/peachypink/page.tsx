@@ -9,13 +9,12 @@ import "./peachypink.css";
   <body></body>
 </html>;
 
-export default function Home() {
+export default function PeachyHome() {
   return (
-
+    <main className="grid">
       <div>
         <PeachyWelcome />
       </div>
-
+    </main>
   );
 }
-

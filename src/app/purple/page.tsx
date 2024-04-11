@@ -11,8 +11,10 @@ import "./purple.css";
 
 export default function Home() {
   return (
+    <main className="main">
     <div>
       <PurpleWelcome />
     </div>
+    </main>
   );
 }
