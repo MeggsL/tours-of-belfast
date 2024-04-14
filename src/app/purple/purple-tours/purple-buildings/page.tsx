@@ -1,22 +1,22 @@
 import React from "react";
 //import BlueMapOfBuildings from "../(tour-components)/BlueMapOfBuildings";
-import "../../globals.css";
+import "../../purple.css";
 import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
+//import Container from "@mui/material/Container";
 //import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
-import UpTopMenu from "../../components/TopMenu.js";
-import BottomNavMaps from "../../components/BottomNavMaps";
-import FixedBottomNavigation from "../../components/BottomNavFixed";
-import FloatingButton from "../../components/FloatingButton";
+//import UpTopMenu from "../../components/TopMenu.js";
+import PurpleBottomNavMaps from "../../purple-components/PurpleBottomNavMaps";
+//import FixedBottomNavigation from "../../components/BottomNavFixed";
+//import FloatingButton from "../../components/FloatingButton";
 
-import BlueMapOfBuildings from "../../components/(tour-components)/BlueMapOfBuildings";
+import PurpleMapOfBuildings from "../../purple-components/PurpleMapOfBuildings";
 
 export default function BlueBuildings() {
   return (
     <Box>
       <Grid item container rowSpacing={0} padding={0}>
-        <BlueMapOfBuildings />
+        <PurpleMapOfBuildings />
       </Grid>
 
       <Grid
@@ -28,7 +28,7 @@ export default function BlueBuildings() {
         padding={0}
       
       >
-        <BottomNavMaps />
+        <PurpleBottomNavMaps />
       </Grid>
     </Box>
   );

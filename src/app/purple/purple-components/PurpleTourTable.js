@@ -3,11 +3,11 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import TButton from "../components/TourButton.js";
+import TButton from "../../components/TourButton.js";
 //import "../globals.css";
-import "../page.module.css";
+import "../p-page.module.css";
 import Box from "@mui/material/Box";
-//import Container from "@mui/material/Container";
+import Container from "@mui/material/Container";
 //import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 //import BottomNavTours from "./BottomNavTours.js";
@@ -16,6 +16,7 @@ import Grid from "@mui/material/Grid";
 // children components of images and buttons
 const ImgOne = () => {
   return (
+    <Link href={"./purple-tours/purple-buildings"}>
     <Image
       //className={styles.logo}
       src="/img/historic-buildings-tour.png"
@@ -24,11 +25,13 @@ const ImgOne = () => {
       height={210}
       priority
     />
+    </Link>
   );
 };
 
 const ImgTwo = () => {
   return (
+    <Link href={"./purple-tours/purple-landmarks"}>
     <Image
       //className={styles.logo}
       src="/img/landmarks-monuments-tour.png"
@@ -37,11 +40,13 @@ const ImgTwo = () => {
       height={210}
       priority
     />
+    </Link>
   );
 };
 
 const ImgThree = () => {
   return (
+    <Link href={"./purple-tours/purple-statues"}>
     <Image
       //className={styles.logo}
       src="/img/statues-artwork-tour.png"
@@ -50,6 +55,7 @@ const ImgThree = () => {
       height={210}
       priority
     />
+    </Link>
   );
 };
 
@@ -87,9 +93,10 @@ export {
   StartStatuesTour,
 };
 
-export default function TourTable() {
+export default function PurpleTourTable() {
   return (
     <Box xs={{ flexgrow: 1, height: "100%" }}>
+            <Container maxWidth="sm">
 
         <Grid
           item
@@ -176,7 +183,7 @@ export default function TourTable() {
             paddingTop={0}
           ></Grid>
         </Grid>
-
+        </Container>
     </Box>
   );
 }

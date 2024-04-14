@@ -1,5 +1,5 @@
 import React from "react";
-import PurpleMapOfLandmarks from "../../components/(tour-components)/PurpleMapOfLandmarks";
+import PurpleMapOfLandmarks from "../(tour-components)/PurpleMapOfLandmarks";
 import "../../globals.css";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";

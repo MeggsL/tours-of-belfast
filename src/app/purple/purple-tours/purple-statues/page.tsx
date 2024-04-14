@@ -1,5 +1,4 @@
 import React from "react";
-import PurpleMapOfLandmarks from "../../components/(tour-components)/PurpleMapOfLandmarks";
 import "../../globals.css";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
@@ -7,8 +6,9 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import UpTopMenu from "../../components/TopMenu.js";
 import BottomNavMaps from "../../components/BottomNavMaps";
+import BlueMapOfStatues from "../(tour-components)/BlueMapOfStatues";
 
-export default function PurpleLandmarks() {
+export default function PinkStatues() {
   return (
     <Box xs={{ flexgrow: 1, bgcolor: "#cfe8fc", height: "100vh" }}>
       <Container maxWidth="sm"></Container>
@@ -18,11 +18,11 @@ export default function PurpleLandmarks() {
         </Grid>
         <Grid item xs={12} container justifyContent="center" rowSpacing={3}>
           <Container fixed>
-    <PurpleMapOfLandmarks />
+           <BlueMapOfStatues />
           </Container>
         </Grid>
         <Grid item xs={12} container justifyContent="center" rowSpacing={4}>
-        <BottomNavMaps/>
+        <BottomNavMaps />
         </Grid>
       </Grid>
       <Container />

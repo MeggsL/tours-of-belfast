@@ -5,7 +5,7 @@ import "./purple.css";
 import "./p-page.module.css";
 import Grid from "@mui/material/Unstable_Grid2";
 import Box from "@mui/material/Box";
-import BottomNavMaps from "../components/BottomNavMaps.js";
+import PurpleBottomNavMaps from "./purple-components/PurpleBottomNavMaps.js";
 
 <html lang="en">
   <head>
@@ -28,8 +28,9 @@ export default function PurpleHome() {
       
       >
         <PurpleWelcome />
-        <BottomNavMaps />
+
       </Grid>
+      <PurpleBottomNavMaps />
     </Box>
   );
 }

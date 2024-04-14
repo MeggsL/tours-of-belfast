@@ -6,7 +6,7 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import UpTopMenu from "../../components/TopMenu.js";
 import BottomNavMaps from "../../components/BottomNavMaps";
-import BlueMapOfStatues from "../(tour-components)/BlueMapOfStatues";
+import BlueMapOfStatues from "../../components/(tour-components)/BlueMapOfStatues";
 
 export default function PinkStatues() {
   return (
