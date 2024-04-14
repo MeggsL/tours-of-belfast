@@ -6,7 +6,6 @@
 
 :root {
   --max-width: 1100px;
-  --max-height:var(1200px)
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
@@ -32,7 +31,6 @@
 
   --tile-start-rgb: 237, 161, 166;
   --tile-end-rgb: 237, 161, 166;
-  --max-height:var(1200px)
   --background-repeat: no-repeat;
   --tile-border: conic-gradient(
     #00000080,
@@ -105,7 +103,7 @@ h2 {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-repeat: ;
+  background-repeat: no-repeat;
   background: linear-gradient(
       to bottom,
       transparent,

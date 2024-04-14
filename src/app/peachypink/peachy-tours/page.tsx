@@ -2,8 +2,8 @@ import React from "react";
 import TourTable from "../../components/TourTable.js";
 //import BottomNavTours from "../components/BottomNavTours.js";
 import "../../peachypink/peachypink.css";
-import "../../page.module.css";
-import Grid from "@mui/material/Grid";
+import "../pp-page.module.css";
+import Grid from "@mui/material/Unstable_Grid2";
 //import Grid from "@mui/material/Unstable_Grid2"; // Grid version 2
 import Box from "@mui/material/Box";
 import BottomNavMaps from "../../components/BottomNavMaps.js";
