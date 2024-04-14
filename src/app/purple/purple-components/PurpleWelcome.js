@@ -5,10 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import TransitionHover from "./StyledAvatarButton.js";
+//import TransitionHover from "./StyledAvatarButton.js";
 //import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Unstable_Grid2"; 
-import "../purple/purple.css";
+import "../purple.css";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 

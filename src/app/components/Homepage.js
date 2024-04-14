@@ -5,12 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import TransitionHover from "../components/StyledAvatarButton.js";
+//import TransitionHover from "../components/StyledAvatarButton.js";
 import Button from "@mui/material/Button";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import AcUnitTwoToneIcon from "@mui/icons-material/AcUnitTwoTone";
-import SelfImprovementTwoToneIcon from "@mui/icons-material/SelfImprovementTwoTone";
-import FilterVintageTwoToneIcon from "@mui/icons-material/FilterVintageTwoTone";
+//import AcUnitTwoToneIcon from "@mui/icons-material/AcUnitTwoTone";
+//import SelfImprovementTwoToneIcon from "@mui/icons-material/SelfImprovementTwoTone";
+//import FilterVintageTwoToneIcon from "@mui/icons-material/FilterVintageTwoTone";
 
 //import Paper from "@mui/material/Paper";
 //import Grid from '@mui/material/Grid'; // Grid version 1
