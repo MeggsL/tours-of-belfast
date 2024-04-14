@@ -64,7 +64,7 @@ function BlueyButton() {
 
 export { Title, BothCranes, BlueyButton };
 
-export default function PeachyWelcome() {
+export default function BlueyWelcome() {
   return (
     <Box xs={{ flexgrow: 1, height: "100%" }}>
       <Container maxWidth="sm">
@@ -91,7 +91,7 @@ export default function PeachyWelcome() {
             <BothCranes />
           </Grid>
           <Grid item xs={12} container justifyContent="center" rowSpacing={-4} paddingTop={3} >
-            <Link href="/tours">
+            <Link href="./blueygrey/bluey-tours">
               <BlueyButton />
             </Link>
           </Grid>

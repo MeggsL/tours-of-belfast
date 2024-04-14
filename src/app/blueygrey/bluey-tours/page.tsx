@@ -1,31 +1,30 @@
 import React from "react";
 import BlueyTourTable from "../bluey-components/BlueyTourTable.js";
 //import BottomNavTours from "../components/BottomNavTours.js";
-import "../../peachypink/peachypink.css";
-import "../pp-page.module.css";
+import "./blueygrey/bluegrey.css";
+import "./bg-page.module.css";
 import Grid from "@mui/material/Grid";
 //import Grid from "@mui/material/Unstable_Grid2"; // Grid version 2
 //import Box from "@mui/material/Box";
 import BottomNavMaps from "../../components/BottomNavMaps.js";
+import Box from "@mui/material/Box";
 
 //import Container from "@mui/material/Container";
 
 export default function BlueyToursHome() {
   return (
-    <div>
+    <Box>
       <Grid
         item
         xs={12}
-        container
+        sm={6}
         justifyContent="center"
         rowSpacing={0}
-        paddingTop={5}
-        paddingBottom={8}
+        padding={0}
       >
         <BlueyTourTable />
-
-        <BottomNavMaps />
       </Grid>
-    </div>
+      <BottomNavMaps />
+    </Box>
   );
 }
