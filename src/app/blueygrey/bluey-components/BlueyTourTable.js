@@ -16,6 +16,7 @@ import Grid from "@mui/material/Grid";
 // children components of images and buttons
 const ImgOne = () => {
   return (
+    <Link href={"./bluey-tours/bluey-buildings"}>
     <Image
       //className={styles.logo}
       src="/img/historic-buildings-tour.png"
@@ -24,11 +25,13 @@ const ImgOne = () => {
       height={210}
       priority
     />
+    </Link>
   );
 };
 
 const ImgTwo = () => {
   return (
+    <Link href={"./bluey-tours/bluey-landmarks"}>
     <Image
       //className={styles.logo}
       src="/img/landmarks-monuments-tour.png"
@@ -37,11 +40,13 @@ const ImgTwo = () => {
       height={210}
       priority
     />
+    </Link>
   );
 };
 
 const ImgThree = () => {
   return (
+    <Link href={"./bluey-tours/bluey-statues"}>
     <Image
       //className={styles.logo}
       src="/img/statues-artwork-tour.png"
@@ -50,6 +55,7 @@ const ImgThree = () => {
       height={210}
       priority
     />
+    </Link>
   );
 };
 

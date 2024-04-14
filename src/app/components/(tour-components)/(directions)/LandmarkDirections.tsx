@@ -1,6 +1,9 @@
 "use client";
 
 import {
+  APIProvider,
+  Map,
+  AdvancedMarker,
   useMapsLibrary,
   useMap,
 } from "@vis.gl/react-google-maps";
@@ -33,7 +36,7 @@ function BlueMapWithRoutes() {
 */
 }
 
-function StatueDirections() {
+function LandmarkDirections() {
   const map = useMap();
   const routesLibrary = useMapsLibrary("routes");
   const [directionsService, setDirectionsService] =
@@ -84,14 +87,17 @@ function StatueDirections() {
         origin: "Europa Buscentre, Belfast UK",
 
         waypoints: [
-          { location: "Queen's Arcade, Belfast UK" }, //the masts
-          { location: "Spirit of Belfast, Belfast UK" },
-          { location: "The Speaker, Belfast UK" },
-          { location: "The Big Fish, Belfast UK" },
-          { location: "Beacon of Hope, Belfast UK" },
-          { location: "The Speaker, Belfast UK" },
-          //   { location: "Queen Victoria Memorial, Belfast UK" },
-          //  { location: "Edward James Harland Statue, Belfast UK" },
+          {
+            location:
+              "Crown Liquor Saloon, Belfast UK"
+          }, 
+          { location: "Monument to the Unknown Woman Worker , Belfast UK" },
+          { location: "Henry Cooke Monument, Belfast UK" },
+          { location: "St George's Market, Belfast UK" },
+          //{ location: "The Merchant Hotel, Belfast UK" },
+          { location: "Albert Memorial Clock, Belfast UK" },
+          { location: "Titanic Memorial Garden, Belfast UK" },
+          { location: "Memorial to World War I and II soldiers, Belfast UK" },
         ],
         destination: "Front of Belfast City Hall, Belfast UK",
         travelMode: google.maps.TravelMode.WALKING,
@@ -106,6 +112,7 @@ function StatueDirections() {
   useEffect(() => {
     if (!directionsRenderer) return;
     directionsRenderer.setRouteIndex(routeIndex);
+    suppressMarkers: true;
   }, [routeIndex, directionsRenderer]);
 
   console.log(routes);
@@ -116,7 +123,8 @@ function StatueDirections() {
 
   return null;
 
-    {/*}
+  {
+    /*}
     <div className="alertbox">
       <Box maxWidth={"80%"}>
         <Collapse in={open}>
@@ -169,8 +177,9 @@ function StatueDirections() {
         </ThemeProvider>
       </Box>
     </div>
-          */}
-
+          */
+  }
 }
 
-export default StatueDirections;
+
+export default LandmarkDirections;

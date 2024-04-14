@@ -16,6 +16,7 @@ import Grid from "@mui/material/Grid";
 // children components of images and buttons
 const ImgOne = () => {
   return (
+    <Link href={"./peachy-tours/peachy-buildings"}>
     <Image
       //className={styles.logo}
       src="/img/historic-buildings-tour.png"
@@ -24,11 +25,13 @@ const ImgOne = () => {
       height={210}
       priority
     />
+    </Link>
   );
 };
 
 const ImgTwo = () => {
   return (
+    <Link href={"./peachy-tours/peachy-landmarks"}>
     <Image
       //className={styles.logo}
       src="/img/landmarks-monuments-tour.png"
@@ -37,11 +40,13 @@ const ImgTwo = () => {
       height={210}
       priority
     />
+    </Link>
   );
 };
 
 const ImgThree = () => {
   return (
+    <Link href={"./peachy-tours/peachy-statues"}>
     <Image
       //className={styles.logo}
       src="/img/statues-artwork-tour.png"
@@ -50,12 +55,13 @@ const ImgThree = () => {
       height={210}
       priority
     />
+    </Link>
   );
 };
 
 const StartBuildingsTour = () => {
   return (
-    <Link href={"./tours/buildings"}>
+    <Link href={"./peachy-tours/peachy-buildings"}>
       <TButton />
     </Link>
   );
@@ -63,7 +69,7 @@ const StartBuildingsTour = () => {
 
 const StartLandmarksTour = () => {
   return (
-    <Link href={"./tours/landmarks"}>
+    <Link href={"./peachy-tours/peachy-landmarks"}>
       <TButton />
     </Link>
   );
@@ -71,7 +77,7 @@ const StartLandmarksTour = () => {
 
 const StartStatuesTour = () => {
   return (
-    <Link href={"./tours/statues"}>
+    <Link href={"./peachy-tours/peachy-statues"}>
       <TButton />
     </Link>
   );
@@ -87,7 +93,7 @@ export {
   StartStatuesTour,
 };
 
-export default function TourTable() {
+export default function PeachyTourTable() {
   return (
     <Box xs={{ flexgrow: 1, height: "100%" }}>
 

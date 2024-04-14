@@ -1,5 +1,8 @@
-import BlueyWelcome from "../components/BlueyWelcome.js";
-import "../blueygrey/blueygrey.css";
+import BlueyWelcome from "./bluey-components/BlueyWelcome.js";
+import "./blueygrey.css";
+import BottomNavMaps from "../components/BottomNavMaps.js";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
 
 <html lang="en">
   <head>
@@ -9,12 +12,20 @@ import "../blueygrey/blueygrey.css";
   <body></body>
 </html>;
 
-export default function Home() {
+export default function BlueHome() {
   return (
-    <main className="main">
-      <div>
+    <Box>
+      <Grid
+        item
+        xs={12}
+        sm={6}
+        justifyContent="center"
+        rowSpacing={0}
+        padding={0}
+      >
         <BlueyWelcome />
-      </div>
-    </main>
+      </Grid>
+      <BottomNavMaps />
+    </Box>
   );
 }

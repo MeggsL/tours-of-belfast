@@ -1,31 +1,34 @@
 import React from "react";
-import PurpleMapOfLandmarks from "../(tour-components)/PurpleMapOfLandmarks";
-import "../../globals.css";
+//import BlueMapOfBuildings from "../(tour-components)/BlueMapOfBuildings";
+import "../../purple.css";
 import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
+//import Container from "@mui/material/Container";
 //import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
-import UpTopMenu from "../../components/TopMenu.js";
-import BottomNavMaps from "../../components/BottomNavMaps";
+//import UpTopMenu from "../../components/TopMenu.js";
+//import PurpleBottomNavMaps from "../../purple-components/PurpleBottomNavMaps";
+//import FixedBottomNavigation from "../../components/BottomNavFixed";
+//import FloatingButton from "../../components/FloatingButton";
+
+import BottomNavMaps from "../../../components/BottomNavMaps";
+import PurpleMapOfLandmarks from "../../purple-components/PurpleMapOfLandmarks";
 
 export default function PurpleLandmarks() {
   return (
-    <Box xs={{ flexgrow: 1, bgcolor: "#cfe8fc", height: "100vh" }}>
-      <Container maxWidth="sm"></Container>
-      <Grid container rowSpacing={4} justifyContent="center">
-        <Grid item xs={12} container justifyContent="center" rowSpacing={-3}>
-          <UpTopMenu />
-        </Grid>
-        <Grid item xs={12} container justifyContent="center" rowSpacing={3}>
-          <Container fixed>
-    <PurpleMapOfLandmarks />
-          </Container>
-        </Grid>
-        <Grid item xs={12} container justifyContent="center" rowSpacing={4}>
-        <BottomNavMaps/>
-        </Grid>
+    <Box>
+      <Grid
+        item
+        xs={12}
+        sm={6}
+        justifyContent="center"
+        rowSpacing={0}
+        padding={0}
+      >
+        <PurpleMapOfLandmarks />
       </Grid>
-      <Container />
+      <Grid paddingBottom={2.5}>
+        <BottomNavMaps />
+      </Grid>
     </Box>
   );
 }

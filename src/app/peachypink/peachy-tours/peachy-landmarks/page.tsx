@@ -11,10 +11,9 @@ import Grid from "@mui/material/Grid";
 //import FloatingButton from "../../components/FloatingButton";
 
 import BottomNavMaps from "../../../components/BottomNavMaps";
+import PinkMapOfLandmarks from "../../peachy-components/PinkMapOfLandmarks";
 
-import PurpleMapOfStatues from "../../purple-components/PurpleMapOfStatues";
-
-export default function PurpleStatues() {
+export default function PeachyLandmarks() {
   return (
     <Box>
       <Grid
@@ -25,7 +24,7 @@ export default function PurpleStatues() {
         rowSpacing={0}
         padding={0}
       >
-        <PurpleMapOfStatues />
+        <PinkMapOfLandmarks />
       </Grid>
       <Grid paddingBottom={2.5}>
         <BottomNavMaps />

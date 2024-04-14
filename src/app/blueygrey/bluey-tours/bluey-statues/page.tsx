@@ -11,10 +11,9 @@ import Grid from "@mui/material/Grid";
 //import FloatingButton from "../../components/FloatingButton";
 
 import BottomNavMaps from "../../../components/BottomNavMaps";
+import BlueMapOfStatues from "../../bluey-components/BlueMapOfStatues";
 
-import PurpleMapOfStatues from "../../purple-components/PurpleMapOfStatues";
-
-export default function PurpleStatues() {
+export default function BlueStatues() {
   return (
     <Box>
       <Grid
@@ -25,7 +24,7 @@ export default function PurpleStatues() {
         rowSpacing={0}
         padding={0}
       >
-        <PurpleMapOfStatues />
+        <BlueMapOfStatues />
       </Grid>
       <Grid paddingBottom={2.5}>
         <BottomNavMaps />

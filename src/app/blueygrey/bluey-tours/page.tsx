@@ -1,5 +1,5 @@
 import React from "react";
-import PeachyTourTable from "../peachy-components/PeachyTourTable.js";
+import BlueyTourTable from "../bluey-components/BlueyTourTable.js";
 //import BottomNavTours from "../components/BottomNavTours.js";
 import "../../peachypink/peachypink.css";
 import "../pp-page.module.css";
@@ -10,7 +10,7 @@ import BottomNavMaps from "../../components/BottomNavMaps.js";
 
 //import Container from "@mui/material/Container";
 
-export default function PeachyToursHome() {
+export default function BlueyToursHome() {
   return (
     <div>
       <Grid
@@ -22,7 +22,7 @@ export default function PeachyToursHome() {
         paddingTop={5}
         paddingBottom={8}
       >
-        <PeachyTourTable />
+        <BlueyTourTable />
 
         <BottomNavMaps />
       </Grid>

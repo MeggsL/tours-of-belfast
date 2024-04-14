@@ -1,20 +1,18 @@
 import React from "react";
 //import BlueMapOfBuildings from "../(tour-components)/BlueMapOfBuildings";
-import "../../purple.css";
+import "../../peachypink.css";
 import Box from "@mui/material/Box";
 //import Container from "@mui/material/Container";
 //import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 //import UpTopMenu from "../../components/TopMenu.js";
-//import PurpleBottomNavMaps from "../../purple-components/PurpleBottomNavMaps";
+import BottomNavMaps from "../../../components/BottomNavMaps";
 //import FixedBottomNavigation from "../../components/BottomNavFixed";
 //import FloatingButton from "../../components/FloatingButton";
 
-import BottomNavMaps from "../../../components/BottomNavMaps";
+import PinkMapOfBuildings from "../../peachy-components/PinkMapOfBuildings";
 
-import PurpleMapOfStatues from "../../purple-components/PurpleMapOfStatues";
-
-export default function PurpleStatues() {
+export default function PinkBuildings() {
   return (
     <Box>
       <Grid
@@ -25,7 +23,7 @@ export default function PurpleStatues() {
         rowSpacing={0}
         padding={0}
       >
-        <PurpleMapOfStatues />
+        <PinkMapOfBuildings />
       </Grid>
       <Grid paddingBottom={2.5}>
         <BottomNavMaps />

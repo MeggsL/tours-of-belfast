@@ -6,16 +6,14 @@ import Box from "@mui/material/Box";
 //import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 //import UpTopMenu from "../../components/TopMenu.js";
-//import PurpleBottomNavMaps from "../../purple-components/PurpleBottomNavMaps";
+import BottomNavMaps from "../../../components/BottomNavMaps";
 //import FixedBottomNavigation from "../../components/BottomNavFixed";
 //import FloatingButton from "../../components/FloatingButton";
+import BlueMapOfBuildings from "../../bluey-components/BlueMapOfBuildings";
 
-import BottomNavMaps from "../../../components/BottomNavMaps";
-
-import PurpleMapOfStatues from "../../purple-components/PurpleMapOfStatues";
-
-export default function PurpleStatues() {
+export default function BlueBuildings() {
   return (
+
     <Box>
       <Grid
         item
@@ -25,11 +23,12 @@ export default function PurpleStatues() {
         rowSpacing={0}
         padding={0}
       >
-        <PurpleMapOfStatues />
+        <BlueMapOfBuildings />
       </Grid>
       <Grid paddingBottom={2.5}>
-        <BottomNavMaps />
+      <BottomNavMaps />
       </Grid>
     </Box>
+
   );
 }
