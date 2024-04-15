@@ -58,13 +58,13 @@ const fetchData = async () => {
  
           {data.map(
             (weather) => (
-              //<div key={item.weather}>
+              <div key={item.weather}>
               (<h2>Current Conditions</h2>),
               (<p>{weather.id}</p>),
               (<p>{weather.main}</p>),
               (<p>{weather.description}</p>),
               (<p>{weather.icon}</p>)
-              //</div>
+              </div>
             )
           )}
 
