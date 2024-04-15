@@ -32,7 +32,7 @@ function GaolMarker() {
           {open && (
             <InfoWindow position={crumlinRoadGaol} onCloseClick={() => setOpen(false)}>
               <a href="https://en.wikipedia.org/wiki/HM_Prison_Belfast">
-                HM Prison Belfast, also known as Crumlin Road Gaol, is a former
+                <b>HM Prison Belfast</b>, also known as Crumlin Road Gaol, is a former
                 prison situated on the Crumlin Road in north Belfast, Northern
                 Ireland. Since 1996 it is the only remaining Victorian era
                 former prison in Northern Ireland. It is colloquially known as

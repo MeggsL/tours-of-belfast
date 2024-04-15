@@ -32,7 +32,7 @@ function CityHallMarker() {
           {open && (
             <InfoWindow position={cityHall} onCloseClick={() => setOpen(false)}>
               <a href="https://en.wikipedia.org/wiki/Belfast_City_Hall">
-                Belfast City Hall (Irish: Halla na Cathrach Bhéal Feirste;
+                <b>Belfast City Hall</b> (Irish: Halla na Cathrach Bhéal Feirste;
                 Ulster-Scots: Bilfawst Citie Haw) is the civic building of
                 Belfast City Council located in Donegall Square, Belfast,
                 Northern Ireland. It faces North and effectively divides the

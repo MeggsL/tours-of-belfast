@@ -5,8 +5,8 @@ import "../page.module.css";
 //import Grid from "@mui/material/Unstable_Grid2";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-import BottomNavMaps from "../components/BottomNavMaps.js";
+//import Container from "@mui/material/Container";
+import BottomNavWelcome from "../components/BottomNavWelcome.js";
 
 <html lang="en">
   <head>
@@ -18,19 +18,18 @@ import BottomNavMaps from "../components/BottomNavMaps.js";
 
 export default function PeachyHome() {
   return (
-    <div>
-      <Grid
-        item
-        xs={12}
-        container
-        justifyContent="center"
-        rowSpacing={0}
-        paddingTop={5}
-        paddingBottom={8}
-      >
+    <Box>
+    <Grid
+      item
+      xs={12}
+      sm={6}
+      justifyContent="center"
+      rowSpacing={0}
+      padding={0}
+    >
         <PeachyWelcome />
-        <BottomNavMaps />
-      </Grid>
-    </div>
+        </Grid>
+      <BottomNavWelcome />
+    </Box>
   );
 }

@@ -1,6 +1,7 @@
 import BlueyWelcome from "./bluey-components/BlueyWelcome.js";
 import "./blueygrey.css";
-import BottomNavMaps from "../components/BottomNavMaps.js";
+import "./bg-page.module.css";
+import BottomNavWelcome from "../components/BottomNavWelcome.js";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 
@@ -25,7 +26,7 @@ export default function BlueHome() {
       >
         <BlueyWelcome />
       </Grid>
-      <BottomNavMaps />
+      <BottomNavWelcome />
     </Box>
   );
 }

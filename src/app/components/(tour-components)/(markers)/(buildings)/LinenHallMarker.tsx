@@ -31,7 +31,7 @@ function LinenHallMarker() {
         {open && (
           <InfoWindow position={linenHall} onCloseClick={() => setOpen(false)}>
             <a href="https://en.wikipedia.org/wiki/Linen_Hall_Library">
-              The Linen Hall Library is located at 17 Donegall Square North,
+              <b>The Linen Hall Library</b> is located at 17 Donegall Square North,
               Belfast, Northern Ireland. It is the oldest library in Belfast and
               the last subscribing library in Northern Ireland. The Library is
               physically in the centre of Belfast, and more generally at the

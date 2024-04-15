@@ -6,26 +6,26 @@ import "../pp-page.module.css";
 import Grid from "@mui/material/Grid";
 //import Grid from "@mui/material/Unstable_Grid2"; // Grid version 2
 //import Box from "@mui/material/Box";
-import BottomNavMaps from "../../components/BottomNavMaps.js";
+import BottomNavWelcome from "../../components/BottomNavWelcome.js";
+import Box from "@mui/material/Box";
 
 //import Container from "@mui/material/Container";
 
 export default function PeachyToursHome() {
   return (
-    <div>
-      <Grid
-        item
-        xs={12}
-        container
-        justifyContent="center"
-        rowSpacing={0}
-        paddingTop={5}
-        paddingBottom={8}
-      >
+    <Box>
+    <Grid
+      item
+      xs={12}
+      sm={6}
+      justifyContent="center"
+      rowSpacing={0}
+      padding={0}
+    >
         <PeachyTourTable />
 
-        <BottomNavMaps />
-      </Grid>
-    </div>
+        </Grid>
+      <BottomNavWelcome />
+    </Box>
   );
 }

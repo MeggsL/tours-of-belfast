@@ -10,6 +10,7 @@ import TitanicMemorialMarker from "../../components/(tour-components)/(markers)/
 import MarketMarker from "../../components/(tour-components)/(markers)/(landmarks)/MarketMarker";
 import HenryCookeMarker from "../../components/(tour-components)/(markers)/(landmarks)/HenryCookeMarker";
 import CrownMarker from "../../components/(tour-components)/(markers)/(landmarks)/CrownMarker";
+import AppUser from "../../components/(tour-components)/(markers)/UserMarker";
 
 function PinkMapOfLandmarks() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
@@ -23,6 +24,7 @@ function PinkMapOfLandmarks() {
             defaultCenter={position}
             mapId={process.env.NEXT_PUBLIC_PINK_MAP_ID}
           >
+              <AppUser />
             <LandmarkDirections />
             <AlbertClockMarker />
             <CrownMarker />

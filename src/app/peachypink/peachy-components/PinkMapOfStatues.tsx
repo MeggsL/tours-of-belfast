@@ -12,7 +12,8 @@ import BeaconOfHopeMarker from "../../components/(tour-components)/(markers)/(st
 import SpeakerMarker from "../../components/(tour-components)/(markers)/(statues)/SpeakerMarker";
 import SpiritMarker from "../../components/(tour-components)/(markers)/(statues)/SpiritOfBelfastMarker";
 import VictoriaMarker from "../../components/(tour-components)/(markers)/(statues)/VictoriaMarker";
-import StatueDirections from "../../components/(tour-components)/(directions)/BuildingsDirections";
+import StatueDirections from "../../components/(tour-components)/(directions)/StatueDirections";
+import AppUser from "../../components/(tour-components)/(markers)/UserMarker";
 
 
 function PinkMapOfStatues() {
@@ -27,6 +28,7 @@ function PinkMapOfStatues() {
             defaultCenter={position}
             mapId={process.env.NEXT_PUBLIC_PINK_MAP_ID}
           >
+              <AppUser />
            <StatueDirections />
             <BigFishMarker />
             <HarlandMarker />

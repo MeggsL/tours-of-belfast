@@ -1,13 +1,11 @@
 import React from "react";
-//import BlueMapOfBuildings from "../(tour-components)/BlueMapOfBuildings";
 import "../../peachypink.css";
 import Box from "@mui/material/Box";
 //import Container from "@mui/material/Container";
 //import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 //import UpTopMenu from "../../components/TopMenu.js";
-import BottomNavMaps from "../../../components/BottomNavMaps";
-//import FixedBottomNavigation from "../../components/BottomNavFixed";
+import PeachyBottomNavMaps from "../../peachy-components/PeachyBottomNavMaps";
 //import FloatingButton from "../../components/FloatingButton";
 
 import PinkMapOfBuildings from "../../peachy-components/PinkMapOfBuildings";
@@ -26,7 +24,7 @@ export default function PinkBuildings() {
         <PinkMapOfBuildings />
       </Grid>
       <Grid paddingBottom={2.5}>
-        <BottomNavMaps />
+        <PeachyBottomNavMaps />
       </Grid>
     </Box>
   );

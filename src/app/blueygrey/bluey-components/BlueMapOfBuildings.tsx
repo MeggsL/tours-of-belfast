@@ -16,6 +16,7 @@ import CourthouseMarker from "../../components/(tour-components)/(markers)/(buil
 import LanyonMarker from "../../components/(tour-components)/(markers)/(buildings)/LanyonMarker";
 import UlsterHallMarker from "../../components/(tour-components)/(markers)/(buildings)/UlsterHallMarker";
 import CathedralMarker from "../../components/(tour-components)/(markers)/(buildings)/CathedralMarker";
+import AppUser from "../../components/(tour-components)/(markers)/UserMarker";
 
 function BlueMapOfBuildings() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
@@ -29,6 +30,7 @@ function BlueMapOfBuildings() {
           defaultCenter={position}
           mapId={process.env.NEXT_PUBLIC_BLUE_MAP_ID}
         >
+          <AppUser />
           <BuildingsDirections />
           <CityHallMarker />
           <LinenHallMarker />

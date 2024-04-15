@@ -11,6 +11,7 @@ import TitanicMemorialMarker from "../../components/(tour-components)/(markers)/
 import UnknownWomanMarker from "../../components/(tour-components)/(markers)/(landmarks)/UnknownWomanMarker";
 import WarMemorialMarker from "../../components/(tour-components)/(markers)/(landmarks)/WarMemorialMarker";
 import LandmarkDirections from "../../components/(tour-components)/(directions)/LandmarkDirections";
+import AppUser from "../../components/(tour-components)/(markers)/UserMarker";
 
 function PurpleMapOfLandmarks() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
@@ -24,17 +25,15 @@ function PurpleMapOfLandmarks() {
             defaultCenter={position}
             mapId={process.env.NEXT_PUBLIC_PURPLE_MAP_ID}
           >
-
-<LandmarkDirections />
-<AlbertClockMarker />
-<CrownMarker />
-<HenryCookeMarker />
-<MarketMarker />
-<TitanicMemorialMarker />
-<UnknownWomanMarker />
-<WarMemorialMarker />
-
-
+            <AppUser />
+            <LandmarkDirections />
+            <AlbertClockMarker />
+            <CrownMarker />
+            <HenryCookeMarker />
+            <MarketMarker />
+            <TitanicMemorialMarker />
+            <UnknownWomanMarker />
+            <WarMemorialMarker />
           </Map>
         </div>
       </Container>

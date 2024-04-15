@@ -36,7 +36,7 @@ function BlueMapWithRoutes() {
 */
 }
 
-function StatueDirections() {
+function BuildingDirections() {
   const map = useMap();
   const routesLibrary = useMapsLibrary("routes");
   const [directionsService, setDirectionsService] =
@@ -184,4 +184,4 @@ function StatueDirections() {
 }
 
 
-export default StatueDirections;
+export default BuildingDirections;

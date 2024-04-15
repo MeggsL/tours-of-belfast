@@ -7,7 +7,7 @@ import "./purple-tours.css";
 import "../p-page.module.css";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import PurpleBottomNavMaps from "../purple-components/PurpleBottomNavMaps.js";
+import BottomNavWelcome from "../../components/BottomNavWelcome.js";
 
 export default function PurpleToursHome() {
   return (
@@ -22,7 +22,7 @@ export default function PurpleToursHome() {
       >
         <PurpleTourTable />
       </Grid>
-      <PurpleBottomNavMaps />
+      <BottomNavWelcome />
     </Box>
   );
 }

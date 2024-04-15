@@ -10,7 +10,8 @@ import BeaconOfHopeMarker from "../../components/(tour-components)/(markers)/(st
 import SpeakerMarker from "../../components/(tour-components)/(markers)/(statues)/SpeakerMarker";
 import SpiritMarker from "../../components/(tour-components)/(markers)/(statues)/SpiritOfBelfastMarker";
 import VictoriaMarker from "../../components/(tour-components)/(markers)/(statues)/VictoriaMarker";
-import StatueDirections from "../../components/(tour-components)/(directions)/BuildingsDirections";
+import StatueDirections from "../../components/(tour-components)/(directions)/StatueDirections";
+import AppUser from "../../components/(tour-components)/(markers)/UserMarker";
 
 function PurpleMapOfStatues() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
@@ -24,7 +25,8 @@ function PurpleMapOfStatues() {
             defaultCenter={position}
             mapId={process.env.NEXT_PUBLIC_PURPLE_MAP_ID}
           >
-           <StatueDirections />
+            <AppUser />
+            <StatueDirections />
             <BigFishMarker />
             <HarlandMarker />
             <MastsMarker />

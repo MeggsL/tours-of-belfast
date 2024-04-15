@@ -1,12 +1,12 @@
 import React from "react";
-import "../../globals.css";
+import "../globals.css";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 //import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
-import BottomNavOverwhelm from "../../../components/BottomNavOverwhelm.js";
-import UpTopMenu from "../../../components/TopMenu.js";
-import GreyMapOfQuietSpots from "../(tour-components)/GreyMapOfQuietSpots";
+import BottomNavOverwhelm from "../components/BottomNavOverwhelm.js";
+//import UpTopMenu from "../components/TopMenu.js";
+import GreyMapOfQuietSpots from "../components/(tour-components)/GreyMapOfQuietSpots";
 
 export default function Overwhelm() {
   return (
@@ -14,7 +14,7 @@ export default function Overwhelm() {
       <Container maxWidth="sm"></Container>
       <Grid container rowSpacing={4} justifyContent="center">
         <Grid item xs={12} container justifyContent="center" rowSpacing={-3}>
-          <UpTopMenu />
+   
         </Grid>
         <Grid item xs={12} container justifyContent="center" rowSpacing={3}>
           <Container fixed>

@@ -1,17 +1,16 @@
 import React from "react";
 //import BlueMapOfBuildings from "../(tour-components)/BlueMapOfBuildings";
-import "../../purple.css";
+import "../../blueygrey.css";
 import Box from "@mui/material/Box";
 //import Container from "@mui/material/Container";
 //import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 //import UpTopMenu from "../../components/TopMenu.js";
-//import PurpleBottomNavMaps from "../../purple-components/PurpleBottomNavMaps";
 //import FixedBottomNavigation from "../../components/BottomNavFixed";
 //import FloatingButton from "../../components/FloatingButton";
 
-import BottomNavMaps from "../../../components/BottomNavMaps";
 import BlueMapOfLandmarks from "../../bluey-components/BlueMapOfLandmarks";
+import BlueyBottomNavMaps from "../../bluey-components/BlueyBottomNavMaps";
 
 export default function BlueLandmarks() {
   return (
@@ -27,7 +26,7 @@ export default function BlueLandmarks() {
         <BlueMapOfLandmarks />
       </Grid>
       <Grid paddingBottom={2.5}>
-        <BottomNavMaps />
+        <BlueyBottomNavMaps />
       </Grid>
     </Box>
   );

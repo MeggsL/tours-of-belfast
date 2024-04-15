@@ -3,9 +3,9 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import TButton from "../components/TourButton.js";
+//import TButton from "../components/TourButton.js";
 //import "../globals.css";
-import "../page.module.css";
+import "../pp-page.module.css";
 import Box from "@mui/material/Box";
 //import Container from "@mui/material/Container";
 //import Paper from "@mui/material/Paper";

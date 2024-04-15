@@ -7,7 +7,7 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 //import TransitionHover from "./StyledAvatarButton.js";
 //import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Unstable_Grid2"; 
+import Grid from "@mui/material/Unstable_Grid2";
 import "../purple.css";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Button from "@mui/material/Button";
@@ -68,16 +68,16 @@ export { Title, BothCranes, PurpleButton };
 
 export default function PurpleWelcome() {
   return (
-    <Box xs={{ flexgrow: 1,  height: "100%" }}>
+    <Box xs={{ flexgrow: 1, height: "100%" }}>
       <Container maxWidth="sm">
-      <Grid
+        <Grid
           item
           xs={12}
           container
           spacing={2}
           justifyContent="center"
           rowSpacing={0}
-          paddingTop={4}
+          paddingTop={1}
         >
           <Grid
             item
@@ -85,27 +85,34 @@ export default function PurpleWelcome() {
             container
             justifyContent="center"
             rowSpacing={-4}
-            paddingTop={3}
+            paddingTop={0}
           >
-          <Title />
-        </Grid>
-        <Grid item xs={12} container justifyContent="center" rowSpacing={-1} paddingTop={2}>
-          <BothCranes />
-        </Grid>
-        <Grid item xs={12} container justifyContent="center" rowSpacing={-4} paddingTop={3} >
-        <Link href="/purple/purple-tours">
-          <PurpleButton />
-          </Link>
-        </Grid>
-        <Grid
+            <Title />
+          </Grid>
+          <Grid
             item
             xs={12}
             container
             justifyContent="center"
-            rowSpacing={0}
-            paddingTop={8}
-          ></Grid>
-      </Grid>
+            rowSpacing={-1}
+            paddingTop={0}
+          >
+            <BothCranes />
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            container
+            justifyContent="center"
+            rowSpacing={-4}
+            paddingTop={3}
+            paddingBottom={4}
+          >
+            <Link href="/purple/purple-tours">
+              <PurpleButton />
+            </Link>
+          </Grid>
+        </Grid>
       </Container>
     </Box>
   );

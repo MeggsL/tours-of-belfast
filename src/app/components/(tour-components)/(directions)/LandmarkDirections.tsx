@@ -94,7 +94,6 @@ function LandmarkDirections() {
           { location: "Monument to the Unknown Woman Worker , Belfast UK" },
           { location: "Henry Cooke Monument, Belfast UK" },
           { location: "St George's Market, Belfast UK" },
-          //{ location: "The Merchant Hotel, Belfast UK" },
           { location: "Albert Memorial Clock, Belfast UK" },
           { location: "Titanic Memorial Garden, Belfast UK" },
           { location: "Memorial to World War I and II soldiers, Belfast UK" },

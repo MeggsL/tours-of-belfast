@@ -1,5 +1,5 @@
 import React from "react";
-import ToursOfBelfast from "./components/Homepage.js";
+import Homepage from "./components/Homepage.js";
 import "./globals.css";
 
 <html lang="en">
@@ -14,7 +14,7 @@ export default function PickYourColour() {
   return (
     <main className="main">
       <div>
-        <ToursOfBelfast />
+        <Homepage />
       </div>
     </main>
   );

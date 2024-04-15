@@ -31,10 +31,16 @@ function VictoriaMarker() {
           />
         </AdvancedMarker>
         {open && (
-          <InfoWindow position={queenVictoria} onCloseClick={() => setOpen(false)}>
-            <a href="https://www.encirclephotos.com/image/the-speaker-statue-at-custom-house-in-belfast-northern-ireland/">
-              <b>The Speaker</b> is a life-size bronze statue created by
-              local-born artist Gareth Knowles.
+          <InfoWindow
+            position={queenVictoria}
+            onCloseClick={() => setOpen(false)}
+          >
+            <a href="https://en.wikipedia.org/wiki/Queen_Victoria">
+              <b>Victoria</b> (Alexandrina Victoria; 24 May 1819 – 22 January
+              1901) was Queen of the United Kingdom of Great Britain and Ireland
+              from 20 June 1837 until her death in 1901. Her reign of 63 years
+              and 216 days, which was longer than those of any of her
+              predecessors, is known as the Victorian era. Tap to find out more.
             </a>
           </InfoWindow>
         )}

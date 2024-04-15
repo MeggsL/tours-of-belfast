@@ -15,6 +15,7 @@ import LanyonMarker from "../../components/(tour-components)/(markers)/(building
 import UlsterHallMarker from "../../components/(tour-components)/(markers)/(buildings)/UlsterHallMarker";
 import CathedralMarker from "../../components/(tour-components)/(markers)/(buildings)/CathedralMarker";
 import Container from "@mui/material/Container";
+import AppUser from "../../components/(tour-components)/(markers)/UserMarker";
 
 
 function PurpleMapOfBuildings() {
@@ -29,6 +30,7 @@ function PurpleMapOfBuildings() {
             defaultCenter={position}
             mapId={process.env.NEXT_PUBLIC_PURPLE_MAP_ID}
           >
+            <AppUser />
             <BuildingsDirections />
             <CityHallMarker />
             <LinenHallMarker />

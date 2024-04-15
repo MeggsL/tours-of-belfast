@@ -34,7 +34,7 @@ function RiddellHallMarker() {
             onCloseClick={() => setOpen(false)}
           >
             <a href="https://en.wikipedia.org/wiki/Eliza_and_Isabella_Riddel">
-              Eliza (1831–1924) and Isabella Riddel (1836–1918) were sisters who
+              <b>Eliza</b> (1831–1924) and <b>Isabella Riddel</b> (1836–1918) were sisters who
               are best known for Riddel Hall in Stranmillis, Belfast, Ireland,
               which they established in 1913 as a university hall of residence
               for women.

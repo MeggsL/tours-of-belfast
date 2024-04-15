@@ -1,9 +1,6 @@
 "use client";
 
-import {
-  APIProvider,
-  Map,
-} from "@vis.gl/react-google-maps";
+import { APIProvider, Map } from "@vis.gl/react-google-maps";
 import Container from "@mui/material/Container";
 import AlbertClockMarker from "../../components/(tour-components)/(markers)/(landmarks)/AlbertClockMarker";
 import CrownMarker from "../../components/(tour-components)/(markers)/(landmarks)/CrownMarker";
@@ -13,7 +10,7 @@ import TitanicMemorialMarker from "../../components/(tour-components)/(markers)/
 import UnknownWomanMarker from "../../components/(tour-components)/(markers)/(landmarks)/UnknownWomanMarker";
 import WarMemorialMarker from "../../components/(tour-components)/(markers)/(landmarks)/WarMemorialMarker";
 import LandmarkDirections from "../../components/(tour-components)/(directions)/LandmarkDirections";
-
+import AppUser from "../../components/(tour-components)/(markers)/UserMarker";
 
 function BlueMapOfLandmarks() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
@@ -27,17 +24,15 @@ function BlueMapOfLandmarks() {
             defaultCenter={position}
             mapId={process.env.NEXT_PUBLIC_BLUE_MAP_ID}
           >
-
-<LandmarkDirections />
-<AlbertClockMarker />
-<CrownMarker />
-<HenryCookeMarker />
-<MarketMarker />
-<TitanicMemorialMarker />
-<UnknownWomanMarker />
-<WarMemorialMarker />
-
-
+            <AppUser />
+            <LandmarkDirections />
+            <AlbertClockMarker />
+            <CrownMarker />
+            <HenryCookeMarker />
+            <MarketMarker />
+            <TitanicMemorialMarker />
+            <UnknownWomanMarker />
+            <WarMemorialMarker />
           </Map>
         </div>
       </Container>

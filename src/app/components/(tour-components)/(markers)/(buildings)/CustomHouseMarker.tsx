@@ -34,7 +34,7 @@ function CustomHouseMarker() {
             onCloseClick={() => setOpen(false)}
           >
             <a href="https://en.wikipedia.org/wiki/Custom_House,_Belfast">
-              The Custom House is a 19th-century B+ listed building located in
+              <b>The Custom House</b> is a 19th-century B+ listed building located in
               Belfast, Northern Ireland. Completed in 1857, the building has
               been used by various governmental departments, including the
               Belfast Board of Works, the Inland Revenue, and an Income Tax

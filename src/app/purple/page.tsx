@@ -3,9 +3,9 @@ import PurpleWelcome from "./purple-components/PurpleWelcome.js";
 import "./purple.css";
 
 import "./p-page.module.css";
-import Grid from "@mui/material/Unstable_Grid2";
+import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import PurpleBottomNavMaps from "./purple-components/PurpleBottomNavMaps.js";
+import BottomNavWelcome from "../components/BottomNavWelcome.js";
 
 <html lang="en">
   <head>
@@ -25,12 +25,21 @@ export default function PurpleHome() {
         justifyContent="center"
         rowSpacing={0}
         padding={0}
-      
       >
         <PurpleWelcome />
-
       </Grid>
-      <PurpleBottomNavMaps />
+      <Grid
+        item
+        xs={12}
+        sm={6}
+        justifyContent="center"
+        rowSpacing={0}
+        padding={0}
+        paddingTop={1}
+        paddingBottom={2}
+      >
+      <BottomNavWelcome />
+      </Grid>
     </Box>
   );
 }

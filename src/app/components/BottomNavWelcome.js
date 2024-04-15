@@ -21,7 +21,7 @@ import Link from '@mui/material/Link';
 import WeekendIcon from '@mui/icons-material/Weekend';
 import Image from 'next/image';
 
-export default function BottomNavMaps() {
+export default function BottomNavWelcome() {
   const [value, setValue] = React.useState(0);
 
   const theme = createTheme({
@@ -63,15 +63,7 @@ export default function BottomNavMaps() {
               </Link>
             }
           />
-          [tour home]
-          <BottomNavigationAction
-            label="Tours"
-            icon={
-              <Link href={"/tours"}>
-                <RouteTwoToneIcon />
-              </Link>
-            }
-          />
+  
           [weather]
           <BottomNavigationAction
             label="Weather"
@@ -85,7 +77,7 @@ export default function BottomNavMaps() {
             <BottomNavigationAction
               label=""
               icon={
-                <Link  href={""}>
+                <Link  href={"./overwhelm"}>
                   <Image width={48} height={48} src="/img/break-time.png" alt="break time!" />
                 </Link>
               }

@@ -34,8 +34,8 @@ function LanyonMarker() {
             onCloseClick={() => setOpen(false)}
           >
             <a href="https://www.qub.ac.uk/about/History-and-heritage/Historic-Buildings/">
-              The centrepiece and the enduring symbol of Queen’s University is
-              the original building, completed in 1849. It is now known as the
+              <b>The Lanyon Building</b>is the centrepiece and the enduring symbol of Queen’s University is
+              the original building, completed in 1849. It is known as the
               Lanyon Building after its architect, the renowned Sir Charles
               Lanyon. His design borrows from the Gothic and Tudor character of
               the great medieval universities, and in particular from Magdalen

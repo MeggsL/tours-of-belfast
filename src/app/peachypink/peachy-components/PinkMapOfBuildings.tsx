@@ -12,6 +12,7 @@ import LanyonMarker from "../../components/(tour-components)/(markers)/(building
 import UlsterHallMarker from "../../components/(tour-components)/(markers)/(buildings)/UlsterHallMarker";
 import CathedralMarker from "../../components/(tour-components)/(markers)/(buildings)/CathedralMarker";
 import Container from "@mui/material/Container";
+import AppUser from "../../components/(tour-components)/(markers)/UserMarker";
 
 function PinkMapOfBuildings() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
@@ -25,6 +26,7 @@ function PinkMapOfBuildings() {
           defaultCenter={position}
           mapId={process.env.NEXT_PUBLIC_PINK_MAP_ID}
         >
+            <AppUser />
           <BuildingsDirections />
           <CityHallMarker />
           <LinenHallMarker />

@@ -9,7 +9,8 @@ import BeaconOfHopeMarker from "../../components/(tour-components)/(markers)/(st
 import SpeakerMarker from "../../components/(tour-components)/(markers)/(statues)/SpeakerMarker";
 import SpiritMarker from "../../components/(tour-components)/(markers)/(statues)/SpiritOfBelfastMarker";
 import VictoriaMarker from "../../components/(tour-components)/(markers)/(statues)/VictoriaMarker";
-import StatueDirections from "../../components/(tour-components)/(directions)/BuildingsDirections";
+import StatueDirections from "../../components/(tour-components)/(directions)/StatueDirections";
+import AppUser from "../../components/(tour-components)/(markers)/UserMarker";
 
 function BlueMapOfStatues() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
@@ -23,6 +24,7 @@ function BlueMapOfStatues() {
             defaultCenter={position}
             mapId={process.env.NEXT_PUBLIC_BLUE_MAP_ID}
           >
+            <AppUser />
             <StatueDirections />
             <BigFishMarker />
             <HarlandMarker />

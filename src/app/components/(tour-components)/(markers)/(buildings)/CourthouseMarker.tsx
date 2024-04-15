@@ -34,7 +34,7 @@ function CourthouseMarker() {
         {open && (
           <InfoWindow position={courtHouse} onCloseClick={() => setOpen(false)}>
             <a href="https://en.wikipedia.org/wiki/Crumlin_Road_Courthouse">
-              The Crumlin Road Courthouse is a former judicial facility on
+              <b>The Crumlin Road Courthouse</b> is a former judicial facility on
               Crumlin Road in Belfast, Northern Ireland. It is a Grade B+ listed
               building.
             </a>

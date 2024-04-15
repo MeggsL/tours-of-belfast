@@ -98,7 +98,7 @@ function BlueyButton() {
 //exporting the buttons
 export { PurpleButton, PeachyButton, BlueyButton };
 
-export default function ToursOfBelfast() {
+export default function Homepage() {
   return (
     <Box xs={{ flexgrow: 1, height: "100%" }}>
       <Container maxWidth="sm">
@@ -108,7 +108,7 @@ export default function ToursOfBelfast() {
           rowSpacing={3}
           item
           xs={12}
-          paddingTop={12}
+          paddingTop={8}
           justifyContent="center"
         >
           <Image
@@ -120,10 +120,10 @@ export default function ToursOfBelfast() {
             priority
           />
         </Grid>
-        <Grid item xs={12} container justifyContent="center" rowSpacing={-5} paddingTop={3}>
+        <Grid item xs={12} container justifyContent="center" rowSpacing={-5} paddingTop={1}>
           <h2 align="center ">Please select your colour experience.</h2>
         </Grid>
-        <Grid item xs={12} container justifyContent="center" rowSpacing={-5} paddingTop={6}>
+        <Grid item xs={12} container justifyContent="center" rowSpacing={-5} paddingTop={4}>
           <Link href="/purple">
             <PurpleButton />
           </Link>
@@ -149,6 +149,7 @@ export default function ToursOfBelfast() {
           container
           justifyContent="center"
           rowSpacing={-5}
+          paddingBottom={8}
         ></Grid>
       </Container>
     </Box>

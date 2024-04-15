@@ -31,7 +31,7 @@ function CathedralMarker() {
         {open && (
           <InfoWindow position={bigChurch} onCloseClick={() => setOpen(false)}>
             <a href="https://en.wikipedia.org/wiki/St_Anne%27s_Cathedral,_Belfast">
-              Belfast Cathedral, also known as St Anne's Cathedral, is a Church
+              <b>Belfast Cathedral</b>, also known as St Anne's Cathedral, is a Church
               of Ireland cathedral in Donegall Street, Belfast, Northern
               Ireland. It is unusual in serving two separate dioceses (Connor
               and Down and Dromore). It is the focal point of Belfast's

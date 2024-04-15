@@ -31,7 +31,7 @@ function UlsterHallMarker() {
         {open && (
           <InfoWindow position={ulsterHall} onCloseClick={() => setOpen(false)}>
             <a href="https://en.wikipedia.org/wiki/Ulster_Hall">
-              The Ulster Hall is a concert hall and grade A listed building in
+              <b>The Ulster Hall</b> is a concert hall and grade A listed building in
               Belfast, Northern Ireland. Situated on Bedford Street in Belfast
               city centre, the hall hosts concerts, classical recitals, craft
               fairs and political party conferences.
