@@ -4,29 +4,40 @@
 }
 
 .city-name {
-    font-size: 12px;
-    color: maroon;
+    font-size: 20px;
+    color:black;
     margin: 15px 0px 8px 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-kerning:auto;
 }
 
 .deg {
+    font-size: 18px;
     font-weight: 500;
-    color: brown;
+    color:black;
 }
 
-
+.degfeelslike {
+    font-size: 14px;
+    font-weight:700;
+    color:darkorchid;
+}
 
 .icon-temp {
     display: flex;
-    font-size: 3rem;
+    font-size: 40px;
     font-weight: 700;
+    align-items: center;
+    color: black;
+  
 }
 
 .feels-like {
     font-weight: 500;
-    color: chartreuse;
+    color:darkorchid;
     font-size: large;
     margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .city {
@@ -46,8 +57,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 350px;
-    background-color: black;
+    width: 280px;
+    height: 30vh;
+    background-color:lightgray;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -55,9 +67,9 @@
 
 
 .App {
-    width: 400px;
-    height: 100vh;
-    background-color: aqua;
+    width:240px;
+    height: 30vh;
+    background-color:bisque;
     display: flex;
     align-items: center;
 }
@@ -69,7 +81,8 @@
     border-radius: 20px;
     background-color: aliceblue;
     padding: 6px 30px 6px 30px;
-    height: 50px;
+    height: 100px;
+    width: 100px;
 }
 
 .error-message {
@@ -80,8 +93,8 @@
 }
 
 
-.date {
-    font-size: 1.50em;
+.description {
+    font-size: 12px;
     font-weight: 500;
     color: deeppink;
 }

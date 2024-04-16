@@ -25,6 +25,7 @@ export default function PurpleHome() {
         justifyContent="center"
         rowSpacing={0}
         padding={0}
+        paddingBottom={7}
       >
         <PurpleWelcome />
       </Grid>
@@ -36,7 +37,7 @@ export default function PurpleHome() {
         rowSpacing={0}
         padding={0}
         paddingTop={1}
-        paddingBottom={2}
+        paddingBottom={3}
       >
       <BottomNavWelcome />
       </Grid>

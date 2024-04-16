@@ -1,9 +1,6 @@
 "use client";
 
-import {
-  APIProvider,
-  Map,
-} from "@vis.gl/react-google-maps";
+import { APIProvider, Map } from "@vis.gl/react-google-maps";
 import BuildingsDirections from "../../components/(tour-components)/(directions)/BuildingsDirections";
 import CityHallMarker from "../../components/(tour-components)/(markers)/(buildings)/CityHallMarker";
 import LinenHallMarker from "../../components/(tour-components)/(markers)/(buildings)/LinenHallMarker";
@@ -16,7 +13,9 @@ import UlsterHallMarker from "../../components/(tour-components)/(markers)/(buil
 import CathedralMarker from "../../components/(tour-components)/(markers)/(buildings)/CathedralMarker";
 import Container from "@mui/material/Container";
 import AppUser from "../../components/(tour-components)/(markers)/UserMarker";
-
+import FloatingButton from "../../components/FloatingButton";
+import Grid from "@mui/material/Grid";
+import OpenBox from "../../components/OpenBox"
 
 function PurpleMapOfBuildings() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
@@ -30,6 +29,9 @@ function PurpleMapOfBuildings() {
             defaultCenter={position}
             mapId={process.env.NEXT_PUBLIC_PURPLE_MAP_ID}
           >
+            <Grid paddingTop={6}>
+             <OpenBox />
+           </Grid>
             <AppUser />
             <BuildingsDirections />
             <CityHallMarker />

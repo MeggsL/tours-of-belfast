@@ -21,7 +21,7 @@ const ImgOne = () => {
       //className={styles.logo}
       src="/img/historic-buildings-tour.png"
       alt="Buildings Tour"
-      width={255}
+      width={250}
       height={210}
       priority
     />
@@ -36,7 +36,7 @@ const ImgTwo = () => {
       //className={styles.logo}
       src="/img/landmarks-monuments-tour.png"
       alt="Landmarks Tour"
-      width={255}
+      width={250}
       height={210}
       priority
     />
@@ -51,7 +51,7 @@ const ImgThree = () => {
       //className={styles.logo}
       src="/img/statues-artwork-tour.png"
       alt="Statues Tour"
-      width={255}
+      width={250}
       height={210}
       priority
     />

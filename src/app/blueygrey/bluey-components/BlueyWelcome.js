@@ -75,7 +75,7 @@ export default function BlueyWelcome() {
           spacing={2}
           justifyContent="center"
           rowSpacing={0}
-          paddingTop={4}
+          paddingTop={0}
         >
           <Grid
             item
@@ -83,11 +83,11 @@ export default function BlueyWelcome() {
             container
             justifyContent="center"
             rowSpacing={-4}
-            paddingTop={3}
+            paddingTop={0}
           >
             <Title />
           </Grid>
-          <Grid item xs={12} container justifyContent="center" rowSpacing={-1} paddingTop={2}>
+          <Grid item xs={12} container justifyContent="center" rowSpacing={-1} paddingTop={0}>
             <BothCranes />
           </Grid>
           <Grid item xs={12} container justifyContent="center" rowSpacing={-4} paddingTop={3} >
@@ -101,7 +101,7 @@ export default function BlueyWelcome() {
             container
             justifyContent="center"
             rowSpacing={0}
-            paddingTop={8}
+            paddingTop={5}
           ></Grid>
         </Grid>
       </Container>

@@ -26,10 +26,22 @@ export default function PeachyHome() {
       justifyContent="center"
       rowSpacing={0}
       padding={0}
+      paddingBottom={7}
     >
         <PeachyWelcome />
         </Grid>
+        <Grid
+        item
+        xs={12}
+        sm={6}
+        justifyContent="center"
+        rowSpacing={0}
+        padding={0}
+        paddingTop={1}
+        paddingBottom={3}
+      >
       <BottomNavWelcome />
+      </Grid>
     </Box>
   );
 }

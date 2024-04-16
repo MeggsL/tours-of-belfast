@@ -133,7 +133,7 @@ export default function Homepage() {
             <PeachyButton />
           </Link>
         </Grid>
-        <Grid item xs={12} container justifyContent="center" rowSpacing={-5}>
+        <Grid item xs={12} container justifyContent="center" rowSpacing={-5} paddingBottom={3}>
           <Link href="/blueygrey">
             <BlueyButton />
           </Link>
