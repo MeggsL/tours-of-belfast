@@ -1,9 +1,11 @@
 import React from "react";
-import Homepage from "./components/Homepage.js";
-import "./globals.css";
-import "./page.module.css";
-import '@fontsource/inter';
+import PurpleWelcome from "./tours/purple-components/PurpleWelcome.js";
+import "./glbals.css";
 
+import "./page.module.css";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import BottomNavWelcome from "./components/BottomNavWelcome.js";
 
 <html lang="en">
   <head>
@@ -13,12 +15,32 @@ import '@fontsource/inter';
   <body></body>
 </html>;
 
-export default function PickYourColour() {
+export default function PurpleHome() {
   return (
-    <main className="main">
-      <div>
-        <Homepage />
-      </div>
-    </main>
+    <Box>
+      <Grid
+        item
+        xs={12}
+        sm={6}
+        justifyContent="center"
+        rowSpacing={0}
+        padding={0}
+        paddingBottom={7}
+      >
+        <PurpleWelcome />
+      </Grid>
+      <Grid
+        item
+        xs={12}
+        sm={6}
+        justifyContent="center"
+        rowSpacing={0}
+        padding={0}
+        paddingTop={1}
+        paddingBottom={3}
+      >
+      <BottomNavWelcome />
+      </Grid>
+    </Box>
   );
 }
