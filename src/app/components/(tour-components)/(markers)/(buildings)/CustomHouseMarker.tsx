@@ -20,13 +20,11 @@ function CustomHouseMarker() {
     <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
       <div style={{ height: "100vh", width: "100" }}>
         <AdvancedMarker position={customHouse} onClick={() => setOpen(true)}>
-          <Pin
-            background={"white"}
-            borderColor={"black"}
-            glyphColor={"black"}
-            //glyph={"Custom Hall"}
-            scale={1.7}
-          />
+          {/*create customised pin */}
+          <Pin background={"#22ccff"} borderColor={"#1e89a1"} scale={1.7}>
+            {/* children are rendered as 'glyph' of pin */}
+            <span style={{ fontSize: "1rem" }}>🏛️</span>
+          </Pin>
         </AdvancedMarker>
         {open && (
           <InfoWindow
@@ -34,11 +32,11 @@ function CustomHouseMarker() {
             onCloseClick={() => setOpen(false)}
           >
             <a href="https://en.wikipedia.org/wiki/Custom_House,_Belfast">
-              <b>The Custom House</b> is a 19th-century B+ listed building located in
-              Belfast, Northern Ireland. Completed in 1857, the building has
-              been used by various governmental departments, including the
-              Belfast Board of Works, the Inland Revenue, and an Income Tax
-              Office.
+              <b>The Custom House</b> is a 19th-century B+ listed building
+              located in Belfast, Northern Ireland. Completed in 1857, the
+              building has been used by various governmental departments,
+              including the Belfast Board of Works, the Inland Revenue, and an
+              Income Tax Office.
             </a>
           </InfoWindow>
         )}

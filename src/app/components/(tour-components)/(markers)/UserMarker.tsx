@@ -20,13 +20,11 @@ function AppUser() {
     <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
       <div style={{ height: "100vh", width: "100" }}>
         <AdvancedMarker position={appUser} onClick={() => setOpen(true)}>
-          <Pin
-            background={"aqua"}
-            borderColor={"black"}
-            glyphColor={"black"}
-            //    glyph={""}
-            scale={1.7}
-          />
+          {/*create customised pin */}
+          <Pin background={"#a3f58d"} borderColor={"#1e89a1"} scale={1.7}>
+            {/* children are rendered as 'glyph' of pin */}
+            <span style={{ fontSize: "1rem" }}>🙋🏼‍♀️</span>
+          </Pin>
         </AdvancedMarker>
         {open && (
           <InfoWindow position={appUser} onCloseClick={() => setOpen(false)}>
