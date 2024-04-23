@@ -74,9 +74,7 @@ export default function TourOptionsForm({ onSubmit }) {
   const [state, setState] = useState({
     buildings: false,
     statues: false,
-    artworks: false,
     landmarks: false,
-    monuments: false,
   });
 
   const handleChange = (event) => {
@@ -86,23 +84,8 @@ export default function TourOptionsForm({ onSubmit }) {
     });
   };
 
-  const { buildings, statues, artworks, landmarks, monuments } = state;
-  const error =
-    [buildings, statues, artworks, landmarks, monuments].filter((v) => v)
-      .length !== 2;
-
-  {
-    /*}
-  const handleChange = (event) => {
-    const { checked, name } = event.target;
-    setState(prevState =>( {
-    ...prevState,
-    [name]: type === 'checkbox' ? checked : value,
-    }));
-  };
-
-  */
-  }
+  const { buildings, statues, landmarks } = state;
+  const error = [buildings, statues, landmarks].filter((v) => v).length !== 2;
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -127,12 +110,12 @@ export default function TourOptionsForm({ onSubmit }) {
             alignItems={"center"}
             paddingLeft={0}
           >
-            <ThemeProvider theme={PurpleTheme}>
-              <FormLabel component="legend" sx={{ fontWeight: "500" }}>
-
-                What would you like to see on your tour?
-              </FormLabel>
-            </ThemeProvider>
+            <FormLabel
+              component="legend"
+              sx={{ fontWeight: "500", color: "white", textAlign: "center" }}
+            >
+              What would you like to see on your tour?
+            </FormLabel>
           </Grid>
 
           <FormGroup>
@@ -142,7 +125,7 @@ export default function TourOptionsForm({ onSubmit }) {
                   checked={buildings}
                   onChange={handleChange}
                   name="buildings"
-                  size='large'
+                  size="large"
                   sx={{
                     color: purple[800],
                     "&.Mui-checked": {
@@ -159,7 +142,7 @@ export default function TourOptionsForm({ onSubmit }) {
                   checked={statues}
                   onChange={handleChange}
                   name="statues"
-                  size='large'
+                  size="large"
                   sx={{
                     color: purple[800],
                     "&.Mui-checked": {
@@ -171,30 +154,14 @@ export default function TourOptionsForm({ onSubmit }) {
               label="Impressive Statues"
               color="primary"
             />
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={artworks}
-                  onChange={handleChange}
-                  name="artworks"
-                  size='large'
-                  sx={{
-                    color: purple[800],
-                    "&.Mui-checked": {
-                      color: purple[600],
-                    },
-                  }}
-                />
-              }
-              label="Large-scale Artworks"
-            />
+
             <FormControlLabel
               control={
                 <Checkbox
                   checked={landmarks}
                   onChange={handleChange}
                   name="landmarks"
-                  size='large'
+                  size="large"
                   sx={{
                     color: purple[800],
                     "&.Mui-checked": {
@@ -205,26 +172,15 @@ export default function TourOptionsForm({ onSubmit }) {
               }
               label="Notable Landmarks"
             />
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={monuments}
-                  onChange={handleChange}
-                  name="monuments"
-                  size='large'
-                  sx={{
-                    color: purple[800],
-                    "&.Mui-checked": {
-                      color: purple[600],
-                    },
-                  }}
-                />
-              }
-              label="Impressive Monuments"
-            />
           </FormGroup>
-
-          <FormHelperText sx={{ m: 4 }}>
+          <FormHelperText
+            sx={{
+              m: 4,
+              fontWeight: "300",
+              color: "black",
+              textAlign: "center",
+            }}
+          >
             *You must choose at least one option.
           </FormHelperText>
 

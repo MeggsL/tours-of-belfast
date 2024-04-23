@@ -5,9 +5,10 @@ import Container from "@mui/material/Container";
 import AppUser from "../(markers)/UserMarker";
 import LandmarkMarkers from "../(markers)/LandmarkMarkers";
 import StatueMarkers from "../(markers)/StatueMarkers";
+import SandLDirections from "../(directions)/Directions-s-l";
 
 
-function PurpleMapOfLandmarksAndStatues() {
+export default function PurpleMapOfLandmarksAndStatues() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
 
   return (
@@ -22,6 +23,7 @@ function PurpleMapOfLandmarksAndStatues() {
       <StatueMarkers />
       <LandmarkMarkers />
       <AppUser />
+      <SandLDirections />
       
           </Map>
         </div>
@@ -29,4 +31,3 @@ function PurpleMapOfLandmarksAndStatues() {
     </APIProvider>
   );
 }
-export default PurpleMapOfLandmarksAndStatues;

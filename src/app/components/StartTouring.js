@@ -40,110 +40,20 @@ export default function StartTour({ onSubmit }) {
     // Handle form submission logic here
     console.log("Form data submitted:", data);
 
-    if (
-      data.buildings &&
-      !data.statues &&
-      !ata.landmarks &&
-      !data.monuments &&
-      !data.artworks
-    ) {
+    if (data.buildings && !data.statues && !data.landmarks) {
       window.location.href = "../tours/purple-b";
-    } else if (
-      data.buildings &&
-      data.statues &&
-      !data.landmarks &&
-      !data.monuments &&
-      !data.artworks
-    ) {
+    } else if (data.buildings && data.statues && !data.landmarks) {
       window.location.href = "../tours/purple-b-s";
-    } else if (
-      data.buildings &&
-      data.statues &&
-      data.landmarks &&
-      !data.monuments &&
-      !data.artworks
-    ) {
+    } else if (data.buildings && data.statues && data.landmarks) {
       window.location.href = "../tours/purple-b-l-s";
-    } else if (
-      data.statues &&
-      !data.landmarks &&
-      !data.buildings &&
-      !data.monuments &&
-      !data.artworks
-    ) {
+    } else if (data.statues && !data.landmarks && !data.buildings) {
       window.location.href = "../tours/purple-s";
-    } else if (
-      data.statues &&
-      data.landmarks &&
-      !data.buildings &&
-      !data.monuments &&
-      !data.artworks
-    ) {
+    } else if (data.statues && data.landmarks && !data.buildings) {
       window.location.href = "../tours/purple-l-s";
-    } else if (
-      data.landmarks &&
-      !data.statues &&
-      !data.buildings &&
-      !data.monuments &&
-      !data.artworks
-    ) {
+    } else if (data.landmarks && !data.statues && !data.buildings) {
       window.location.href = "../tours/purple-l";
-    } else if (
-      data.landmarks &&
-      data.buildings &&
-      !data.statues &&
-      !data.monuments &&
-      !data.artworks
-    ) {
+    } else if (data.landmarks && data.buildings && !data.statues) {
       window.location.href = "../tours/purple-b-l";
-    } else if (
-      data.artworks &&
-      !data.landmarks &&
-      !data.buildings &&
-      !data.monuments &&
-      !data.statues
-    ) {
-      window.location.href = "../tours/purple-s";
-    } else if (
-      data.monuments &&
-      !data.statues &&
-      !data.buildings &&
-      !data.landmarks &&
-      !data.artworks
-    ) {
-      window.location.href = "../tours/purple-l";
-    } else if (
-      data.statues &&
-      data.landmarks &&
-      data.monuments &&
-      !data.buildings &&
-      !data.artworks
-    ) {
-      window.location.href = "../tours/purple-l-s";
-    } else if (
-      data.buildings &&
-      data.statues &&
-      data.landmarks &&
-      data.monuments &&
-      !data.artworks
-    ) {
-      window.location.href = "../tours/purple-b-l-s";
-    } else if (
-      data.buildings &&
-      data.statues &&
-      data.landmarks &&
-      data.monuments &&
-      data.artworks
-    ) {
-      window.location.href = "../tours/purple-b-l-s";
-    } else if (
-      data.artworks &&
-      data.statues &&
-      !data.buildings &&
-      !data.monuments &&
-      !data.landmarks
-    ) {
-      window.location.href = "../tours/purple-s";
     } else {
       console.log("That didn't work.");
     }
@@ -158,7 +68,7 @@ export default function StartTour({ onSubmit }) {
         spacing={2}
         justifyContent="center"
         rowSpacing={0}
-        paddingTop={7}
+        paddingTop={14}
       >
         <Grid
           container
@@ -166,7 +76,7 @@ export default function StartTour({ onSubmit }) {
           rowSpacing={0}
           item
           xs={12}
-          paddingTop={0}
+          paddingTop={4}
           justifyContent="center"
         >
           <Title />
@@ -178,6 +88,7 @@ export default function StartTour({ onSubmit }) {
           item
           xs={12}
           paddingTop={0}
+          paddingBottom={4}
           justifyContent="center"
         >
           <TourOptionsForm formData={state} onSubmit={handleFormSubmit} />

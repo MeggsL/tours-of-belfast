@@ -3,11 +3,11 @@
 import { APIProvider, Map } from "@vis.gl/react-google-maps";
 
 import Container from "@mui/material/Container";
-import StatueMarkers from "../(markers)/StatueMarkers";
-import StatueDirections from "../../components/(tour-components)/(directions)/StatueDirections";
+import StatueMarkers from "../../components/(markers)/StatueMarkers";
 import AppUser from "../../components/(markers)/UserMarker";
+import DirectionsStatues from "../../components/(directions)/DirectionsStatues";
 
-function PinkMapOfStatues() {
+export default function PinkMapOfStatues() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
 
   return (
@@ -21,10 +21,10 @@ function PinkMapOfStatues() {
           >
             <AppUser />
             <StatueMarkers />
+            <DirectionsStatues />
           </Map>
         </div>
       </Container>
     </APIProvider>
   );
 }
-export default PurpleMapOfStatues;

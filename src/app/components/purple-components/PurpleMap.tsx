@@ -6,7 +6,7 @@ import {
 } from "@vis.gl/react-google-maps";
 
 
-function PurpleMap() {
+export default function PurpleMap() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
 
   return (
@@ -19,4 +19,3 @@ function PurpleMap() {
     </APIProvider>
   );
 }
-export default PurpleMap;

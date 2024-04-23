@@ -10,7 +10,7 @@ import LandmarkMarkers from "../(markers)/LandmarkMarkers";
 import StatueMarkers from "../(markers)/StatueMarkers";
 
 
-function PurpleMapAll() {
+export default function PurpleMapAll() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
 
   return (
@@ -33,4 +33,3 @@ function PurpleMapAll() {
     </APIProvider>
   );
 }
-export default PurpleMapAll;
