@@ -39,7 +39,7 @@ const MapMarkers = ({ points }: Props) => {
           onClick={() => handleActiveMarker(point)}
         >
           {/* create custom pin */}
-          <Pin background={"#22ccff"} borderColor={"#1e89a1"} scale={1.4}>
+          <Pin background={"#f68ff7"} borderColor={"#1e89a1"} scale={1.4}>
             {/* children are rendered as 'glyph' of pin */}
             <span style={{ fontSize: "1rem" }}>🏛️</span>
           </Pin>

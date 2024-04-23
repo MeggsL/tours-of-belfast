@@ -16,9 +16,8 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 //import Paper from "@mui/material/Paper";
 import Grid from '@mui/material/Grid'; // Grid version 1
-import "../globals.css";
-import "../page.module.css";
-import PurpleTheme from "../components/PurpleTheme.js";
+import "../peachypink.css";
+import "../pp-page.module.css";
 
 // setting the font
 const roboto = Roboto({
@@ -28,11 +27,11 @@ const roboto = Roboto({
 });
 
 //the button for the soothing lilac experience
-function PurpleButton() {
+function GetStartedButton() {
   const ButtonColor = createTheme({
     palette: {
       primary: {
-        main: "#e0c6e7",
+        main: "#f690df",
       },
       secondary: {
         main: "#e0c6e7",
@@ -87,9 +86,9 @@ function ChangeColourButton() {
 
 
 //exporting the buttons
-export { PurpleButton, ChangeColourButton };
+export { GetStartedButton, ChangeColourButton };
 
-export default function Homepage() {
+export default function PeachyPinkHomepage() {
   return (
     <Box xs={{ flexgrow: 1, height: "100%" }}>
       <Container maxWidth="sm">
@@ -131,8 +130,8 @@ export default function Homepage() {
         </Grid>
    
         <Grid item xs={12} container justifyContent="center" rowSpacing={-5} paddingTop={4}>
-          <Link href="/tours">
-            <PurpleButton />
+          <Link href="./peachypink/peachy-tours">
+            <GetStartedButton />
           </Link>
         </Grid>
         <Grid item xs={12} container justifyContent="center" rowSpacing={-5} paddingTop={3} paddingBottom={6}>

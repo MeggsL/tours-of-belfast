@@ -1,9 +1,7 @@
 import React from "react";
-import Homepage from "./components/Homepage.js";
-import "./globals.css";
-import "./page.module.css";
-import '@fontsource/inter';
-
+import "../../peachypink/peachypink.css";
+import "../pp-page.module.css";
+import StartTour from "../peachy-components/StartTouringPeachy";
 
 <html lang="en">
   <head>
@@ -13,11 +11,11 @@ import '@fontsource/inter';
   <body></body>
 </html>;
 
-export default function App() {
+export default function TakeATour() {
   return (
     <main className="main">
       <div>
-        <Homepage />
+  <StartTour onSubmit={undefined} />
       </div>
     </main>
   );

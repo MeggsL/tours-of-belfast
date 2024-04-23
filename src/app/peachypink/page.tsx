@@ -7,6 +7,7 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 //import Container from "@mui/material/Container";
 import BottomNavWelcome from "../components/BottomNavWelcome.js";
+import PeachyPinkHomepage from "./peachy-components/HomepagePeachy.js";
 
 <html lang="en">
   <head>
@@ -16,32 +17,13 @@ import BottomNavWelcome from "../components/BottomNavWelcome.js";
   <body></body>
 </html>;
 
-export default function PeachyHome() {
+export default function App() {
   return (
-    <Box>
-    <Grid
-      item
-      xs={12}
-      sm={6}
-      justifyContent="center"
-      rowSpacing={0}
-      padding={0}
-      paddingBottom={7}
-    >
-        <PeachyWelcome />
-        </Grid>
-        <Grid
-        item
-        xs={12}
-        sm={6}
-        justifyContent="center"
-        rowSpacing={0}
-        padding={0}
-        paddingTop={1}
-        paddingBottom={3}
-      >
-      <BottomNavWelcome />
-      </Grid>
-    </Box>
+    <main className="main">
+      <div>
+        <PeachyPinkHomepage />
+      </div>
+    </main>
   );
 }
+

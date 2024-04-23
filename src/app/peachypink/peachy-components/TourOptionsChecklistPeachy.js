@@ -9,10 +9,9 @@ import Checkbox from "@mui/material/Checkbox";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
-import { purple } from "@mui/material/colors";
 import { useState } from "react";
 import { Roboto } from "next/font/google";
+import { orange } from "@mui/material/colors";
 
 // setting the font
 const roboto = Roboto({
@@ -21,12 +20,12 @@ const roboto = Roboto({
   display: "swap",
 });
 
-//the button for the soothing lilac experience
-function PurpleButton() {
+//creating a pink button
+function PinkButton() {
   const ButtonColor = createTheme({
     palette: {
       primary: {
-        main: "#9e6abf",
+        main: "#de66c3",
       },
       secondary: {
         main: "#e0c6e7",
@@ -50,33 +49,15 @@ function PurpleButton() {
     </ThemeProvider>
   );
 }
-export { PurpleButton };
+export { PinkButton };
 
-const PurpleTheme = createTheme({
-  palette: {
-    primary: {
-      main: "#9e6abf",
-    },
-    secondary: {
-      main: "#e0c6e7",
-    },
-  },
-  typography: {
-    fontFamily: roboto.style.fontFamily,
-    fontWeight: 700,
-  },
-});
-export { PurpleTheme };
-
-//the child component
+//the child component of the form process
 
 export default function TourOptionsForm({ onSubmit }) {
   const [state, setState] = useState({
     buildings: false,
     statues: false,
-    artworks: false,
     landmarks: false,
-    monuments: false,
   });
 
   const handleChange = (event) => {
@@ -86,23 +67,8 @@ export default function TourOptionsForm({ onSubmit }) {
     });
   };
 
-  const { buildings, statues, artworks, landmarks, monuments } = state;
-  const error =
-    [buildings, statues, artworks, landmarks, monuments].filter((v) => v)
-      .length !== 2;
-
-  {
-    /*}
-  const handleChange = (event) => {
-    const { checked, name } = event.target;
-    setState(prevState =>( {
-    ...prevState,
-    [name]: type === 'checkbox' ? checked : value,
-    }));
-  };
-
-  */
-  }
+  const { buildings, statues, landmarks } = state;
+  const error = [buildings, statues, landmarks].filter((v) => v).length !== 2;
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -122,17 +88,17 @@ export default function TourOptionsForm({ onSubmit }) {
           margin="normal"
         >
           <Grid
-            paddingTop={0}
+            paddingTop={4}
             paddingBottom={2}
             alignItems={"center"}
             paddingLeft={0}
           >
-            <ThemeProvider theme={PurpleTheme}>
-              <FormLabel component="legend" sx={{ fontWeight: "500" }}>
-
-                What would you like to see on your tour?
-              </FormLabel>
-            </ThemeProvider>
+            <FormLabel
+              component="legend"
+              sx={{ fontWeight: "500", color: "white", textAlign: "center" }}
+            >
+              What would you like to see on your tour?
+            </FormLabel>
           </Grid>
 
           <FormGroup>
@@ -142,11 +108,11 @@ export default function TourOptionsForm({ onSubmit }) {
                   checked={buildings}
                   onChange={handleChange}
                   name="buildings"
-                  size='large'
+                  size="large"
                   sx={{
-                    color: purple[800],
+                    color: orange[600],
                     "&.Mui-checked": {
-                      color: purple[600],
+                      color: orange[400],
                     },
                   }}
                 />
@@ -159,76 +125,50 @@ export default function TourOptionsForm({ onSubmit }) {
                   checked={statues}
                   onChange={handleChange}
                   name="statues"
-                  size='large'
+                  size="large"
                   sx={{
-                    color: purple[800],
+                    color: orange[600],
                     "&.Mui-checked": {
-                      color: purple[600],
+                      color: orange[400],
                     },
                   }}
                 />
               }
-              label="Impressive Statues"
+              label="Statues and Large-scale Artworks"
               color="primary"
             />
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={artworks}
-                  onChange={handleChange}
-                  name="artworks"
-                  size='large'
-                  sx={{
-                    color: purple[800],
-                    "&.Mui-checked": {
-                      color: purple[600],
-                    },
-                  }}
-                />
-              }
-              label="Large-scale Artworks"
-            />
+
             <FormControlLabel
               control={
                 <Checkbox
                   checked={landmarks}
                   onChange={handleChange}
                   name="landmarks"
-                  size='large'
+                  size="large"
                   sx={{
-                    color: purple[800],
+                    color: orange[600],
                     "&.Mui-checked": {
-                      color: purple[600],
+                      color: orange[400],
                     },
                   }}
                 />
               }
-              label="Notable Landmarks"
-            />
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={monuments}
-                  onChange={handleChange}
-                  name="monuments"
-                  size='large'
-                  sx={{
-                    color: purple[800],
-                    "&.Mui-checked": {
-                      color: purple[600],
-                    },
-                  }}
-                />
-              }
-              label="Impressive Monuments"
+              label="Notable Landmarks and Monuments"
             />
           </FormGroup>
 
-          <FormHelperText sx={{ m: 4 }}>
+          <FormHelperText
+            sx={{
+              m: 4,
+              fontWeight: "300",
+              color: "black",
+              textAlign: "center",
+            }}
+          >
             *You must choose at least one option.
           </FormHelperText>
 
-          <PurpleButton />
+          <PinkButton />
         </FormControl>
       </Box>
     </form>

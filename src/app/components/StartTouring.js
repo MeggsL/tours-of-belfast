@@ -15,6 +15,7 @@ import { useState } from "react";
 //import BottomNavMaps from "./BottomNavMaps.js";
 import TourOptionsForm from "./TourOptionsChecklist.js";
 import { redirect } from "next/navigation";
+import Alert from "@mui/material/Alert";
 
 //the parent component
 
@@ -25,7 +26,7 @@ const Title = () => {
       src="/img/purple-welcome.png"
       alt="Welcome"
       width={356}
-      height={250}
+      height={164}
       priority
     />
   );
@@ -40,37 +41,109 @@ export default function StartTour({ onSubmit }) {
     console.log("Form data submitted:", data);
 
     if (
-      data.buildings && !data.statues && !ata.landmarks && !data.monuments && !data.artworks) {
+      data.buildings &&
+      !data.statues &&
+      !ata.landmarks &&
+      !data.monuments &&
+      !data.artworks
+    ) {
       window.location.href = "../tours/purple-b";
     } else if (
-      data.buildings && data.statues && !data.landmarks && !data.monuments && !data.artworks) {
+      data.buildings &&
+      data.statues &&
+      !data.landmarks &&
+      !data.monuments &&
+      !data.artworks
+    ) {
       window.location.href = "../tours/purple-b-s";
     } else if (
-      data.buildings && data.statues && data.landmarks && !data.monuments && !data.artworks) {
+      data.buildings &&
+      data.statues &&
+      data.landmarks &&
+      !data.monuments &&
+      !data.artworks
+    ) {
       window.location.href = "../tours/purple-b-l-s";
-
     } else if (
-      data.statues && !data.landmarks && !data.buildings && !data.monuments && !data.artworks) {
+      data.statues &&
+      !data.landmarks &&
+      !data.buildings &&
+      !data.monuments &&
+      !data.artworks
+    ) {
       window.location.href = "../tours/purple-s";
     } else if (
-      data.statues && data.landmarks && !data.buildings && !data.monuments && !data.artworks) {
+      data.statues &&
+      data.landmarks &&
+      !data.buildings &&
+      !data.monuments &&
+      !data.artworks
+    ) {
       window.location.href = "../tours/purple-l-s";
     } else if (
-      data.landmarks && !data.statues && !data.buildings && !data.monuments && !data.artworks) {
+      data.landmarks &&
+      !data.statues &&
+      !data.buildings &&
+      !data.monuments &&
+      !data.artworks
+    ) {
       window.location.href = "../tours/purple-l";
     } else if (
-      data.landmarks && data.buildings && !data.statues && !data.monuments && !data.artworks) {
+      data.landmarks &&
+      data.buildings &&
+      !data.statues &&
+      !data.monuments &&
+      !data.artworks
+    ) {
       window.location.href = "../tours/purple-b-l";
     } else if (
-      data.artworks && !data.landmarks && !data.buildings && !data.monuments && !data.statues) {
+      data.artworks &&
+      !data.landmarks &&
+      !data.buildings &&
+      !data.monuments &&
+      !data.statues
+    ) {
       window.location.href = "../tours/purple-s";
     } else if (
-      data.monuments && !data.statues && !data.buildings && !data.landmarks && !data.artworks) {
+      data.monuments &&
+      !data.statues &&
+      !data.buildings &&
+      !data.landmarks &&
+      !data.artworks
+    ) {
       window.location.href = "../tours/purple-l";
     } else if (
-      data.statues && data.landmarks && data.monuments && !data.buildings && !data.artworks) {
+      data.statues &&
+      data.landmarks &&
+      data.monuments &&
+      !data.buildings &&
+      !data.artworks
+    ) {
       window.location.href = "../tours/purple-l-s";
-
+    } else if (
+      data.buildings &&
+      data.statues &&
+      data.landmarks &&
+      data.monuments &&
+      !data.artworks
+    ) {
+      window.location.href = "../tours/purple-b-l-s";
+    } else if (
+      data.buildings &&
+      data.statues &&
+      data.landmarks &&
+      data.monuments &&
+      data.artworks
+    ) {
+      window.location.href = "../tours/purple-b-l-s";
+    } else if (
+      data.artworks &&
+      data.statues &&
+      !data.buildings &&
+      !data.monuments &&
+      !data.landmarks
+    ) {
+      window.location.href = "../tours/purple-s";
     } else {
       console.log("That didn't work.");
     }
@@ -85,15 +158,15 @@ export default function StartTour({ onSubmit }) {
         spacing={2}
         justifyContent="center"
         rowSpacing={0}
-        paddingTop={2}
+        paddingTop={7}
       >
         <Grid
           container
           spacing={2}
-          rowSpacing={-2}
+          rowSpacing={0}
           item
           xs={12}
-          paddingTop={4}
+          paddingTop={0}
           justifyContent="center"
         >
           <Title />
@@ -101,10 +174,10 @@ export default function StartTour({ onSubmit }) {
         <Grid
           container
           spacing={2}
-          rowSpacing={-2}
+          rowSpacing={0}
           item
           xs={12}
-          paddingTop={4}
+          paddingTop={0}
           justifyContent="center"
         >
           <TourOptionsForm formData={state} onSubmit={handleFormSubmit} />
@@ -113,62 +186,3 @@ export default function StartTour({ onSubmit }) {
     </Box>
   );
 }
-
-
-{/*
-if (
-      data.buildings === true &&
-      (data.statues && data.landmarks && data.monuments && data.artworks) ===
-        false
-    ) {
-      window.location.href = "../tours/purple-b";
-    } else if (
-      (data.buildings && data.statues) === true &&
-      (data.landmarks && data.monuments && data.artworks) === false
-    ) {
-      window.location.href = "../tours/purple-b-s";
-    } else if (
-      (data.buildings && data.statues && data.landmarks) === true &&
-      (data.monuments && data.artworks) === false
-    ) {
-      window.location.href = "../tours/purple-b-l-s";
-    } else if (
-      data.statues === true &&
-      (data.landmarks && data.buildings && data.monuments && data.artworks) ===
-        false
-    ) {
-      window.location.href = "../tours/purple-s";
-    } else if (
-      (data.statues && data.landmarks) === true &&
-      (data.buildings && data.monuments && data.artworks) === false
-    ) {
-      window.location.href = "../tours/purplel-s";
-    } else if (
-      data.landmarks === true &&
-      (data.statues && data.buildings && data.monuments && data.artworks) ===
-        false
-    ) {
-      window.location.href = "../tours/purple-l";
-    } else if (
-      (data.landmarks && data.buildings) === true &&
-      (data.statues && data.monuments && data.artworks) === false
-    ) {
-      window.location.href = "../tours/purple-b-l";
-    } else if (
-      data.artworks === true &&
-      (data.landmarks && data.buildings && data.monuments && data.statues) ===
-        false
-    ) {
-      window.location.href = "../tours/purple-s";
-    } else if (
-      data.monuments === true &&
-      (data.statues && data.buildings && data.landmarks && data.artworks) ===
-        false
-    ) {
-      window.location.href = "../tours/purple-l";
-
-    } else {
-      console.log("That didn't work.");
-    }
-  };}
-*/}
