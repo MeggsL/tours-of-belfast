@@ -1,13 +1,14 @@
 "use client";
 
 import { APIProvider, Map } from "@vis.gl/react-google-maps";
-
+import BuildingsDirections from "../(tour-components)/(directions)/BuildingsDirections";
+import BuildingMarkers from "../(markers)/BuildingMarkers";
 import Container from "@mui/material/Container";
+import AppUser from "../(markers)/UserMarker";
 import LandmarkMarkers from "../(markers)/LandmarkMarkers";
 
-import AppUser from "../../components/(markers)/UserMarker";
 
-function PurpleMapOfLandmarks() {
+function PurpleMapOfBuildingsAndLandmarks() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
 
   return (
@@ -19,13 +20,14 @@ function PurpleMapOfLandmarks() {
             defaultCenter={position}
             mapId={process.env.NEXT_PUBLIC_PURPLE_MAP_ID}
           >
-            <AppUser />
-            <LandmarkMarkers />
-         
+      <BuildingMarkers />
+      <LandmarkMarkers />
+      <AppUser />
+      
           </Map>
         </div>
       </Container>
     </APIProvider>
   );
 }
-export default PurpleMapOfLandmarks;
+export default PurpleMapOfBuildingsAndLandmarks;

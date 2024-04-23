@@ -1,28 +1,30 @@
-import React from "react";
-import PurpleTourTable from "../purple-components/PurpleTourTable.js";
-//import BottomNavTours from "../components/BottomNavTours.js";
-//import styles from "../page.module.css";
-//import "../purple.css";
-import "./purple-tours.css";
-import "../p-page.module.css";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import BottomNavWelcome from "../../components/BottomNavWelcome.js";
+"use client";
 
-export default function PurpleToursHome() {
+import React from "react";
+
+import "../../globals.css";
+import "../../page.module.css";
+//import Grid from "@mui/material/Grid";
+//import Box from "@mui/material/Box";
+//import SetTour from "../../components/ProcessTourForm";
+//import TourOptionsForm from "../../components/TourOptionsChecklist";
+//import BottomNavWelcome from "./components/BottomNavWelcome.js";
+import StartTour from "../../components/StartTouring";
+
+<html lang="en">
+  <head>
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>Tours of Belfast</title>
+  </head>
+  <body></body>
+</html>;
+
+export default function TakeATour() {
   return (
-    <Box>
-      <Grid
-        item
-        xs={12}
-        sm={6}
-        justifyContent="center"
-        rowSpacing={0}
-        padding={0}
-      >
-        <PurpleTourTable />
-      </Grid>
-      <BottomNavWelcome />
-    </Box>
+    <main className="main">
+      <div>
+  <StartTour onSubmit={undefined} />
+      </div>
+    </main>
   );
 }

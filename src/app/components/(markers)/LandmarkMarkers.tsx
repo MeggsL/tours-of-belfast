@@ -4,53 +4,69 @@ import {
   useAdvancedMarkerRef,
   AdvancedMarker,
   InfoWindow,
+  Pin,
 } from "@vis.gl/react-google-maps";
 
-import landmarks from "../../../apis/landmarks";
+import landmarks from "../../data/landmarks";
 import { useState } from "react";
+
 
 type Point = google.maps.LatLngLiteral & { key: string } & { name: string } & {
   info: string;
 };
 type Props = { points: Point[] };
 
-const Markers = ({ points }: Props) => {
-  //const [open, setOpen] = useState(false);
-  const [markerRef] = useAdvancedMarkerRef();
-  const [infowindowShown, setInfowindowShown] = useState(false);
+const MapMarkers = ({ points }: Props) => {
+  const [markerRef, marker] = useAdvancedMarkerRef();
 
-  const toggleInfoWindow = () =>
-    setInfowindowShown((previousState) => !previousState);
+  const [activeMarker, setActiveMarker] = useState(null);
 
-  const closeInfoWindow = () => setInfowindowShown(false);
+  const handleActiveMarker = (marker) => {
+    if (marker === activeMarker) {
+      return;
+    }
+    setActiveMarker(marker);
+  };
 
   return (
     <>
+      {/* map out the various points from the data source: overwhelm.ts */}
       {points.map((point) => (
         <AdvancedMarker
           ref={markerRef}
           position={point}
           key={point.key}
-          onClick={toggleInfoWindow}
+          onClick={() => handleActiveMarker(point)}
         >
-          <span style={{ fontSize: "2rem" }}>🕋</span>
-          {infowindowShown && (
+          {/* create custom pin */}
+          <Pin background={"#22ccff"} borderColor={"#1e89a1"} scale={1.4}>
+            {/* children are rendered as 'glyph' of pin */}
+            <span style={{ fontSize: "1rem" }}>🗿</span>
+          </Pin>
+
+          {/* create InfoWindow for each marker and set it so that only the window for the marker clicked-on opens*/}
+          {activeMarker === point ? (
             <InfoWindow
-              onCloseClick={closeInfoWindow}
-              content={point.name + point.info}
+              // anchor={marker}
+              maxWidth={200}
+              onCloseClick={() => setActiveMarker(null)}
+              //  content={point.name + point.info}
               position={point}
               key={point.key}
-            ></InfoWindow>
-          )}
+            >
+              <h2>{point.name}</h2>
+              <p>{point.info}</p>
+            </InfoWindow>
+          ) : null}
         </AdvancedMarker>
       ))}
     </>
   );
 };
-export { Markers };
+export { MapMarkers };
 
 function LandmarkMarkers() {
-  return <Markers points={landmarks} />;
+  return <MapMarkers points={landmarks} />;
 };
 
 export default LandmarkMarkers;

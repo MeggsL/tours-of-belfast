@@ -2,20 +2,11 @@
 
 import { APIProvider, Map } from "@vis.gl/react-google-maps";
 import BuildingsDirections from "../../components/(tour-components)/(directions)/BuildingsDirections";
-import CityHallMarker from "../../components/(tour-components)/(markers)/(buildings)/CityHallMarker";
-import LinenHallMarker from "../../components/(tour-components)/(markers)/(buildings)/LinenHallMarker";
-import GaolMarker from "../../components/(tour-components)/(markers)/(buildings)/GaolMarker";
-import RiddellHallMarker from "../../components/(tour-components)/(markers)/(buildings)/RiddellHallMarker";
-import CustomHouseMarker from "../../components/(tour-components)/(markers)/(buildings)/CustomHouseMarker";
-import CourthouseMarker from "../../components/(tour-components)/(markers)/(buildings)/CourthouseMarker";
-import LanyonMarker from "../../components/(tour-components)/(markers)/(buildings)/LanyonMarker";
-import UlsterHallMarker from "../../components/(tour-components)/(markers)/(buildings)/UlsterHallMarker";
-import CathedralMarker from "../../components/(tour-components)/(markers)/(buildings)/CathedralMarker";
+import BuildingMarkers from "../(markers)/BuildingMarkers";
+
 import Container from "@mui/material/Container";
-import AppUser from "../../components/(tour-components)/(markers)/UserMarker";
-import FloatingButton from "../../components/FloatingButton";
-import Grid from "@mui/material/Grid";
-import OpenBox from "../../components/OpenBox"
+import AppUser from "../../components/(markers)/UserMarker";
+
 
 function PurpleMapOfBuildings() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
@@ -29,20 +20,9 @@ function PurpleMapOfBuildings() {
             defaultCenter={position}
             mapId={process.env.NEXT_PUBLIC_PURPLE_MAP_ID}
           >
-            <Grid paddingTop={6}>
-             <OpenBox />
-           </Grid>
-            <AppUser />
-            <BuildingsDirections />
-            <CityHallMarker />
-            <LinenHallMarker />
-            <GaolMarker />
-            <RiddellHallMarker />
-            <CustomHouseMarker />
-            <CourthouseMarker />
-            <LanyonMarker />
-            <UlsterHallMarker />
-            <CathedralMarker />
+      <BuildingMarkers />
+      <AppUser />
+      
           </Map>
         </div>
       </Container>

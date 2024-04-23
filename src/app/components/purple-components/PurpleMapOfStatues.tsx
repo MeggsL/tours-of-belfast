@@ -3,15 +3,9 @@
 import { APIProvider, Map } from "@vis.gl/react-google-maps";
 
 import Container from "@mui/material/Container";
-import BigFishMarker from "../../components/(tour-components)/(markers)/(statues)/BigFishMarker";
-import HarlandMarker from "../../components/(tour-components)/(markers)/(statues)/HarlandMarker";
-import MastsMarker from "../../components/(tour-components)/(markers)/(statues)/MastsMarker";
-import BeaconOfHopeMarker from "../../components/(tour-components)/(markers)/(statues)/BeaconMarker";
-import SpeakerMarker from "../../components/(tour-components)/(markers)/(statues)/SpeakerMarker";
-import SpiritMarker from "../../components/(tour-components)/(markers)/(statues)/SpiritOfBelfastMarker";
-import VictoriaMarker from "../../components/(tour-components)/(markers)/(statues)/VictoriaMarker";
+import StatueMarkers from "../(markers)/StatueMarkers";
 import StatueDirections from "../../components/(tour-components)/(directions)/StatueDirections";
-import AppUser from "../../components/(tour-components)/(markers)/UserMarker";
+import AppUser from "../../components/(markers)/UserMarker";
 
 function PurpleMapOfStatues() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
@@ -26,14 +20,7 @@ function PurpleMapOfStatues() {
             mapId={process.env.NEXT_PUBLIC_PURPLE_MAP_ID}
           >
             <AppUser />
-            <StatueDirections />
-            <BigFishMarker />
-            <HarlandMarker />
-            <MastsMarker />
-            <BeaconOfHopeMarker />
-            <SpeakerMarker />
-            <SpiritMarker />
-            <VictoriaMarker />
+            <StatueMarkers />
           </Map>
         </div>
       </Container>

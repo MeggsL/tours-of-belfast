@@ -5,27 +5,18 @@ import Image from "next/image";
 import Link from "next/link";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import { Roboto } from 'next/font/google';
 //import TransitionHover from "../components/StyledAvatarButton.js";
 import Button from "@mui/material/Button";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-
 //import AcUnitTwoToneIcon from "@mui/icons-material/AcUnitTwoTone";
 //import SelfImprovementTwoToneIcon from "@mui/icons-material/SelfImprovementTwoTone";
 //import FilterVintageTwoToneIcon from "@mui/icons-material/FilterVintageTwoTone";
 
 //import Paper from "@mui/material/Paper";
-import Grid from '@mui/material/Grid'; // Grid version 1
+//import Grid from '@mui/material/Grid'; // Grid version 1
+import Grid from "@mui/material/Unstable_Grid2"; // Grid version 2
 import "../globals.css";
 import "../page.module.css";
-import PurpleTheme from "../components/PurpleTheme.js";
-
-// setting the font
-const roboto = Roboto({
-  weight: ['300', '400', '500', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-});
 
 //the button for the soothing lilac experience
 function PurpleButton() {
@@ -38,9 +29,6 @@ function PurpleButton() {
         main: "#e0c6e7",
       },
     },
-    typography: {
-      fontFamily: roboto.style.fontFamily,
-    },
   });
 
   return (
@@ -50,44 +38,65 @@ function PurpleButton() {
         size="large"
    //     startIcon={<SelfImprovementTwoToneIcon />}
       >
-        Let's get started
+        Soothing Lilacs
       </Button>
     </ThemeProvider>
   );
 }
 
 //the button for the peachy pink experience
-function ChangeColourButton() {
+function PeachyButton() {
   const ButtonColor = createTheme({
     palette: {
       primary: {
-        main: "#0d0114",
+        main: "#dcbfba",
       },
       secondary: {
-        main: "#0d0114",
+        main: "#dcbfba",
       },
-    },
-    typography: {
-      fontFamily: roboto.style.fontFamily,
     },
   });
 
   return (
     <ThemeProvider theme={ButtonColor}>
       <Button
-        variant="outlined"
+        variant="contained"
         size="large"
    //     startIcon={<FilterVintageTwoToneIcon />}
       >
-       Change Colour Theme
+        Peachy Pinks
       </Button>
     </ThemeProvider>
   );
 }
 
+//the button for the cooling blues experience
+function BlueyButton() {
+  const ButtonColor = createTheme({
+    palette: {
+      primary: {
+        main: "#8bd6f3",
+      },
+      secondary: {
+        main: "#8bd6f3",
+      },
+    },
+  });
 
+  return (
+    <ThemeProvider theme={ButtonColor}>
+      <Button
+        variant="contained"
+        size="large"
+      //  startIcon={<AcUnitTwoToneIcon />}
+      >
+        Cooling Blues
+      </Button>
+    </ThemeProvider>
+  );
+}
 //exporting the buttons
-export { PurpleButton, ChangeColourButton };
+export { PurpleButton, PeachyButton, BlueyButton };
 
 export default function Homepage() {
   return (
@@ -112,20 +121,22 @@ export default function Homepage() {
           />
         </Grid>
         <Grid item xs={12} container justifyContent="center" rowSpacing={-5} paddingTop={1}>
-          <h2 align="center ">Right, what's the craic mate?</h2>
+          <h2 align="center ">Please select your colour experience.</h2>
         </Grid>
         <Grid item xs={12} container justifyContent="center" rowSpacing={-5} paddingTop={4}>
-          <Link href="/tours">
+          <Link href="/purple">
             <PurpleButton />
           </Link>
         </Grid>
-        <Grid item xs={12} container justifyContent="center" rowSpacing={-5} paddingTop={3}>
+        <Grid item xs={12} container justifyContent="center" rowSpacing={-5}>
           <Link href="/peachypink">
-            <ChangeColourButton />
+            <PeachyButton />
           </Link>
         </Grid>
         <Grid item xs={12} container justifyContent="center" rowSpacing={-5} paddingBottom={3}>
-      
+          <Link href="/blueygrey">
+            <BlueyButton />
+          </Link>
         </Grid>
 
         <Grid item xs={12} container justifyContent="center" rowSpacing={-2}>

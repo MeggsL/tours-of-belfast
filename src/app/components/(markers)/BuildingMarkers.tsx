@@ -7,8 +7,9 @@ import {
   Pin,
 } from "@vis.gl/react-google-maps";
 
-import statues from "../../data/statues";
+import buildings from "../../data/buildings";
 import { useState } from "react";
+import "./markers.css";
 
 type Point = google.maps.LatLngLiteral & { key: string } & { name: string } & {
   info: string;
@@ -40,7 +41,7 @@ const MapMarkers = ({ points }: Props) => {
           {/* create custom pin */}
           <Pin background={"#22ccff"} borderColor={"#1e89a1"} scale={1.4}>
             {/* children are rendered as 'glyph' of pin */}
-            <span style={{ fontSize: "1rem" }}>🗽</span>
+            <span style={{ fontSize: "1rem" }}>🏛️</span>
           </Pin>
 
           {/* create InfoWindow for each marker and set it so that only the window for the marker clicked-on opens*/}
@@ -64,8 +65,8 @@ const MapMarkers = ({ points }: Props) => {
 };
 export { MapMarkers };
 
-function StatueMarkers() {
-  return <MapMarkers points={statues} />;
+function BuildingMarkers() {
+  return <MapMarkers points={buildings} />;
 };
 
-export default StatueMarkers;
+export default BuildingMarkers;

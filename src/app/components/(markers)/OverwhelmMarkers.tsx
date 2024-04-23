@@ -7,7 +7,7 @@ import {
   Pin,
 } from "@vis.gl/react-google-maps";
 
-import overwhelm from "../../../apis/overwhelm";
+import overwhelm from "../../data/overwhelm";
 import { useState } from "react";
 
 type Point = google.maps.LatLngLiteral & { key: string } & { name: string } & {
