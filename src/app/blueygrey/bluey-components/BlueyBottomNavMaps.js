@@ -1,24 +1,19 @@
 "use client";
 
 import React from "react";
-import "../globals.css";
+import "../../globals.css";
 import Box from "@mui/material/Box";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import WbSunnyTwoToneIcon from "@mui/icons-material/WbSunnyTwoTone";
-import DoNotDisturbOnTotalSilenceTwoToneIcon from "@mui/icons-material/DoNotDisturbOnTotalSilenceTwoTone";
+//import DoNotDisturbOnTotalSilenceTwoToneIcon from "@mui/icons-material/DoNotDisturbOnTotalSilenceTwoTone";
 import RouteTwoToneIcon from "@mui/icons-material/RouteTwoTone";
 import HomeTwoToneIcon from "@mui/icons-material/HomeTwoTone";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-//import WhereToVoteTwoToneIcon from "@mui/icons-material/WhereToVoteTwoTone";
-//import WcTwoToneIcon from '@mui/icons-material/WcTwoTone';
-//import AirTwoToneIcon from '@mui/icons-material/AirTwoTone';
-import Container from "@mui/material/Container";
+//import Container from "@mui/material/Container";
 import CssBaseline from "@mui/material/CssBaseline";
-//import { useEffect } from "react";
 import Link from '@mui/material/Link';
-//import ThemeProvider from "@mui/material/styles";
-import WeekendIcon from '@mui/icons-material/Weekend';
+//import WeekendIcon from '@mui/icons-material/Weekend';
 import Image from 'next/image';
 
 export default function BottomNavMaps() {
