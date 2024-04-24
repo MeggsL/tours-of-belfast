@@ -1,12 +1,13 @@
 "use client";
 
 import { APIProvider, Map } from "@vis.gl/react-google-maps";
+import BuildingMarkers from "../../components/(markers)/BuildingMarkers";
 import Container from "@mui/material/Container";
-import LandmarkMarkers from "../../components/(markers)/LandmarkMarkers";
 import AppUser from "../../components/(markers)/UserMarker";
-import DirectionsLandmarks from "../../components/(directions)/DirectionsLandmarks";
+import LandmarkMarkers from "../../components/(markers)/LandmarkMarkers";
+import LandBDirections from "../../components/(directions)/Directions-l-b";
 
-function BlueMapOfLandmarks() {
+export default function BlueMapOfBuildingsAndLandmarks() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
 
   return (
@@ -18,13 +19,13 @@ function BlueMapOfLandmarks() {
             defaultCenter={position}
             mapId={process.env.NEXT_PUBLIC_BLUE_MAP_ID}
           >
-            <AppUser />
+            <BuildingMarkers />
             <LandmarkMarkers />
-            <DirectionsLandmarks />
+            <AppUser />
+            <LandBDirections />
           </Map>
         </div>
       </Container>
     </APIProvider>
   );
 }
-export default BlueMapOfLandmarks;
