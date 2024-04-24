@@ -6,15 +6,8 @@ import Link from "next/link";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import { Roboto } from 'next/font/google';
-//import TransitionHover from "../components/StyledAvatarButton.js";
 import Button from "@mui/material/Button";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-
-//import AcUnitTwoToneIcon from "@mui/icons-material/AcUnitTwoTone";
-//import SelfImprovementTwoToneIcon from "@mui/icons-material/SelfImprovementTwoTone";
-//import FilterVintageTwoToneIcon from "@mui/icons-material/FilterVintageTwoTone";
-
-//import Paper from "@mui/material/Paper";
 import Grid from '@mui/material/Grid'; // Grid version 1
 import "../peachypink.css";
 import "../pp-page.module.css";
@@ -31,10 +24,10 @@ function GetStartedButton() {
   const ButtonColor = createTheme({
     palette: {
       primary: {
-        main: "#f690df",
+        main: "#f7c455",
       },
       secondary: {
-        main: "#e0c6e7",
+        main: "#f7c455",
       },
     },
     typography: {
@@ -60,10 +53,10 @@ function ChangeColourButton() {
   const ButtonColor = createTheme({
     palette: {
       primary: {
-        main: "#0d0114",
+        main: "#ffffff",
       },
       secondary: {
-        main: "#0d0114",
+        main: "#ffffff",
       },
     },
     typography: {
@@ -98,7 +91,7 @@ export default function PeachyPinkHomepage() {
           rowSpacing={3}
           item
           xs={12}
-          paddingTop={8}
+          paddingTop={12}
           justifyContent="center"
         >
           <Image
@@ -106,7 +99,7 @@ export default function PeachyPinkHomepage() {
             src="/img/home-title.png"
             alt="Tour of Belfast"
             width={356}
-            height={250}
+            height={200}
             priority
           />
         </Grid>
@@ -117,6 +110,7 @@ export default function PeachyPinkHomepage() {
           item
           xs={12}
           paddingTop={6}
+          paddingBottom={2}
           justifyContent="center"
         >
           <Image

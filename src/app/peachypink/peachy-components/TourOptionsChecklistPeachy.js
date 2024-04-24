@@ -11,7 +11,8 @@ import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import { useState } from "react";
 import { Roboto } from "next/font/google";
-import { orange } from "@mui/material/colors";
+import { amber } from "@mui/material/colors";
+import { brown } from "@mui/material/colors";
 
 // setting the font
 const roboto = Roboto({
@@ -110,9 +111,9 @@ export default function TourOptionsForm({ onSubmit }) {
                   name="buildings"
                   size="large"
                   sx={{
-                    color: orange[600],
+                    color: amber[300],
                     "&.Mui-checked": {
-                      color: orange[400],
+                      color: amber[500],
                     },
                   }}
                 />
@@ -127,9 +128,9 @@ export default function TourOptionsForm({ onSubmit }) {
                   name="statues"
                   size="large"
                   sx={{
-                    color: orange[600],
+                    color: amber[300],
                     "&.Mui-checked": {
-                      color: orange[400],
+                      color: amber[500],
                     },
                   }}
                 />
@@ -146,9 +147,9 @@ export default function TourOptionsForm({ onSubmit }) {
                   name="landmarks"
                   size="large"
                   sx={{
-                    color: orange[600],
+                    color: amber[300],
                     "&.Mui-checked": {
-                      color: orange[400],
+                      color: amber[500],
                     },
                   }}
                 />
@@ -160,8 +161,8 @@ export default function TourOptionsForm({ onSubmit }) {
           <FormHelperText
             sx={{
               m: 4,
-              fontWeight: "300",
-              color: "black",
+              fontWeight: "500",
+              color: brown[900],
               textAlign: "center",
             }}
           >

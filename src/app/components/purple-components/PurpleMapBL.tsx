@@ -1,11 +1,11 @@
 "use client";
 
 import { APIProvider, Map } from "@vis.gl/react-google-maps";
-import BuildingsDirections from "../(tour-components)/(directions)/BuildingsDirections";
 import BuildingMarkers from "../(markers)/BuildingMarkers";
 import Container from "@mui/material/Container";
 import AppUser from "../(markers)/UserMarker";
 import LandmarkMarkers from "../(markers)/LandmarkMarkers";
+import LandBDirections from "../(directions)/Directions-l-b";
 
 
 export default function PurpleMapOfBuildingsAndLandmarks() {
@@ -23,6 +23,8 @@ export default function PurpleMapOfBuildingsAndLandmarks() {
       <BuildingMarkers />
       <LandmarkMarkers />
       <AppUser />
+      <LandBDirections />
+
       
           </Map>
         </div>

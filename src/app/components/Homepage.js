@@ -28,14 +28,14 @@ const roboto = Roboto({
 });
 
 //the button for the soothing lilac experience
-function PurpleButton() {
+function GoldieButton() {
   const ButtonColor = createTheme({
     palette: {
       primary: {
-        main: "#e0c6e7",
+        main: "#8e5dac",
       },
       secondary: {
-        main: "#e0c6e7",
+        main: "#8e5dac",
       },
     },
     typography: {
@@ -61,10 +61,10 @@ function ChangeColourButton() {
   const ButtonColor = createTheme({
     palette: {
       primary: {
-        main: "#0d0114",
+        main: "#ffffff",
       },
       secondary: {
-        main: "#0d0114",
+        main: "#ffffff",
       },
     },
     typography: {
@@ -87,7 +87,7 @@ function ChangeColourButton() {
 
 
 //exporting the buttons
-export { PurpleButton, ChangeColourButton };
+export { GoldieButton, ChangeColourButton };
 
 export default function Homepage() {
   return (
@@ -99,7 +99,7 @@ export default function Homepage() {
           rowSpacing={3}
           item
           xs={12}
-          paddingTop={8}
+          paddingTop={12}
           justifyContent="center"
         >
           <Image
@@ -107,7 +107,7 @@ export default function Homepage() {
             src="/img/home-title.png"
             alt="Tour of Belfast"
             width={356}
-            height={250}
+            height={200}
             priority
           />
         </Grid>
@@ -118,6 +118,7 @@ export default function Homepage() {
           item
           xs={12}
           paddingTop={6}
+          paddingBottom={2}
           justifyContent="center"
         >
           <Image
@@ -132,7 +133,7 @@ export default function Homepage() {
    
         <Grid item xs={12} container justifyContent="center" rowSpacing={-5} paddingTop={4}>
           <Link href="/tours">
-            <PurpleButton />
+            <GoldieButton />
           </Link>
         </Grid>
         <Grid item xs={12} container justifyContent="center" rowSpacing={-5} paddingTop={3} paddingBottom={6}>

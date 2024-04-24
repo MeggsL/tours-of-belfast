@@ -4,6 +4,7 @@ import { APIProvider, Map } from "@vis.gl/react-google-maps";
 import Container from "@mui/material/Container";
 import LandmarkMarkers from "../(markers)/LandmarkMarkers";
 import AppUser from "../../components/(markers)/UserMarker";
+import LandmarkDirections from "../(directions)/DirectionsLandmarks";
 
 export default function PurpleMapOfLandmarks() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
@@ -19,6 +20,7 @@ export default function PurpleMapOfLandmarks() {
           >
             <AppUser />
             <LandmarkMarkers />
+            <LandmarkDirections />
          
           </Map>
         </div>

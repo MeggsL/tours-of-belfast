@@ -1,13 +1,12 @@
 "use client";
 
 import { APIProvider, Map } from "@vis.gl/react-google-maps";
-
 import Container from "@mui/material/Container";
-import LandmarkMarkers from "../(markers)/LandmarkMarkers";
-
+import LandmarkMarkers from "../../components/(markers)/LandmarkMarkers";
 import AppUser from "../../components/(markers)/UserMarker";
+import DirectionsLandmarks from "../../components/(directions)/DirectionsLandmarks";
 
-function PinkMapOfLandmarks() {
+export default function PinkMapOfLandmarks() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
 
   return (
@@ -21,6 +20,7 @@ function PinkMapOfLandmarks() {
           >
             <AppUser />
             <LandmarkMarkers />
+            <DirectionsLandmarks />
          
           </Map>
         </div>
@@ -28,4 +28,3 @@ function PinkMapOfLandmarks() {
     </APIProvider>
   );
 }
-export default PurpleMapOfLandmarks;

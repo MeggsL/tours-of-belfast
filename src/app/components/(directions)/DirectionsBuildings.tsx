@@ -4,7 +4,6 @@ import { useMapsLibrary, useMap } from "@vis.gl/react-google-maps";
 
 import { useEffect, useState } from "react";
 import "./routes.css";
-import "../../../globals.css";
 
 function BuildingDirections() {
   const map = useMap();
@@ -43,6 +42,7 @@ function BuildingDirections() {
           { location: "Belfast Cathedral, Belfast UK" },
           //{ location: "The Merchant Hotel, Belfast UK" },
           { location: "Custom House, Belfast UK" },
+          { location: "St George's Market, Belfast UK" },
           { location: "Riddell Hall, Belfast UK" },
           { location: "The Lanyon Building, Belfast UK" },
           { location: "The Ulster Hall, Belfast UK" },

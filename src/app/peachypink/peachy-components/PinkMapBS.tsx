@@ -1,15 +1,13 @@
 "use client";
 
 import { APIProvider, Map } from "@vis.gl/react-google-maps";
-import BuildingsDirections from "../(tour-components)/(directions)/BuildingsDirections";
-import BuildingMarkers from "../(markers)/BuildingMarkers";
+import BuildingMarkers from "../../components/(markers)/BuildingMarkers";
 import Container from "@mui/material/Container";
-import AppUser from "../(markers)/UserMarker";
-import LandmarkMarkers from "../(markers)/LandmarkMarkers";
-import StatueMarkers from "../(markers)/StatueMarkers";
+import AppUser from "../../components/(markers)/UserMarker";
+import StatueMarkers from "../../components/(markers)/StatueMarkers";
+import BandSDirections from "../../components/(directions)/Directions-b-s";
 
-
-function PinkMapOfBuildingsAndStatues() {
+export default function PinkMapOfBuildingsAndStatues() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
 
   return (
@@ -24,6 +22,7 @@ function PinkMapOfBuildingsAndStatues() {
       <BuildingMarkers />
       <StatueMarkers />
       <AppUser />
+      <BandSDirections />
       
           </Map>
         </div>
@@ -31,4 +30,3 @@ function PinkMapOfBuildingsAndStatues() {
     </APIProvider>
   );
 }
-export default PurpleMapOfBuildingsAndStatues;
