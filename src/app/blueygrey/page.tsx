@@ -1,9 +1,7 @@
-import BlueyWelcome from "./bluey-components/BlueyWelcome.js";
+import React from "react";
 import "./blueygrey.css";
 import "./bg-page.module.css";
-import BottomNavWelcome from "../components/BottomNavWelcome.js";
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
+import BlueyGreyHomepage from "./bluey-components/HomepageBluey.js";
 
 <html lang="en">
   <head>
@@ -13,32 +11,12 @@ import Grid from "@mui/material/Grid";
   <body></body>
 </html>;
 
-export default function BlueHome() {
+export default function PeachyApp() {
   return (
-    <Box>
-      <Grid
-        item
-        xs={12}
-        sm={6}
-        justifyContent="center"
-        rowSpacing={0}
-        padding={0}
-        paddingBottom={7}
-      >
-        <BlueyWelcome />
-      </Grid>
-      <Grid
-        item
-        xs={12}
-        sm={6}
-        justifyContent="center"
-        rowSpacing={0}
-        padding={0}
-        paddingTop={1}
-        paddingBottom={3}
-      >
-      <BottomNavWelcome />
-      </Grid>
-    </Box>
+    <main className="main">
+      <div>
+        <BlueyGreyHomepage />
+      </div>
+    </main>
   );
 }

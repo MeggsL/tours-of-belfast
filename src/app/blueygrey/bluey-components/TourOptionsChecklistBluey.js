@@ -11,7 +11,7 @@ import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import { useState } from "react";
 import { Roboto } from "next/font/google";
-import { amber } from "@mui/material/colors";
+import { pink } from "@mui/material/colors";
 import { brown } from "@mui/material/colors";
 
 // setting the font
@@ -22,7 +22,7 @@ const roboto = Roboto({
 });
 
 //creating a pink button
-function PinkButton() {
+function BlueButton() {
   const ButtonColor = createTheme({
     palette: {
       primary: {
@@ -50,7 +50,7 @@ function PinkButton() {
     </ThemeProvider>
   );
 }
-export { PinkButton };
+export { BlueButton };
 
 //the child component of the form process
 
@@ -98,7 +98,7 @@ export default function TourOptionsForm({ onSubmit }) {
               component="legend"
               sx={{ fontWeight: "500", color: "white", textAlign: "center" }}
             >
-              What would you like to see on your tour?
+              
             </FormLabel>
           </Grid>
 
@@ -111,9 +111,9 @@ export default function TourOptionsForm({ onSubmit }) {
                   name="buildings"
                   size="large"
                   sx={{
-                    color: amber[300],
+                    color: pink[400],
                     "&.Mui-checked": {
-                      color: amber[500],
+                      color: pink[600],
                     },
                   }}
                 />
@@ -128,9 +128,9 @@ export default function TourOptionsForm({ onSubmit }) {
                   name="statues"
                   size="large"
                   sx={{
-                    color: amber[300],
+                    color: pink[400],
                     "&.Mui-checked": {
-                      color: amber[500],
+                      color: pink[600],
                     },
                   }}
                 />
@@ -147,9 +147,9 @@ export default function TourOptionsForm({ onSubmit }) {
                   name="landmarks"
                   size="large"
                   sx={{
-                    color: amber[300],
+                    color: pink[400],
                     "&.Mui-checked": {
-                      color: amber[500],
+                      color: pink[600],
                     },
                   }}
                 />
@@ -169,7 +169,7 @@ export default function TourOptionsForm({ onSubmit }) {
             *You must choose at least one option.
           </FormHelperText>
 
-          <PinkButton />
+          <BlueButton />
         </FormControl>
       </Box>
     </form>

@@ -1,12 +1,6 @@
 import React from "react";
-import PeachyWelcome from "./peachy-components/PeachyWelcome.js";
-import ".//peachypink.css";
-import "../page.module.css";
-//import Grid from "@mui/material/Unstable_Grid2";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-//import Container from "@mui/material/Container";
-import BottomNavWelcome from "../components/BottomNavWelcome.js";
+import "./peachypink.css";
+import "../pp-page.module.css";
 import PeachyPinkHomepage from "./peachy-components/HomepagePeachy.js";
 
 <html lang="en">
@@ -17,7 +11,7 @@ import PeachyPinkHomepage from "./peachy-components/HomepagePeachy.js";
   <body></body>
 </html>;
 
-export default function App() {
+export default function PeachyApp() {
   return (
     <main className="main">
       <div>
@@ -26,4 +20,3 @@ export default function App() {
     </main>
   );
 }
-

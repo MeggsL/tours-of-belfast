@@ -9,8 +9,8 @@ import { Roboto } from 'next/font/google';
 import Button from "@mui/material/Button";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Grid from '@mui/material/Grid'; // Grid version 1
-import "../peachypink.css";
-import "../pp-page.module.css";
+import "../blueygrey.css";
+import "../bg-page.module.css";
 
 // setting the font
 const roboto = Roboto({
@@ -24,10 +24,10 @@ function GetStartedButton() {
   const ButtonColor = createTheme({
     palette: {
       primary: {
-        main: "#f7c455",
+        main: "#ef6779",
       },
       secondary: {
-        main: "#f7c455",
+        main: "#ef6779",
       },
     },
     typography: {
@@ -81,7 +81,7 @@ function ChangeColourButton() {
 //exporting the buttons
 export { GetStartedButton, ChangeColourButton };
 
-export default function PeachyPinkHomepage() {
+export default function BlueyGreyHomepage() {
   return (
     <Box xs={{ flexgrow: 1, height: "100%" }}>
       <Container maxWidth="sm">
@@ -124,7 +124,7 @@ export default function PeachyPinkHomepage() {
         </Grid>
    
         <Grid item xs={12} container justifyContent="center" rowSpacing={-5} paddingTop={4}>
-          <Link href="./peachypink/peachy-tours">
+          <Link href="./blueygrey/bluey-tours">
             <GetStartedButton />
           </Link>
         </Grid>

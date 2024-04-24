@@ -1,7 +1,7 @@
 import React from "react";
-import "../../peachypink/peachypink.css";
-import "../pp-page.module.css";
-import StartTour from "../peachy-components/StartTouringPeachy";
+import "../../blueygrey/blueygrey.css";
+import "../bg-page.module.css";
+import StartTour from "../bluey-components/StartTouringBluey";
 
 <html lang="en">
   <head>

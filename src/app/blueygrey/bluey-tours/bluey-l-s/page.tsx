@@ -3,7 +3,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import BlueyBottomNavMaps from "../../../blueygrey/bluey-components/BlueyBottomNavMaps";
-import PinkMapOfLandmarksAndStatues from "../../peachy-components/PinkMapLS";
+import BlueMapOfLandmarksAndStatues from "../../bluey-components/BlueMapLS";
 
 <html lang="en">
   <head>
@@ -13,7 +13,7 @@ import PinkMapOfLandmarksAndStatues from "../../peachy-components/PinkMapLS";
   <body></body>
 </html>;
 
-export default function PinkMapOfLandS() {
+export default function BlueMapOfLandS() {
   return (
     <Box>
       <Grid
@@ -24,7 +24,7 @@ export default function PinkMapOfLandS() {
         rowSpacing={0}
         padding={0}
       >
-        <PinkMapOfLandmarksAndStatues/>
+        <BlueMapOfLandmarksAndStatues/>
       </Grid>
       <Grid paddingBottom={2.5}>
         <BlueyBottomNavMaps />
