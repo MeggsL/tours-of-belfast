@@ -34,19 +34,19 @@ export default function StartTour({ onSubmit }) {
     console.log("Form data submitted:", data);
 
     if (data.buildings && !data.statues && !data.landmarks) {
-      window.location.href = "../peachy-tours/peachy-b";
+      window.location.href = "../peachypink/peachy-tours/peachy-b";
     } else if (data.buildings && data.statues && !data.landmarks) {
-      window.location.href = "../peachy-tours/peachy-b-s";
+      window.location.href = "../peachypink/peachy-tours/peachy-b-s";
     } else if (data.buildings && data.statues && data.landmarks) {
-      window.location.href = "../peachy-tours/peachy-b-l-s";
+      window.location.href = "../peachypink/peachy-tours/peachy-b-l-s";
     } else if (data.statues && !data.landmarks && !data.buildings) {
-      window.location.href = "../peachy-tours/peachy-s";
+      window.location.href = "../peachypink/peachy-tours/peachy-s";
     } else if (data.statues && data.landmarks && !data.buildings) {
-      window.location.href = "../peachy-tours/peachy-l-s";
+      window.location.href = "../peachypink/peachy-tours/peachy-l-s";
     } else if (data.landmarks && !data.statues && !data.buildings) {
-      window.location.href = "../peachy-tours/peachy-l";
+      window.location.href = "../peachypink/peachy-tours/peachy-l";
     } else if (data.landmarks && data.buildings && !data.statues) {
-      window.location.href = "../peachy-tours/peachy-b-l";
+      window.location.href = "../peachypink/peachy-tours/peachy-b-l";
     } else {
       console.log("That didn't work.");
     }

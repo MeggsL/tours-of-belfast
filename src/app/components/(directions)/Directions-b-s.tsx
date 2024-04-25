@@ -51,6 +51,7 @@ export default function BandSDirections() {
           { location: "The Speaker, Belfast UK" },
           { location: "The Big Fish, Belfast UK" },
           { location: "Spirit of Belfast, Belfast UK" },
+          { location: "St George's Market, Belfast UK" },
           { location: "Riddell Hall, Belfast UK" },
           { location: "The Lanyon Building, Belfast UK" },
           { location: "The Ulster Hall, Belfast UK" },

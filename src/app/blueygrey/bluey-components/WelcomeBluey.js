@@ -9,10 +9,10 @@ import { Roboto } from 'next/font/google';
 import Button from "@mui/material/Button";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Grid from '@mui/material/Grid'; // Grid version 1
-import "../peachypink.css";
-import "../pp-page.module.css";
-import ColourMenu from "../../components/ChangeColourMenu";
-import { pink } from "@mui/material/colors";
+import "../blueygrey.css";
+import "../bg-page.module.css";
+import { brown } from "@mui/material/colors";
+import WelcomeCard from "./WelcomeCard";
 
 // setting the font
 const roboto = Roboto({
@@ -22,14 +22,14 @@ const roboto = Roboto({
 });
 
 //the button for the soothing lilac experience
-function GetStartedButton() {
+function TourSelectionsButton() {
   const ButtonColor = createTheme({
     palette: {
       primary: {
-        main: pink[400],
+        main: brown[600],
       },
       secondary: {
-        main: pink[600]
+        main: brown[900],
       },
     },
     typography: {
@@ -40,21 +40,22 @@ function GetStartedButton() {
   return (
     <ThemeProvider theme={ButtonColor}>
       <Button
-        variant="contained"
+        variant="outlined"
         size="large"
    //     startIcon={<SelfImprovementTwoToneIcon />}
       >
-        Let's get started
+        Take me to tour selections
       </Button>
     </ThemeProvider>
   );
 }
 
 
-//exporting the buttons
-export { GetStartedButton };
 
-export default function PeachyPinkHomepage() {
+//exporting the buttons
+export { TourSelectionsButton };
+
+export default function BlueyWelcome() {
   return (
     <Box xs={{ flexgrow: 1, height: "100%" }}>
       <Container maxWidth="sm">
@@ -69,7 +70,7 @@ export default function PeachyPinkHomepage() {
         >
           <Image
             //className={styles.logo}
-            src="/img/home-title.png"
+            src="/img/bg-welcome.png"
             alt="Tour of Belfast"
             width={356}
             height={200}
@@ -86,23 +87,17 @@ export default function PeachyPinkHomepage() {
           paddingBottom={2}
           justifyContent="center"
         >
-          <Image
-            //className={styles.logo}
-            src="/img/cranes800x435.png"
-            alt="Samson and Goliath"
-            width={356}
-            height={250}
-            priority
-          />
+<WelcomeCard />
+
         </Grid>
    
         <Grid item xs={12} container justifyContent="center" rowSpacing={-5} paddingTop={4}>
-          <Link href="./peachypink/peachy-tours">
-            <GetStartedButton />
+          <Link href="./bluey-welcome/bluey-tours">
+            <TourSelectionsButton />
           </Link>
         </Grid>
         <Grid item xs={12} container justifyContent="center" rowSpacing={-5} paddingTop={3} paddingBottom={6}>
-        <ColourMenu />
+   
         </Grid>
       </Container>
     </Box>

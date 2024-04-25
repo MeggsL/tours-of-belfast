@@ -12,8 +12,8 @@ export default function BlueMapOfBuildingsAndStatues() {
 
   return (
     <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
-      <Container fixed>
-        <div style={{ height: "91vh", width: "100" }}>
+      <Container fixed maxWidth={false}>
+        <div style={{ height: "91vh" }}>
           <Map
             defaultZoom={15}
             defaultCenter={position}

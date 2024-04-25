@@ -2,9 +2,8 @@ import React from "react";
 
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import BlueyBottomNavMaps from "../../../blueygrey/bluey-components/BlueyBottomNavMaps";
-import PinkMapOfBuildingsAndStatues from "../../peachy-components/PinkMapBS";
-import "../../peachypink.css";
+import MapInfoCard from "../../../bluey-components/MapInfoCard";
+import "../../../blueygrey.css";
 
 <html lang="en">
   <head>
@@ -14,9 +13,9 @@ import "../../peachypink.css";
   <body></body>
 </html>;
 
-export default function PinkMapOfBandS() {
+export default function BlueMapOfS() {
   return (
-    <Box>
+    <Box sx={{width: 350, pt: 10  }}>
       <Grid
         item
         xs={12}
@@ -24,11 +23,8 @@ export default function PinkMapOfBandS() {
         justifyContent="center"
         rowSpacing={0}
         padding={0}
-      >
-        <PinkMapOfBuildingsAndStatues />
-      </Grid>
-      <Grid paddingBottom={2.5}>
-        <BlueyBottomNavMaps />
+   >
+<MapInfoCard />
       </Grid>
     </Box>
   );

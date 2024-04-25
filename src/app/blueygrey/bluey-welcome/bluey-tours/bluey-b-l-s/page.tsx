@@ -1,8 +1,10 @@
 import React from "react";
-import BlueMapOfBuildings from "../../bluey-components/BlueMapOfBuildings";
+
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import BlueyBottomNavMaps from "../../../blueygrey/bluey-components/BlueyBottomNavMaps";
+import BlueyBottomNavMaps from "../../../bluey-components/BlueyBottomNavMaps";
+import BlueMapAll from "../../../bluey-components/BlueMapBLS";
+import "../../../blueygrey.css";
 
 <html lang="en">
   <head>
@@ -12,7 +14,7 @@ import BlueyBottomNavMaps from "../../../blueygrey/bluey-components/BlueyBottomN
   <body></body>
 </html>;
 
-export default function BLueMapOfBs() {
+export default function BlueMapOfBandLandS() {
   return (
     <Box>
       <Grid
@@ -23,9 +25,9 @@ export default function BLueMapOfBs() {
         rowSpacing={0}
         padding={0}
       >
-        <BlueMapOfBuildings />
+        <BlueMapAll />
       </Grid>
-      <Grid paddingBottom={2.5}>
+      <Grid paddingBottom={3}>
         <BlueyBottomNavMaps />
       </Grid>
     </Box>

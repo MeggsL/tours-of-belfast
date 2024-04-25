@@ -19,6 +19,7 @@ import Grid from '@mui/material/Grid'; // Grid version 1
 import "../globals.css";
 import "../page.module.css";
 import PurpleTheme from "../components/PurpleTheme.js";
+import ColourMenu from "./ChangeColourMenu";
 
 // setting the font
 const roboto = Roboto({
@@ -56,38 +57,9 @@ function GoldieButton() {
   );
 }
 
-//the button for the peachy pink experience
-function ChangeColourButton() {
-  const ButtonColor = createTheme({
-    palette: {
-      primary: {
-        main: "#ffffff",
-      },
-      secondary: {
-        main: "#ffffff",
-      },
-    },
-    typography: {
-      fontFamily: roboto.style.fontFamily,
-    },
-  });
-
-  return (
-    <ThemeProvider theme={ButtonColor}>
-      <Button
-        variant="outlined"
-        size="large"
-   //     startIcon={<FilterVintageTwoToneIcon />}
-      >
-       Change Colour Theme
-      </Button>
-    </ThemeProvider>
-  );
-}
-
 
 //exporting the buttons
-export { GoldieButton, ChangeColourButton };
+export { GoldieButton };
 
 export default function Homepage() {
   return (
@@ -137,9 +109,7 @@ export default function Homepage() {
           </Link>
         </Grid>
         <Grid item xs={12} container justifyContent="center" rowSpacing={-5} paddingTop={3} paddingBottom={6}>
-          <Link href="">
-            <ChangeColourButton />
-          </Link>
+       <ColourMenu />
         </Grid>
       </Container>
     </Box>

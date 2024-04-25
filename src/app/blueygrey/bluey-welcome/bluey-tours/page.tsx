@@ -1,7 +1,7 @@
 import React from "react";
-import "./peachypink.css";
-import "./pp-page.module.css";
-import PeachyPinkHomepage from "./peachy-components/HomepagePeachy.js";
+import "../../blueygrey.css";
+import "../../bg-page.module.css";
+import StartTour from "../../bluey-components/StartTouringBluey";
 
 <html lang="en">
   <head>
@@ -11,11 +11,11 @@ import PeachyPinkHomepage from "./peachy-components/HomepagePeachy.js";
   <body></body>
 </html>;
 
-export default function PeachyApp() {
+export default function TakeATour() {
   return (
     <main className="main">
       <div>
-        <PeachyPinkHomepage />
+  <StartTour onSubmit={undefined} />
       </div>
     </main>
   );

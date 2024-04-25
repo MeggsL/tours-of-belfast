@@ -4,7 +4,7 @@ import { useMapsLibrary, useMap } from "@vis.gl/react-google-maps";
 
 import { useEffect, useState } from "react";
 import "./routes.css";
-import "../../../globals.css";
+import "../../globals.css";
 
 export default function StatueDirections() {
   const map = useMap();

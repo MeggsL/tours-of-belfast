@@ -1,20 +1,19 @@
 "use client";
 
 import React from "react";
-import "../../globals.css";
+import "../blueygrey.css";
+import "../bg-page.module.css";
 import Box from "@mui/material/Box";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import WbSunnyTwoToneIcon from "@mui/icons-material/WbSunnyTwoTone";
-//import DoNotDisturbOnTotalSilenceTwoToneIcon from "@mui/icons-material/DoNotDisturbOnTotalSilenceTwoTone";
 import RouteTwoToneIcon from "@mui/icons-material/RouteTwoTone";
 import HomeTwoToneIcon from "@mui/icons-material/HomeTwoTone";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-//import Container from "@mui/material/Container";
+import { createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Link from '@mui/material/Link';
-//import WeekendIcon from '@mui/icons-material/Weekend';
 import Image from 'next/image';
+import HelpOutlineTwoToneIcon from '@mui/icons-material/HelpOutlineTwoTone';
 
 export default function BottomNavMaps() {
   const [value, setValue] = React.useState(0);
@@ -53,29 +52,30 @@ export default function BottomNavMaps() {
           <BottomNavigationAction
             label="Home"
             icon={
-              <Link href={"../"}>
+              <Link href={"../../../"}>
                 <HomeTwoToneIcon />
               </Link>
             }
           />
           [tour home]
           <BottomNavigationAction
+            label="Info"
+            icon={
+              <Link href={"./map-info"}>
+                <HelpOutlineTwoToneIcon />
+            </Link>
+            }
+          />
+          [map information]
+<BottomNavigationAction
             label="Tours"
             icon={
-              <Link href={"/tours"}>
+              <Link href={"./"}>
                 <RouteTwoToneIcon />
               </Link>
             }
           />
-          [weather]
-          <BottomNavigationAction
-            label="Weather"
-            icon={
-              <Link href={""}>
-                <WbSunnyTwoToneIcon />
-              </Link>
-            }
-            />
+    
             [break time]
             <BottomNavigationAction
               label=""
@@ -91,3 +91,4 @@ export default function BottomNavMaps() {
     </React.Fragment>
   );
 }
+

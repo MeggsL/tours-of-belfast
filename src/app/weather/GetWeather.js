@@ -4,11 +4,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 //import Oval from "react-loader-spinner";
 import "./getweather.css";
-//import Container from "@mui/material/Container";
-import Box from "@mui/material/Box";
-//import Alert from "@mui/material/Alert";
 
-function CurrentWeather() {
+export default function TheWeather() {
   // const [input, setInput] = useState("");
   const [weather, setWeather] = useState({
     loading: false,
@@ -38,8 +35,11 @@ function CurrentWeather() {
       })
       .catch((err) => {
         setWeather({ ...weather, data: {}, error: true });
-      });
-  };
+      })
+      
+ 
+    
+    };
 
   return (
     <div className="App">
@@ -52,9 +52,7 @@ function CurrentWeather() {
 
         {weather && weather.data && weather.data.main && (
           <div>
-            <div className="city-name">
-              <h2>{weather.data.name}</h2>
-            </div>
+            <div className="city-name">{weather.data.name}</div>
 
             <div className="icon-temp">
               <img
@@ -69,9 +67,35 @@ function CurrentWeather() {
               Feels like: {Math.round(weather.data.main.feels_like)}{" "}
               <sup className="degfeelslike">°C</sup>
             </div>
-            <div className="description">
-              <p>{weather.data.weather.description}</p>
+
+            <div>
+              <tr>
+                <td className="min-max-temp">
+                  Min: {Math.round(weather.data.main.temp_min)}{" "}
+                  <sup className="degminmax">°C</sup>
+                </td>
+
+                <td className="min-max-temp" width="80px" align="center">
+                  Max: {Math.round(weather.data.main.temp_max)}{" "}
+                  <sup className="degminmax">°C</sup>
+                </td>
+              </tr>
             </div>
+          {/*}
+            <div>
+              <tr>
+                <td className="sun-rise-set">
+                  Sunrise: NewSunriseTime
+                  <sup className="degminmax">°C</sup>
+                </td>
+
+                <td className="sun-rise-set" width="80px" align="center">
+                  Sunset: {Math.round(weather.data.sys.sunset)}{" "}
+                  <sup className="degminmax">°C</sup>
+                </td>
+              </tr>
+            </div>
+        */}
           </div>
         )}
       </div>
@@ -79,4 +103,3 @@ function CurrentWeather() {
   );
 }
 
-export default CurrentWeather;

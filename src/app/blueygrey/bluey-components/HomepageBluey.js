@@ -11,6 +11,8 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Grid from '@mui/material/Grid'; // Grid version 1
 import "../blueygrey.css";
 import "../bg-page.module.css";
+import { brown } from "@mui/material/colors";
+import ColourMenu from "../../components/ChangeColourMenu";
 
 // setting the font
 const roboto = Roboto({
@@ -24,10 +26,10 @@ function GetStartedButton() {
   const ButtonColor = createTheme({
     palette: {
       primary: {
-        main: "#ef6779",
+        main: brown[400],
       },
       secondary: {
-        main: "#ef6779",
+        main: brown[800],
       },
     },
     typography: {
@@ -53,10 +55,10 @@ function ChangeColourButton() {
   const ButtonColor = createTheme({
     palette: {
       primary: {
-        main: "#ffffff",
+        main: brown[400],
       },
       secondary: {
-        main: "#ffffff",
+        main: brown[800],
       },
     },
     typography: {
@@ -124,14 +126,12 @@ export default function BlueyGreyHomepage() {
         </Grid>
    
         <Grid item xs={12} container justifyContent="center" rowSpacing={-5} paddingTop={4}>
-          <Link href="./blueygrey/bluey-tours">
+          <Link href="./blueygrey/bluey-welcome">
             <GetStartedButton />
           </Link>
         </Grid>
         <Grid item xs={12} container justifyContent="center" rowSpacing={-5} paddingTop={3} paddingBottom={6}>
-          <Link href="">
-            <ChangeColourButton />
-          </Link>
+        <ColourMenu />
         </Grid>
       </Container>
     </Box>

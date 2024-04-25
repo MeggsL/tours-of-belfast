@@ -5,22 +5,17 @@
 
 .city-name {
     font-size: 20px;
-    color:black;
+    color: black;
     margin: 15px 0px 8px 0px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-kerning:auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-kerning: auto;
+
 }
 
 .deg {
     font-size: 18px;
     font-weight: 500;
-    color:black;
-}
-
-.degfeelslike {
-    font-size: 14px;
-    font-weight:700;
-    color:darkorchid;
+    color: black;
 }
 
 .icon-temp {
@@ -29,15 +24,43 @@
     font-weight: 700;
     align-items: center;
     color: black;
-  
+
 }
 
 .feels-like {
     font-weight: 500;
-    color:darkorchid;
+    color: aliceblue;
     font-size: large;
     margin-top: 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.degfeelslike {
+    font-size: 14px;
+    font-weight: 700;
+    color: aliceblue;
+}
+
+.min-max-temp {
+    font-weight: 500;
+    color: aliceblue;
+    font-size: small;
+    margin-top: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.degminmax {
+    font-size: 10px;
+    font-weight: 500;
+    color: aliceblue;
+}
+
+.sun-rise-set{
+    font-weight: 500;
+    color: aliceblue;
+    font-size: small;
+    margin-top: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .city {
@@ -58,8 +81,8 @@
     justify-content: center;
     align-items: center;
     width: 280px;
-    height: 30vh;
-    background-color:lightgray;
+    height: 34vh;
+    background-color: #29b6f6;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -67,9 +90,9 @@
 
 
 .App {
-    width:240px;
-    height: 30vh;
-    background-color:bisque;
+    width: 240px;
+    height: 34vh;
+    background-color: floralwhite;
     display: flex;
     align-items: center;
 }

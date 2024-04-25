@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import BlueyBottomNavMaps from "../../../blueygrey/bluey-components/BlueyBottomNavMaps";
 import PinkMapOfStatues from "../../peachy-components/PinkMapOfStatues";
+import "../../peachypink.css";
 
 <html lang="en">
   <head>

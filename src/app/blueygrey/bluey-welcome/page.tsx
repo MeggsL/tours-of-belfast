@@ -1,7 +1,7 @@
 import React from "react";
-import "../../blueygrey/blueygrey.css";
+import "../blueygrey.css";
 import "../bg-page.module.css";
-import StartTour from "../bluey-components/StartTouringBluey";
+import BlueyWelcome from "../bluey-components/WelcomeBluey.js";
 
 <html lang="en">
   <head>
@@ -11,11 +11,11 @@ import StartTour from "../bluey-components/StartTouringBluey";
   <body></body>
 </html>;
 
-export default function TakeATour() {
+export default function PeachyApp() {
   return (
     <main className="main">
       <div>
-  <StartTour onSubmit={undefined} />
+        <BlueyWelcome />
       </div>
     </main>
   );

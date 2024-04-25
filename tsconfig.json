@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/components/OpenWeather.js", "src/app/apis/GetWeather.ts", "src/app/apis/GetWeather-2.js", "src/app/tours/buildings/ClickableMarkers.tsx"  ],
+, "src/components/OpenWeather.js", "src/app/apis/GetWeather.ts", "src/app/apis/GetWeather-2.js", "src/app/tours/buildings/ClickableMarkers.tsx", "src/app/blueygrey/bluey-components/WelcomeCard.js"  ],
   "exclude": [
     "node_modules"
   ]

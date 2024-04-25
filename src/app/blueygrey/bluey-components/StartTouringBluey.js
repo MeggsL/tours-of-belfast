@@ -7,6 +7,9 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { useState } from "react";
 import TourOptionsForm from "../bluey-components/TourOptionsChecklistBluey.js";
+import OpenBox from "../../weather/OpenBox";
+import YouMustSelect from "./TourSelectionAlert";
+
 
 //import Alert from "@mui/material/Alert";
 
@@ -17,8 +20,8 @@ const Title = () => {
     <Image
       src="/img/bg-welcome.png"
       alt="Welcome, failte"
-      width={356}
-      height={164}
+      width={300}
+      height={145}
       priority
     />
   );
@@ -29,8 +32,8 @@ const SubTitle = () => {
     <Image
       src="/img/bg-welcome-sub-title.png"
       alt="What would you like to see on your tour?"
-      width={356}
-      height={84}
+      width={300}
+      height={120}
       priority
     />
   );
@@ -45,20 +48,21 @@ export default function StartTour({ onSubmit }) {
     console.log("Form data submitted:", data);
 
     if (data.buildings && !data.statues && !data.landmarks) {
-      window.location.href = "../bluey-tours/bluey-b";
+      window.location.href = "../bluey-welcome/bluey-tours/bluey-b";
     } else if (data.buildings && data.statues && !data.landmarks) {
-      window.location.href = "../bluey-tours/bluey-b-s";
+      window.location.href = "../bluey-welcome/bluey-tours/bluey-b-s";
     } else if (data.buildings && data.statues && data.landmarks) {
-      window.location.href = "../bluey-tours/bluey-b-l-s";
+      window.location.href = "../bluey-welcome/bluey-tours/bluey-b-l-s";
     } else if (data.statues && !data.landmarks && !data.buildings) {
-      window.location.href = "../bluey-tours/bluey-s";
+      window.location.href = "../bluey-welcome/bluey-tours/bluey-s";
     } else if (data.statues && data.landmarks && !data.buildings) {
-      window.location.href = "../bluey-tours/bluey-l-s";
+      window.location.href = "../bluey-welcome/bluey-tours/bluey-l-s";
     } else if (data.landmarks && !data.statues && !data.buildings) {
-      window.location.href = "../bluey-tours/bluey-l";
+      window.location.href = "../bluey-welcome/bluey-tours/bluey-l";
     } else if (data.landmarks && data.buildings && !data.statues) {
-      window.location.href = "../bluey-tours/bluey-b-l";
+      window.location.href = "../bluey-welcome/bluey-tours/bluey-b-l";
     } else {
+      <YouMustSelect />;
       console.log("That didn't work.");
     }
   };
@@ -72,19 +76,8 @@ export default function StartTour({ onSubmit }) {
         spacing={2}
         justifyContent="center"
         rowSpacing={0}
-        paddingTop={14}
+        paddingTop={16}
       >
-        <Grid
-          container
-          spacing={2}
-          rowSpacing={0}
-          item
-          xs={12}
-          paddingTop={4}
-          justifyContent="center"
-        >
-          <Title />
-        </Grid>
         <Grid
           container
           spacing={2}
@@ -103,11 +96,13 @@ export default function StartTour({ onSubmit }) {
           item
           xs={12}
           paddingTop={0}
-          paddingBottom={4}
+          paddingBottom={0}
           justifyContent="center"
         >
           <TourOptionsForm formData={state} onSubmit={handleFormSubmit} />
         </Grid>
+
+        <OpenBox />
       </Grid>
     </Box>
   );

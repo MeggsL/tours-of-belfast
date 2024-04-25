@@ -3,6 +3,7 @@ import PinkMapOfBuildings from "../../peachy-components/PinkMapOfBuildings";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import BlueyBottomNavMaps from "../../../blueygrey/bluey-components/BlueyBottomNavMaps";
+import "../../peachypink.css";
 
 <html lang="en">
   <head>

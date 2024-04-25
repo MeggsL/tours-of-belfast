@@ -98,6 +98,12 @@ h2 {
 }
 
 body {
+  background: rgb(var(--background-end-rgb))
+   
+}
+
+{/* saving this code in case I would like to make the background behind the maps a colour gradient}
+body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -106,6 +112,7 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+*/}
 
 a {
   color: inherit;
