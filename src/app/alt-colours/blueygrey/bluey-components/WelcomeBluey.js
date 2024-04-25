@@ -5,10 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import { Roboto } from 'next/font/google';
+import { Roboto } from "next/font/google";
 import Button from "@mui/material/Button";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import Grid from '@mui/material/Grid'; // Grid version 1
+import Grid from "@mui/material/Grid"; // Grid version 1
 import "../blueygrey.css";
 import "../bg-page.module.css";
 import { brown } from "@mui/material/colors";
@@ -16,9 +16,9 @@ import WelcomeCard from "./WelcomeCard";
 
 // setting the font
 const roboto = Roboto({
-  weight: ['300', '400', '500', '700'],
-  subsets: ['latin'],
-  display: 'swap',
+  weight: ["300", "400", "500", "700"],
+  subsets: ["latin"],
+  display: "swap",
 });
 
 //the button for the soothing lilac experience
@@ -42,15 +42,14 @@ function TourSelectionsButton() {
       <Button
         variant="outlined"
         size="large"
-   //     startIcon={<SelfImprovementTwoToneIcon />}
+        sx={{padding: 2, pl:3, pr:3}}
+        //     startIcon={<SelfImprovementTwoToneIcon />}
       >
         Take me to tour selections
       </Button>
     </ThemeProvider>
   );
 }
-
-
 
 //exporting the buttons
 export { TourSelectionsButton };
@@ -87,17 +86,20 @@ export default function BlueyWelcome() {
           paddingBottom={2}
           justifyContent="center"
         >
-<WelcomeCard />
-
+          <WelcomeCard />
         </Grid>
-   
-        <Grid item xs={12} container justifyContent="center" rowSpacing={-5} paddingTop={4}>
+
+        <Grid
+          item
+          xs={12}
+          container
+          justifyContent="center"
+          rowSpacing={-5}
+          paddingTop={2}
+        >
           <Link href="./bluey-welcome/bluey-tours">
             <TourSelectionsButton />
           </Link>
-        </Grid>
-        <Grid item xs={12} container justifyContent="center" rowSpacing={-5} paddingTop={3} paddingBottom={6}>
-   
         </Grid>
       </Container>
     </Box>

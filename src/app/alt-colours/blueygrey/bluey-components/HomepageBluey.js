@@ -42,6 +42,7 @@ function GetStartedButton() {
       <Button
         variant="contained"
         size="large"
+        sx={{padding:2, pl:4, pr:4}}
    //     startIcon={<SelfImprovementTwoToneIcon />}
       >
         Let's get started

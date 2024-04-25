@@ -65,10 +65,10 @@ function BlueButton() {
   const ButtonColor = createTheme({
     palette: {
       primary: {
-        main: blue[900]
+        main: blue[900],
       },
       secondary: {
-        main: blue[500]
+        main: blue[500],
       },
     },
     typography: {
@@ -79,10 +79,10 @@ function BlueButton() {
   return (
     <ThemeProvider theme={ButtonColor}>
       <Button
-        variant="outlined"
+        variant="contained"
         size="large"
         type="Submit"
-        sx={{ m: 1, pl: 3, pr: 3 }}
+        sx={{ m: 1, pl: 6, pr: 6, pt: 2, pb: 2 }}
       >
         Start Tour
       </Button>
@@ -135,7 +135,12 @@ export default function TourOptionsForm({ onSubmit }) {
           >
             <FormLabel
               component="legend"
-              sx={{ fontSize:"18px", fontWeight: "400", color: brown[600], textAlign: "center" }}
+              sx={{
+                fontSize: "18px",
+                fontWeight: "400",
+                color: brown[600],
+                textAlign: "center",
+              }}
             >
               Please select at least one option.
             </FormLabel>
@@ -204,7 +209,7 @@ export default function TourOptionsForm({ onSubmit }) {
               </Grid>
             </Grid>
           </FormGroup>
-{/*}
+          {/*}
           <FormHelperText
             sx={{
               m: 4,
@@ -216,7 +221,9 @@ export default function TourOptionsForm({ onSubmit }) {
             *You must choose at least one option.
           </FormHelperText>
           */}
-          <BlueButton />
+          <Grid item xs={12} sx={{ mx: 8, pt:3, pb:3 }}>
+            <BlueButton />
+          </Grid>
         </FormControl>
       </Box>
     </form>

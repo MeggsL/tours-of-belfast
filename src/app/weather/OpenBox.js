@@ -54,6 +54,7 @@ export default function OpenBox() {
             <Button
               disabled={open}
               variant="contained"
+              sx={{padding:2}}
               onClick={() => {
                 setOpen(true);
               }}

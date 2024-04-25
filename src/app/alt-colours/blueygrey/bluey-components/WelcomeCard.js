@@ -5,6 +5,8 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { brown } from "@mui/material/colors";
+import { blue } from "@mui/material/colors";
 
 const bull = (
   <Box
@@ -18,31 +20,27 @@ const bull = (
 export default function WelcomeCard() {
   return (
     <Box sx={{ pl: 3 }}>
-      <Card sx={{ minWidth: 275 }}>
+      <Card sx={{ minWidth: 275, mx:2, padding:2 }}>
         <CardContent>
-          <Typography variant="h5" color="text.primary" gutterBottom>
+          <Typography variant="h5" sx={{ mb: 1.5 }} color={brown[400]}>
             So nice to see you!
           </Typography>
-
-          <Typography sx={{ mb: 1.5 }} color="text.secondary">
-            A few notes to help get you on your way.
-          </Typography>
-          <Typography variant="body2">
+          <Typography variant="body2" color={brown[800]}>
             On the next screen you will be offered a list of attractions that
             can be included on your tour.
           </Typography>
           <br />
-          <Typography variant="body2">
+          <Typography variant="body2" color={brown[800]}>
             Once you have made your selections and hit the 'Start Tour' button,
             your bespoke tour map will load.
           </Typography>
           <Typography
             sx={{ fontSize: 18, alignContent: "center" }}
-            color="text.primary"
             gutterBottom
-            paddingTop={5}
+            paddingTop={3}
+            color={blue[600]}
           >
-           Happy touring!
+            Happy touring!
           </Typography>
         </CardContent>
       </Card>

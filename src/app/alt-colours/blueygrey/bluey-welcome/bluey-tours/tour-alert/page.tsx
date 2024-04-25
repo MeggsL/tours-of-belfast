@@ -15,7 +15,7 @@ import "../../../blueygrey.css";
 
 export default function BlueMapOfS() {
   return (
-    <Box sx={{width: 350, pt: 10  }}>
+    <Box sx={{ width: 350, pt: 10 }}>
       <Grid
         item
         xs={12}
@@ -23,8 +23,8 @@ export default function BlueMapOfS() {
         justifyContent="center"
         rowSpacing={0}
         padding={0}
-   >
-<YouMustSelect />
+      >
+        <YouMustSelect />
       </Grid>
     </Box>
   );

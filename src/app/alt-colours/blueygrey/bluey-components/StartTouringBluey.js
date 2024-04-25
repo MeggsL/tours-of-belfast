@@ -10,7 +10,6 @@ import TourOptionsForm from "../bluey-components/TourOptionsChecklistBluey.js";
 import OpenBox from "../../weather/OpenBox";
 import YouMustSelect from "./TourSelectionAlert";
 
-
 //import Alert from "@mui/material/Alert";
 
 //the parent component
@@ -62,7 +61,7 @@ export default function StartTour({ onSubmit }) {
     } else if (data.landmarks && data.buildings && !data.statues) {
       window.location.href = "../bluey-welcome/bluey-tours/bluey-b-l";
     } else {
-      <YouMustSelect />;
+      window.location.href = "../bluey-welcome/bluey-tours/tour-alert";
       console.log("That didn't work.");
     }
   };

@@ -11,9 +11,9 @@ import BlueyGreyHomepage from "./bluey-components/HomepageBluey.js";
   <body></body>
 </html>;
 
-export default function PeachyApp() {
+export default function BlueyApp() {
   return (
-    <main className="main">
+    <main>
       <div>
         <BlueyGreyHomepage />
       </div>
