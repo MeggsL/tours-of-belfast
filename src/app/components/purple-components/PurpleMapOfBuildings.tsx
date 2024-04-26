@@ -2,11 +2,9 @@
 
 import { APIProvider, Map } from "@vis.gl/react-google-maps";
 import BuildingMarkers from "../(markers)/BuildingMarkers";
-
 import Container from "@mui/material/Container";
-import AppUser from "../../components/(markers)/UserMarker";
+import AppUser from "../(markers)/UserMarker";
 import DirectionsBuildings from "../(directions)/DirectionsBuildings";
-
 
 export default function PurpleMapOfBuildings() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };

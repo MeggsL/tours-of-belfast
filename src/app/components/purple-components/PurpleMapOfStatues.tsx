@@ -3,7 +3,7 @@
 import { APIProvider, Map } from "@vis.gl/react-google-maps";
 import Container from "@mui/material/Container";
 import StatueMarkers from "../(markers)/StatueMarkers";
-import AppUser from "../../components/(markers)/UserMarker";
+import AppUser from "../(markers)/UserMarker";
 import StatueDirections from "../(directions)/DirectionsStatues";
 
 export default function PurpleMapOfStatues() {
@@ -21,7 +21,7 @@ export default function PurpleMapOfStatues() {
             <AppUser />
             <StatueMarkers />
             <StatueDirections />
-            
+            </Map>
         </div>
       </Container>
     </APIProvider>

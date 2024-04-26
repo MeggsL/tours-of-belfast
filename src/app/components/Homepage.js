@@ -6,20 +6,14 @@ import Link from "next/link";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import { Roboto } from 'next/font/google';
-//import TransitionHover from "../components/StyledAvatarButton.js";
 import Button from "@mui/material/Button";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-
-//import AcUnitTwoToneIcon from "@mui/icons-material/AcUnitTwoTone";
-//import SelfImprovementTwoToneIcon from "@mui/icons-material/SelfImprovementTwoTone";
-//import FilterVintageTwoToneIcon from "@mui/icons-material/FilterVintageTwoTone";
-
-//import Paper from "@mui/material/Paper";
 import Grid from '@mui/material/Grid'; // Grid version 1
 import "../globals.css";
 import "../page.module.css";
 import PurpleTheme from "../components/PurpleTheme.js";
 import ColourMenu from "./ChangeColourMenu";
+import { purple } from "@mui/material/colors";
 
 // setting the font
 const roboto = Roboto({
@@ -29,14 +23,14 @@ const roboto = Roboto({
 });
 
 //the button for the soothing lilac experience
-function GoldieButton() {
+function PurpleyButton() {
   const ButtonColor = createTheme({
     palette: {
       primary: {
-        main: "#8e5dac",
+        main: purple[400],
       },
       secondary: {
-        main: "#8e5dac",
+        main: purple[600],
       },
     },
     typography: {
@@ -49,6 +43,7 @@ function GoldieButton() {
       <Button
         variant="contained"
         size="large"
+        sx={{ pl:4, pr:4}}
    //     startIcon={<SelfImprovementTwoToneIcon />}
       >
         Let's get started
@@ -59,7 +54,7 @@ function GoldieButton() {
 
 
 //exporting the buttons
-export { GoldieButton };
+export { PurpleyButton };
 
 export default function Homepage() {
   return (
@@ -94,7 +89,6 @@ export default function Homepage() {
           justifyContent="center"
         >
           <Image
-            //className={styles.logo}
             src="/img/cranes800x435.png"
             alt="Samson and Goliath"
             width={356}
@@ -104,8 +98,8 @@ export default function Homepage() {
         </Grid>
    
         <Grid item xs={12} container justifyContent="center" rowSpacing={-5} paddingTop={4}>
-          <Link href="/tours">
-            <GoldieButton />
+          <Link href="/purpley-welcome">
+            <PurpleyButton />
           </Link>
         </Grid>
         <Grid item xs={12} container justifyContent="center" rowSpacing={-5} paddingTop={3} paddingBottom={6}>

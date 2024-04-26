@@ -7,7 +7,6 @@ import LandmarkMarkers from "../(markers)/LandmarkMarkers";
 import StatueMarkers from "../(markers)/StatueMarkers";
 import SandLDirections from "../(directions)/Directions-s-l";
 
-
 export default function PurpleMapOfLandmarksAndStatues() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
 

@@ -8,7 +8,6 @@ import AppUser from "../(markers)/UserMarker";
 import StatueMarkers from "../(markers)/StatueMarkers";
 import BandSDirections from "../(directions)/Directions-b-s";
 
-
 export default function PurpleMapOfBuildingsAndStatues() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
 

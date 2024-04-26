@@ -4,8 +4,6 @@ import Image from "next/image";
 import FormLabel from "@mui/material/FormLabel";
 import FormControl from "@mui/material/FormControl";
 import FormGroup from "@mui/material/FormGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import FormHelperText from "@mui/material/FormHelperText";
 import Checkbox from "@mui/material/Checkbox";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Button from "@mui/material/Button";
@@ -207,20 +205,10 @@ export default function TourOptionsForm({ onSubmit }) {
               <Grid item xs={10}>
                 <LandmarkCard />
               </Grid>
+              
             </Grid>
           </FormGroup>
-          {/*}
-          <FormHelperText
-            sx={{
-              m: 4,
-              fontWeight: "500",
-              color: brown[900],
-              textAlign: "center",
-            }}
-          >
-            *You must choose at least one option.
-          </FormHelperText>
-          */}
+  
           <Grid item xs={12} sx={{ mx: 8, pt:3, pb:3 }}>
             <BlueButton />
           </Grid>

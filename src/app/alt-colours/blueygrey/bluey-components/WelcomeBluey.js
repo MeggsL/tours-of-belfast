@@ -12,7 +12,7 @@ import Grid from "@mui/material/Grid"; // Grid version 1
 import "../blueygrey.css";
 import "../bg-page.module.css";
 import { brown } from "@mui/material/colors";
-import WelcomeCard from "./WelcomeCard";
+import WelcomeCard from "./BlueyWelcomeCard";
 
 // setting the font
 const roboto = Roboto({
@@ -43,7 +43,6 @@ function TourSelectionsButton() {
         variant="outlined"
         size="large"
         sx={{padding: 2, pl:3, pr:3}}
-        //     startIcon={<SelfImprovementTwoToneIcon />}
       >
         Take me to tour selections
       </Button>

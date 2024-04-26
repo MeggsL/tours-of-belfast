@@ -7,25 +7,9 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { useState } from "react";
 import TourOptionsForm from "../bluey-components/TourOptionsChecklistBluey.js";
-import OpenBox from "../../weather/OpenBox";
-import YouMustSelect from "./TourSelectionAlert";
+import OpenBox from "../../../weather/OpenBox";
 
-//import Alert from "@mui/material/Alert";
-
-//the parent component
-
-const Title = () => {
-  return (
-    <Image
-      src="/img/bg-welcome.png"
-      alt="Welcome, failte"
-      width={300}
-      height={145}
-      priority
-    />
-  );
-};
-
+//the parent component of the form process
 const SubTitle = () => {
   return (
     <Image
@@ -37,7 +21,7 @@ const SubTitle = () => {
     />
   );
 };
-export { Title, SubTitle };
+export {  SubTitle };
 
 export default function StartTour({ onSubmit }) {
   const [state, setState] = useState({}); // State for form data

@@ -9,7 +9,6 @@ import {
 
 import buildings from "../../data/buildings";
 import { useState } from "react";
-import "./markers.css";
 
 type Point = google.maps.LatLngLiteral & { key: string } & { name: string } & {
   info: string;
@@ -47,10 +46,8 @@ const MapMarkers = ({ points }: Props) => {
           {/* create InfoWindow for each marker and set it so that only the window for the marker clicked-on opens*/}
           {activeMarker === point ? (
             <InfoWindow
-              // anchor={marker}
               maxWidth={200}
               onCloseClick={() => setActiveMarker(null)}
-              //  content={point.name + point.info}
               position={point}
               key={point.key}
             >

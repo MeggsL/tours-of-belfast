@@ -3,7 +3,6 @@
 import {
   APIProvider,
   Map,
-  //useMap,
   AdvancedMarker,
 } from "@vis.gl/react-google-maps";
 

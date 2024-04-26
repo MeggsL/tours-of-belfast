@@ -71,10 +71,10 @@ export default function ColourMenu() {
           horizontal: "center",
         }}
       >
-        <Link href="/peachypink">
+        <Link href="/alt-colours/peachypink">
           <MenuItem onClick={handleClose}>Peachy Pink</MenuItem>
         </Link>
-        <Link href="/blueygrey">
+        <Link href="/alt-colours/blueygrey">
           <MenuItem onClick={handleClose}>Bluey Beige</MenuItem>
         </Link>
         <Link href="../">

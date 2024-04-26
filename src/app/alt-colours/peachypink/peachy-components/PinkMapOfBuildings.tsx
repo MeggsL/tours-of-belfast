@@ -1,10 +1,10 @@
 "use client";
 
 import { APIProvider, Map } from "@vis.gl/react-google-maps";
-import BuildingMarkers from "../../components/(markers)/BuildingMarkers";
+import BuildingMarkers from "../../../components/(markers)/BuildingMarkers";
 import Container from "@mui/material/Container";
-import AppUser from "../../components/(markers)/UserMarker";
-import DirectionsBuildings from "../../components/(directions)/DirectionsBuildings";
+import AppUser from "../../../components/(markers)/UserMarker";
+import DirectionsBuildings from "../../../components/(directions)/DirectionsBuildings";
 
 
 export default function PinkMapOfBuildings() {

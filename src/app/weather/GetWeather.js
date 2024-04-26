@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-//import Oval from "react-loader-spinner";
 import "./getweather.css";
 
 export default function TheWeather() {
@@ -81,21 +80,7 @@ export default function TheWeather() {
                 </td>
               </tr>
             </div>
-          {/*}
-            <div>
-              <tr>
-                <td className="sun-rise-set">
-                  Sunrise: NewSunriseTime
-                  <sup className="degminmax">°C</sup>
-                </td>
 
-                <td className="sun-rise-set" width="80px" align="center">
-                  Sunset: {Math.round(weather.data.sys.sunset)}{" "}
-                  <sup className="degminmax">°C</sup>
-                </td>
-              </tr>
-            </div>
-        */}
           </div>
         )}
       </div>

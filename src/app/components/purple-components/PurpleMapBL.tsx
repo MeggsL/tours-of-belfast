@@ -7,7 +7,6 @@ import AppUser from "../(markers)/UserMarker";
 import LandmarkMarkers from "../(markers)/LandmarkMarkers";
 import LandBDirections from "../(directions)/Directions-l-b";
 
-
 export default function PurpleMapOfBuildingsAndLandmarks() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
 

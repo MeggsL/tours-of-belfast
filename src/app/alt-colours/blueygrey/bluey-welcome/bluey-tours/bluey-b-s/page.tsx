@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import BlueyBottomNavMaps from "../../../bluey-components/BlueyBottomNavMaps";
 import BlueMapOfBuildingsAndStatues from "../../../bluey-components/BlueMapBS";
-import "../../,,/blueygrey.css";
+import "../../../blueygrey.css";
 
 <html lang="en">
   <head>

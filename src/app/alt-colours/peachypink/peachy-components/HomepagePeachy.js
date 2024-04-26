@@ -11,7 +11,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Grid from '@mui/material/Grid'; // Grid version 1
 import "../peachypink.css";
 import "../pp-page.module.css";
-import ColourMenu from "../../components/ChangeColourMenu";
+import ColourMenu from "../../../components/ChangeColourMenu";
 import { pink } from "@mui/material/colors";
 
 // setting the font
@@ -42,7 +42,8 @@ function GetStartedButton() {
       <Button
         variant="contained"
         size="large"
-   //     startIcon={<SelfImprovementTwoToneIcon />}
+        sx={{pl:4, pr:4}}
+
       >
         Let's get started
       </Button>
@@ -69,7 +70,7 @@ export default function PeachyPinkHomepage() {
         >
           <Image
             //className={styles.logo}
-            src="/img/home-title.png"
+            src="/img/pp-home-title.png"
             alt="Tour of Belfast"
             width={356}
             height={200}
@@ -97,7 +98,7 @@ export default function PeachyPinkHomepage() {
         </Grid>
    
         <Grid item xs={12} container justifyContent="center" rowSpacing={-5} paddingTop={4}>
-          <Link href="./peachypink/peachy-tours">
+          <Link href="./peachypink/peachy-welcome">
             <GetStartedButton />
           </Link>
         </Grid>

@@ -3,9 +3,9 @@
 import { APIProvider, Map } from "@vis.gl/react-google-maps";
 
 import Container from "@mui/material/Container";
-import AppUser from "../../components/(markers)/UserMarker";
-import BuildingMarkers from "../../components/(markers)/BuildingMarkers";
-import DirectionsBuildings from "../../components/(directions)/DirectionsBuildings";
+import AppUser from "../../../components/(markers)/UserMarker";
+import BuildingMarkers from "../../../components/(markers)/BuildingMarkers";
+import DirectionsBuildings from "../../../components/(directions)/DirectionsBuildings";
 
 function BlueMapOfBuildings() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };

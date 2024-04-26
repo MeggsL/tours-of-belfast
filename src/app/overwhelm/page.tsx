@@ -1,31 +1,24 @@
-import React from "react";
-import "../globals.css";
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-//import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Grid";
-import BottomNavOverwhelm from "../components/BottomNavOverwhelm.js";
-//import UpTopMenu from "../components/TopMenu.js";
-import GreyMapOfQuietSpots from "../components/(tour-components)/GreyMapOfQuietSpots";
+"use client";
 
-export default function Overwhelm() {
+import React from "react";
+import "./overwhelm.css";
+import "../page.module.css";
+import AndRelax from "./StartChilling";
+
+<html lang="en">
+  <head>
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>Tours of Belfast</title>
+  </head>
+  <body></body>
+</html>;
+
+export default function TakeATour() {
   return (
-    <Box xs={{ flexgrow: 1, bgcolor: "#cfe8fc", height: "100vh" }}>
-      <Container maxWidth="sm"></Container>
-      <Grid container rowSpacing={4} justifyContent="center">
-        <Grid item xs={12} container justifyContent="center" rowSpacing={-3}>
-   
-        </Grid>
-        <Grid item xs={12} container justifyContent="center" rowSpacing={3}>
-          <Container fixed>
-<GreyMapOfQuietSpots />
-          </Container>
-        </Grid>
-        <Grid item xs={12} container justifyContent="center" rowSpacing={4}>
-          <BottomNavOverwhelm />
-        </Grid>
-      </Grid>
-      <Container />
-    </Box>
+    <main>
+      <div>
+  <AndRelax onSubmit={undefined} />
+      </div>
+    </main>
   );
 }

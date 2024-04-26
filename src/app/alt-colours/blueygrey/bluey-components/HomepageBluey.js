@@ -12,7 +12,7 @@ import Grid from '@mui/material/Grid'; // Grid version 1
 import "../blueygrey.css";
 import "../bg-page.module.css";
 import { brown } from "@mui/material/colors";
-import ColourMenu from "../../components/ChangeColourMenu";
+import ColourMenu from "../../../components/ChangeColourMenu";
 
 // setting the font
 const roboto = Roboto({
@@ -42,8 +42,8 @@ function GetStartedButton() {
       <Button
         variant="contained"
         size="large"
-        sx={{padding:2, pl:4, pr:4}}
-   //     startIcon={<SelfImprovementTwoToneIcon />}
+        sx={{pl:4, pr:4}}
+
       >
         Let's get started
       </Button>

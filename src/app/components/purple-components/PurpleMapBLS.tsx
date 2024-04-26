@@ -6,8 +6,7 @@ import Container from "@mui/material/Container";
 import AppUser from "../(markers)/UserMarker";
 import LandmarkMarkers from "../(markers)/LandmarkMarkers";
 import StatueMarkers from "../(markers)/StatueMarkers";
-import AllDirections from "../../components/(directions)/Directions-b-s-l";
-
+import AllDirections from "../(directions)/Directions-b-s-l";
 
 export default function PurpleMapAll() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };

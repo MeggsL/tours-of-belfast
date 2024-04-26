@@ -2,7 +2,7 @@ import React from "react";
 
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import YouMustSelect from "../../../bluey-components/TourSelectionAlert";
+import YouMustSelect from "../../../bluey-components/BlueyTourSelectionAlert";
 import "../../../blueygrey.css";
 
 <html lang="en">

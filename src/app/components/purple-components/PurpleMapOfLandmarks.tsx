@@ -3,7 +3,7 @@
 import { APIProvider, Map } from "@vis.gl/react-google-maps";
 import Container from "@mui/material/Container";
 import LandmarkMarkers from "../(markers)/LandmarkMarkers";
-import AppUser from "../../components/(markers)/UserMarker";
+import AppUser from "../(markers)/UserMarker";
 import LandmarkDirections from "../(directions)/DirectionsLandmarks";
 
 export default function PurpleMapOfLandmarks() {

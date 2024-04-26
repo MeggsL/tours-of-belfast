@@ -7,24 +7,22 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { useState } from "react";
 import TourOptionsForm from "../peachy-components/TourOptionsChecklistPeachy.js";
+import OpenBox from "../../../weather/OpenBox";
 
-//import Alert from "@mui/material/Alert";
 
-//the parent component
-
-const Title = () => {
+//the parent component of the form process
+const SubTitle = () => {
   return (
     <Image
-      //className={styles.logo}
-      src="/img/purple-welcome.png"
-      alt="Welcome"
-      width={356}
-      height={164}
+      src="/img/pp-welcome-sub-title.png"
+      alt="What would you like to see on your tour?"
+      width={300}
+      height={120}
       priority
     />
   );
 };
-export { Title };
+export {  SubTitle };
 
 export default function StartTour({ onSubmit }) {
   const [state, setState] = useState({}); // State for form data
@@ -34,20 +32,21 @@ export default function StartTour({ onSubmit }) {
     console.log("Form data submitted:", data);
 
     if (data.buildings && !data.statues && !data.landmarks) {
-      window.location.href = "../peachypink/peachy-tours/peachy-b";
+      window.location.href = "../peachy-welcome/peachy-tours/peachy-b";
     } else if (data.buildings && data.statues && !data.landmarks) {
-      window.location.href = "../peachypink/peachy-tours/peachy-b-s";
+      window.location.href = "../peachy-welcome/peachy-tours/peachy-b-s";
     } else if (data.buildings && data.statues && data.landmarks) {
-      window.location.href = "../peachypink/peachy-tours/peachy-b-l-s";
+      window.location.href = "../peachy-welcome/peachy-tours/peachy-b-l-s";
     } else if (data.statues && !data.landmarks && !data.buildings) {
-      window.location.href = "../peachypink/peachy-tours/peachy-s";
+      window.location.href = "../peachy-welcome/peachy-tours/peachy-s";
     } else if (data.statues && data.landmarks && !data.buildings) {
-      window.location.href = "../peachypink/peachy-tours/peachy-l-s";
+      window.location.href = ".../peachy-welcome/peachy-tours/peachy-l-s";
     } else if (data.landmarks && !data.statues && !data.buildings) {
-      window.location.href = "../peachypink/peachy-tours/peachy-l";
+      window.location.href = "../peachy-welcome/peachy-tours/peachy-l";
     } else if (data.landmarks && data.buildings && !data.statues) {
-      window.location.href = "../peachypink/peachy-tours/peachy-b-l";
+      window.location.href = "../peachy-welcome/peachy-tours/peachy-b-l";
     } else {
+      window.location.href = "../peachy-welcome/peachy-tours/tour-alert";
       console.log("That didn't work.");
     }
   };
@@ -72,7 +71,7 @@ export default function StartTour({ onSubmit }) {
           paddingTop={4}
           justifyContent="center"
         >
-          <Title />
+          <SubTitle />
         </Grid>
         <Grid
           container
@@ -86,6 +85,7 @@ export default function StartTour({ onSubmit }) {
         >
           <TourOptionsForm formData={state} onSubmit={handleFormSubmit} />
         </Grid>
+        <OpenBox />
       </Grid>
     </Box>
   );

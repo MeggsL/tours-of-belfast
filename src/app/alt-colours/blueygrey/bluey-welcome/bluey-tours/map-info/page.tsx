@@ -2,7 +2,7 @@ import React from "react";
 
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import MapInfoCard from "../../../bluey-components/MapInfoCard";
+import MapInfoCard from "../../../bluey-components/BlueyMapInfoCard";
 import "../../../blueygrey.css";
 
 <html lang="en">
@@ -13,7 +13,8 @@ import "../../../blueygrey.css";
   <body></body>
 </html>;
 
-export default function BlueMapOfS() {
+export default function BlueMapInfo
+() {
   return (
     <Box sx={{width: 350, pt: 10  }}>
       <Grid

@@ -1,11 +1,9 @@
 "use client";
 
 import {
-  useAdvancedMarkerRef,
   AdvancedMarker,
   InfoWindow,
   APIProvider,
-  Map,
   Pin,
 } from "@vis.gl/react-google-maps";
 
