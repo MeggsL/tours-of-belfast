@@ -2,9 +2,6 @@ import React from "react";
 import Homepage from "./components/Homepage.js";
 import "./globals.css";
 import "./page.module.css";
-import '@fontsource/inter';
-import EmptyCache from "./components/ClearCache.js";
-
 
 <html lang="en">
   <head>
@@ -14,15 +11,9 @@ import EmptyCache from "./components/ClearCache.js";
   <body></body>
 </html>;
 
-
-
 export default function App() {
   return (
-    <main className="main">
-      <div>
 
         <Homepage />
-      </div>
-    </main>
   );
 }

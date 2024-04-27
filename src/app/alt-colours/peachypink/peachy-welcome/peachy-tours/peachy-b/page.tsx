@@ -2,7 +2,7 @@ import React from "react";
 import PinkMapOfBuildings from "../../../peachy-components/PinkMapOfBuildings";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import PeachyBottomNavMaps from "../../../../peachypink/peachy-components/PeachyBottomNavMaps";
+import PeachyBottomNavMaps from "../../../peachy-components/PeachyBottomNavMaps";
 import "../../../peachypink.css";
 
 <html lang="en">

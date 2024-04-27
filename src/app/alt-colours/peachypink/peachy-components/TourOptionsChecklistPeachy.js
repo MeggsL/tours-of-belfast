@@ -12,11 +12,13 @@ import { useState } from "react";
 import { Roboto } from "next/font/google";
 import { brown } from "@mui/material/colors";
 import { pink } from "@mui/material/colors";
+import ColourMenuTours from "../../../components/ChangeColourMenuTours";
+import Stack from "@mui/material/Stack";
 
 const BuildingCard = () => {
   return (
     <Image
-      src="/img/selection-card-buildings.png"
+      src="/img/selection-card-buildings-pink.png"
       alt="Tour of Belfast"
       width={280}
       height={250}
@@ -28,7 +30,7 @@ const BuildingCard = () => {
 const StatuesCard = () => {
   return (
     <Image
-      src="/img/selection-card-statues.png"
+      src="/img/selection-card-statues-pink.png"
       alt="Tour of Belfast"
       width={280}
       height={250}
@@ -40,7 +42,7 @@ const StatuesCard = () => {
 const LandmarkCard = () => {
   return (
     <Image
-      src="/img/selection-card-monuments.png"
+      src="/img/selection-card-monuments-pink.png"
       alt="Tour of Belfast"
       width={280}
       height={250}
@@ -80,7 +82,7 @@ function PinkButton() {
         variant="contained"
         size="large"
         type="Submit"
-        sx={{ m: 1, pl: 6, pr: 6, pt: 2, pb: 2 }}
+        sx={{ pl: 4, pr: 4, pt: 3, pb: 3 }}
       >
         Start Tour
       </Button>
@@ -209,9 +211,17 @@ export default function TourOptionsForm({ onSubmit }) {
             </Grid>
           </FormGroup>
 
-          <Grid item xs={12} sx={{ mx: 8, pt:3, pb:3 }}>
-          <PinkButton />
-          </Grid>
+          <Stack
+            direction="row"
+            spacing={2}
+            justifyContent="center"
+            sx={{ pt: 3 }}
+          >
+                   <PinkButton />
+          </Stack>
+
+
+         
         </FormControl>
       </Box>
     </form>

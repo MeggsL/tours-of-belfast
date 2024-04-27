@@ -6,7 +6,7 @@ import "../bg-page.module.css";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { useState } from "react";
-import TourOptionsForm from "../bluey-components/TourOptionsChecklistBluey.js";
+import TourOptionsForm from "./TourOptionsChecklistBluey.js";
 import OpenBox from "../../../weather/OpenBox";
 
 //the parent component of the form process

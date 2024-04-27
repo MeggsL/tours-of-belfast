@@ -51,7 +51,7 @@ export default function BottomNavMaps() {
           <BottomNavigationAction
             label="Home"
             icon={
-              <Link href={"../../../"}>
+              <Link href={"../../"}>
                 <HomeTwoToneIcon />
               </Link>
             }

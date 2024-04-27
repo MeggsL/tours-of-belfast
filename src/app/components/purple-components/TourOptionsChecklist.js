@@ -3,17 +3,16 @@ import Box from "@mui/material/Box";
 import FormLabel from "@mui/material/FormLabel";
 import FormControl from "@mui/material/FormControl";
 import FormGroup from "@mui/material/FormGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import FormHelperText from "@mui/material/FormHelperText";
 import Checkbox from "@mui/material/Checkbox";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
 import { purple } from "@mui/material/colors";
 import { useState } from "react";
 import { Roboto } from "next/font/google";
 import Image from "next/image";
+import ColourMenuTours from "../../components/ChangeColourMenuTours";
+import Stack from "@mui/material/Stack";
 
 const BuildingCard = () => {
   return (
@@ -82,7 +81,7 @@ function PurpleButton() {
         variant="contained"
         size="large"
         type="Submit"
-        sx={{ m: 1, pl: 6, pr: 6, pt: 2, pb: 2 }}
+        sx={{ pl: 4, pr: 4, pt: 3, pb: 3 }}
       >
         Start Tour
       </Button>
@@ -209,10 +208,15 @@ export default function TourOptionsForm({ onSubmit }) {
               </Grid>
             </Grid>
           </FormGroup>
-
-          <Grid item xs={12} sx={{ mx: 8, pt: 3, pb: 3 }}>
+          <Stack
+            direction="row"
+            spacing={2}
+            justifyContent="center"
+            sx={{ pt: 3 }}
+          >
             <PurpleButton />
-          </Grid>
+
+          </Stack>
         </FormControl>
       </Box>
     </form>

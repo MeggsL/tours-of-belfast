@@ -6,7 +6,7 @@ import "../pp-page.module.css";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { useState } from "react";
-import TourOptionsForm from "../peachy-components/TourOptionsChecklistPeachy.js";
+import TourOptionsForm from "./TourOptionsChecklistPeachy.js";
 import OpenBox from "../../../weather/OpenBox";
 
 
