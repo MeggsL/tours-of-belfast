@@ -1,9 +1,9 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import "../global.css";
-import GreyMapAll from "../../ow-components/GreyMapAll";
-import OWBottomNav from "../OWBottomNav";
+import "../../overwhelm.css";
+import GreyMapOfAll from "../../ow-components/GreyMapAll";
+import OWBottomNav from "../../ow-components/OWBottomNav";
 
 <html lang="en">
   <head>
@@ -24,7 +24,7 @@ export default function GreyMapAll() {
         rowSpacing={0}
         padding={0}
       >
-    <GreyMapAll />
+    <GreyMapOfAll />
       </Grid>
       <Grid paddingBottom={3}>
         <OWBottomNav />

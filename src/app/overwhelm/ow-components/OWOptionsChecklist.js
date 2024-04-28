@@ -3,17 +3,15 @@ import Box from "@mui/material/Box";
 import FormLabel from "@mui/material/FormLabel";
 import FormControl from "@mui/material/FormControl";
 import FormGroup from "@mui/material/FormGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import FormHelperText from "@mui/material/FormHelperText";
 import Checkbox from "@mui/material/Checkbox";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
 import { grey } from "@mui/material/colors";
 import { useState } from "react";
 import { Roboto } from "next/font/google";
 import Image from "next/image";
+import "../overwhelm.css";
 
 const BenchCard = () => {
   return (

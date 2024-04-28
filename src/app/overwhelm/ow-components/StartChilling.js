@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import "../overwhelm.css";
 import "../../page.module.css";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
@@ -33,19 +34,19 @@ export default function AndRelax({ onSubmit }) {
     console.log("Form data submitted:", data);
 
     if (data.benches && !data.cafes && !data.toilets) {
-      window.location.href = "../ow-maps/ow-maps-b";
+      window.location.href = "../overwhelm/ow-maps/ow-maps-b";
     } else if (!data.benches && data.cafes && !data.toilets) {
-      window.location.href = "../ow-maps/ow-maps-c";
+      window.location.href = "../overwhelm/ow-maps/ow-maps-c";
     } else if (!data.benches && !data.cafes && data.toilets) {
-      window.location.href = "../ow-maps/ow-maps-t";
+      window.location.href = "../overwhelm/ow-maps/ow-maps-t";
     } else if (data.benches && data.cafes && !data.toilets) {
-      window.location.href = "../ow-maps/ow-maps-b-c";
+      window.location.href = "../overwhelm/ow-maps/ow-maps-b-c";
     } else if (data.benches && !data.cafes && data.toilets) {
-      window.location.href = "../ow-maps/ow-maps-b-t";
+      window.location.href = "../overwhelm/ow-maps/ow-maps-b-t";
     } else if (!data.benches && data.cafes && data.toilets) {
-      window.location.href = "../ow-maps/ow-maps-c-t";
+      window.location.href = "../overwhelm/ow-maps/ow-maps-c-t";
     } else if (data.benches && data.cafes && data.toilets) {
-      window.location.href = "../ow-maps/ow-maps-all";
+      window.location.href = "../overwhelm/ow-maps/ow-maps-all";
     } else {
       window.location.href = "./overwhelm/ow-alert";
       console.log("That didn't work.");

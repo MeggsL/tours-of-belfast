@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import "../global.css";
-import "../page.module.css";
+import "../overwhelm.css";
+import "../../page.module.css";
 import Box from "@mui/material/Box";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
@@ -10,9 +10,10 @@ import RouteTwoToneIcon from "@mui/icons-material/RouteTwoTone";
 import HomeTwoToneIcon from "@mui/icons-material/HomeTwoTone";
 import { createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import Link from 'next/link';
-import Image from 'next/image';
-import HelpOutlineTwoToneIcon from '@mui/icons-material/HelpOutlineTwoTone';
+import Link from "next/link";
+import Image from "next/image";
+import HelpOutlineTwoToneIcon from "@mui/icons-material/HelpOutlineTwoTone";
+import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
 
 export default function OWBottomNav() {
   const [value, setValue] = React.useState(0);
@@ -23,10 +24,10 @@ export default function OWBottomNav() {
       MuiButton: {
         styleOverrides: {
           root: ({ ownerState }) => ({
-            ...(ownerState.variant === 'contained' &&
-              ownerState.color === 'primary' && {
+            ...(ownerState.variant === "contained" &&
+              ownerState.color === "primary" && {
                 backgroundColor: "transparent",
-                color: '#fff',
+                color: "#fff",
               }),
           }),
         },
@@ -34,11 +35,10 @@ export default function OWBottomNav() {
     },
   });
 
-
   return (
     <React.Fragment>
       <CssBaseline />
-      <Box sx={{ height: "5vh" }} alignContent={"center"} alignItems={"center"} >
+      <Box sx={{ height: "5vh" }} alignContent={"center"} alignItems={"center"}>
         <BottomNavigation
           showLabels
           className={"MuiBottomNavigation-root"}
@@ -56,38 +56,26 @@ export default function OWBottomNav() {
               </Link>
             }
           />
-          [tour home]
+          [map info]
           <BottomNavigationAction
             label="Info"
             icon={
-              <Link href={"./map-info"}>
+              <Link href={"./ow-map-info"}>
                 <HelpOutlineTwoToneIcon />
-            </Link>
-            }
-          />
-          [map information]
-<BottomNavigationAction
-            label="Tours"
-            icon={
-              <Link href={"./"}>
-                <RouteTwoToneIcon />
               </Link>
             }
           />
-    
-            [break time]
-            <BottomNavigationAction
-              label=""
-              icon={
-                <Link  href={""}>
-                  <Image width={48} height={48} src="/img/break-time.png" alt="break time!" />
-                </Link>
-              }
-
+          [back to tour selections]
+          <BottomNavigationAction
+            label="Chill Options"
+            icon={
+              <Link href={"../"}>
+                <RouteTwoToneIcon />
+              </Link>
+            }
           />
         </BottomNavigation>
       </Box>
     </React.Fragment>
   );
 }
-

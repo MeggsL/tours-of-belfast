@@ -8,6 +8,7 @@ import {
 } from "@vis.gl/react-google-maps";
 
 import { useState } from "react";
+import { lightGreen } from "@mui/material/colors";
 
 const appUser = { lat: 54.59508217431334, lng: -5.935987917492315 };
 
@@ -19,7 +20,7 @@ function AppUser() {
       <div style={{ height: "100vh", width: "100" }}>
         <AdvancedMarker position={appUser} onClick={() => setOpen(true)}>
           {/*create customised pin */}
-          <Pin background={"#a3f58d"} borderColor={"#1e89a1"} scale={1.7}>
+          <Pin background={lightGreen[200]} borderColor={lightGreen[400]} scale={1.7}>
             {/* children are rendered as 'glyph' of pin */}
             <span style={{ fontSize: "1rem" }}>🙋🏼‍♀️</span>
           </Pin>

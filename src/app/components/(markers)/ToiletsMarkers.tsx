@@ -9,6 +9,7 @@ import {
 
 import toilets from "../../data/toilets";
 import { useState } from "react";
+import { lightBlue } from "@mui/material/colors";
 
 type Point = google.maps.LatLngLiteral & { key: string } & { name: string } & {
   info: string;
@@ -38,9 +39,9 @@ const MapMarkers = ({ points }: Props) => {
           onClick={() => handleActiveMarker(point)}
         >
           {/* create custom pin */}
-          <Pin background={"#f68ff7"} borderColor={"#1e89a1"} scale={1.4}>
+          <Pin background={lightBlue[100]} borderColor={lightBlue[600]} scale={1.4}>
             {/* children are rendered as 'glyph' of pin */}
-            <span style={{ fontSize: "1rem" }}>🏛️</span>
+            <span style={{ fontSize: "1rem" }}>🚻</span>
           </Pin>
 
           {/* create InfoWindow for each marker and set it so that only the window for the marker clicked-on opens*/}

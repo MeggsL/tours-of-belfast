@@ -1,8 +1,8 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import "../global.css";
-import OWBottomNav from "../OWBottomNav";
+import "../../overwhelm.css";
+import OWBottomNav from "../../ow-components/OWBottomNav";
 import GreyMapOfBenches from "../../ow-components/GreyMapBenches";
 
 <html lang="en">

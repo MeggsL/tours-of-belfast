@@ -2,8 +2,8 @@ import React from "react";
 
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import MapInfoCard from "../../../peachy-components/PeachyMapInfoCard";
-import "../../../peachypink.css";
+import MapInfoCard from "../../ow-components/OWMapInfoCard";
+import "../../overwhelm.css";
 
 <html lang="en">
   <head>
@@ -13,7 +13,7 @@ import "../../../peachypink.css";
   <body></body>
 </html>;
 
-export default function PinkMapInfo() {
+export default function OWMapInfoCard() {
   return (
     <Box sx={{width: 350, pt: 10  }}>
       <Grid

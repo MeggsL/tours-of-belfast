@@ -11,7 +11,7 @@ export default function GreyMapOfBenches() {
   return (
     <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
       <Container fixed>
-        <div style={{ height: "100vh", width: "100" }}>
+        <div style={{ height: "91vh", width: "100" }}>
           <Map
             defaultZoom={15}
             defaultCenter={position}

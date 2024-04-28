@@ -7,13 +7,13 @@ import CafeMarkers from "../../components/(markers)/CafeMarkers";
 import BenchMarkers from "../../components/(markers)/BenchMarkers";
 import ToiletMarkers from "../../components/(markers)/ToiletsMarkers";
 
-export default function GreyMapAll() {
+export default function GreyMapOFAll() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
 
   return (
     <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
       <Container fixed>
-        <div style={{ height: "100vh", width: "100" }}>
+        <div style={{ height: "91vh", width: "100" }}>
           <Map
             defaultZoom={15}
             defaultCenter={position}

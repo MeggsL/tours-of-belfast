@@ -9,6 +9,7 @@ import {
 
 import statues from "../../data/statues";
 import { useState } from "react";
+import { purple } from "@mui/material/colors";
 
 type Point = google.maps.LatLngLiteral & { key: string } & { name: string } & {
   info: string;
@@ -38,7 +39,7 @@ const MapMarkers = ({ points }: Props) => {
           onClick={() => handleActiveMarker(point)}
         >
           {/* create custom pin */}
-          <Pin background={"#f5f489"} borderColor={"#1e89a1"} scale={1.4}>
+          <Pin background={purple[100]} borderColor={purple[200]} scale={1.4}>
             {/* children are rendered as 'glyph' of pin */}
             <span style={{ fontSize: "1rem" }}>🗽</span>
           </Pin>

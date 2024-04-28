@@ -44,7 +44,7 @@ export default function MapInfoCard() {
           </Typography>
 
           <CardActions sx={{pt:4}}>
-            <Link href="./">
+            <Link href="../">
               <Button size="small">Back to map</Button>
             </Link>
           </CardActions>
