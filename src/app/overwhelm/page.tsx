@@ -3,7 +3,7 @@
 import React from "react";
 import "./overwhelm.css";
 import "../page.module.css";
-import AndRelax from "./StartChilling";
+import AndRelax from "./ow-components/StartChilling";
 
 <html lang="en">
   <head>

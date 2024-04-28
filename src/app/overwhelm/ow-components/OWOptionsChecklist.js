@@ -51,19 +51,7 @@ const CafesCard = () => {
   );
 };
 
-const GreenSpacesCard = () => {
-  return (
-    <Image
-      src="/img/green-spaces.png"
-      alt="Tour of Belfast"
-      width={280}
-      height={250}
-      priority
-    />
-  );
-};
-
-export { ToiletsCard, BenchCard, CafesCard, GreenSpacesCard };
+export { ToiletsCard, BenchCard, CafesCard };
 
 // setting the font
 const roboto = Roboto({
@@ -96,7 +84,7 @@ function ChillButton() {
         type="Submit"
         sx={{ m: 1, pl: 6, pr: 6, pt: 2, pb: 2 }}
       >
-       Show me chill spots
+        Show me chill spots
       </Button>
     </ThemeProvider>
   );
@@ -107,9 +95,9 @@ export { ChillButton };
 
 export default function ChillOptionsForm({ onSubmit }) {
   const [state, setState] = useState({
-    buildings: false,
-    statues: false,
-    landmarks: false,
+    benches: false,
+    cafes: false,
+    toilets: false,
   });
 
   const handleChange = (event) => {
@@ -119,8 +107,8 @@ export default function ChillOptionsForm({ onSubmit }) {
     });
   };
 
-  const { buildings, statues, landmarks } = state;
-  const error = [buildings, statues, landmarks].filter((v) => v).length !== 2;
+  const { benches, cafes, toilets } = state;
+  const error = [benches, cafes, toilets].filter((v) => v).length !== 2;
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -166,9 +154,9 @@ export default function ChillOptionsForm({ onSubmit }) {
             >
               <Grid item xs={2}>
                 <Checkbox
-                  checked={buildings}
+                  checked={cafes}
                   onChange={handleChange}
-                  name="buildings"
+                  name="cafes"
                   size="large"
                   sx={{
                     color: grey[800],
@@ -185,9 +173,9 @@ export default function ChillOptionsForm({ onSubmit }) {
 
               <Grid item xs={2}>
                 <Checkbox
-                  checked={statues}
+                  checked={benches}
                   onChange={handleChange}
-                  name="statues"
+                  name="benches"
                   size="large"
                   sx={{
                     color: grey[800],
@@ -203,9 +191,9 @@ export default function ChillOptionsForm({ onSubmit }) {
 
               <Grid item xs={2}>
                 <Checkbox
-                  checked={landmarks}
+                  checked={toilets}
                   onChange={handleChange}
-                  name="landmarks"
+                  name="toilets"
                   size="large"
                   sx={{
                     color: grey[800],
@@ -219,30 +207,7 @@ export default function ChillOptionsForm({ onSubmit }) {
               <Grid item xs={10}>
                 <ToiletsCard />
               </Grid>
-
-              <Grid item xs={2}>
-                <Checkbox
-                  checked={landmarks}
-                  onChange={handleChange}
-                  name="landmarks"
-                  size="large"
-                  sx={{
-                    color: grey[800],
-                    "&.Mui-checked": {
-                      color: grey[600],
-                    },
-                  }}
-                />
-              </Grid>
-
-              <Grid item xs={10}>
-                <GreenSpacesCard />
-              </Grid>
-
-
             </Grid>
-
-            
           </FormGroup>
 
           <Grid item xs={12} sx={{ mx: 8, pt: 3, pb: 3 }}>

@@ -2,12 +2,13 @@
 
 import React from "react";
 import Image from "next/image";
-import "../page.module.css";
+import "../../page.module.css";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { useState } from "react";
 import TourOptionsForm from "./OWOptionsChecklist.js";
-import OpenBox from "../weather/OpenBox";
+import OpenBox from "../../weather/OpenBox";
+
 
 //the parent component
 
@@ -31,20 +32,20 @@ export default function AndRelax({ onSubmit }) {
     // Handle form submission logic here
     console.log("Form data submitted:", data);
 
-    if (data.buildings && !data.statues && !data.landmarks) {
-      window.location.href = "../../purpley-welcome/purpley-tours/purple-b";
-    } else if (data.buildings && data.statues && !data.landmarks) {
-      window.location.href = "../../purpley-welcome/purpley-tours/purple-b-s";
-    } else if (data.buildings && data.statues && data.landmarks) {
-      window.location.href = "../../purpley-welcome/purpley-tours/purple-b-l-s";
-    } else if (data.statues && !data.landmarks && !data.buildings) {
-      window.location.href = "../../purpley-welcome/purpley-tours/purple-s";
-    } else if (data.statues && data.landmarks && !data.buildings) {
-      window.location.href = "../../purpley-welcome/purpley-tours/purple-l-s";
-    } else if (data.landmarks && !data.statues && !data.buildings) {
-      window.location.href = "../../purpley-welcome/purpley-tours/purple-l";
-    } else if (data.landmarks && data.buildings && !data.statues) {
-      window.location.href = "../../purpley-welcome/purpley-tours/purple-b-l";
+    if (data.benches && !data.cafes && !data.toilets) {
+      window.location.href = "../ow-maps/ow-maps-b";
+    } else if (!data.benches && data.cafes && !data.toilets) {
+      window.location.href = "../ow-maps/ow-maps-c";
+    } else if (!data.benches && !data.cafes && data.toilets) {
+      window.location.href = "../ow-maps/ow-maps-t";
+    } else if (data.benches && data.cafes && !data.toilets) {
+      window.location.href = "../ow-maps/ow-maps-b-c";
+    } else if (data.benches && !data.cafes && data.toilets) {
+      window.location.href = "../ow-maps/ow-maps-b-t";
+    } else if (!data.benches && data.cafes && data.toilets) {
+      window.location.href = "../ow-maps/ow-maps-c-t";
+    } else if (data.benches && data.cafes && data.toilets) {
+      window.location.href = "../ow-maps/ow-maps-all";
     } else {
       window.location.href = "./overwhelm/ow-alert";
       console.log("That didn't work.");
@@ -86,7 +87,7 @@ export default function AndRelax({ onSubmit }) {
           <TourOptionsForm formData={state} onSubmit={handleFormSubmit} />
         </Grid>
 
-        <OpenBox />
+<OpenBox />
       </Grid>
     </Box>
   );
