@@ -12,7 +12,7 @@ export default function WelcomeCard() {
       <Card sx={{ minWidth: 275, mx:2, padding:2 }}>
         <CardContent>
           <Typography variant="h5" sx={{ mb: 1.5 }} color={brown[400]}>
-            'Bout ye!
+            Bowt ye!
           </Typography>
           <Typography variant="body2" color={brown[800]}>
             On the next screen you will be offered a list of attractions that
