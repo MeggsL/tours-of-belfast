@@ -5,10 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import { Roboto } from 'next/font/google';
+import { Roboto } from "next/font/google";
 import Button from "@mui/material/Button";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import Grid from '@mui/material/Grid'; // Grid version 1
+import Grid from "@mui/material/Grid"; // Grid version 1
 import "../../globals.css";
 import "../../page.module.css";
 import ColourMenu from "../ChangeColourMenu";
@@ -16,9 +16,9 @@ import { purple } from "@mui/material/colors";
 
 // setting the font
 const roboto = Roboto({
-  weight: ['300', '400', '500', '700'],
-  subsets: ['latin'],
-  display: 'swap',
+  weight: ["300", "400", "500", "700"],
+  subsets: ["latin"],
+  display: "swap",
 });
 
 //the button for the soothing lilac experience
@@ -39,16 +39,12 @@ function PurpleyButton() {
 
   return (
     <ThemeProvider theme={ButtonColor}>
-      <Button
-        variant="contained"
-        size="large"
-        sx={{ pl:4, pr:4}}
-      />
-        Get Started
+      <Button variant="contained" size="large" sx={{ pl: 4, pr: 4 }} >
+      Get Started
+      </Button>
     </ThemeProvider>
   );
 }
-
 
 //exporting the buttons
 export { PurpleyButton };
@@ -92,14 +88,29 @@ export default function Homepage() {
             priority
           />
         </Grid>
-   
-        <Grid item xs={12} container justifyContent="center" rowSpacing={-5} paddingTop={4}>
+
+        <Grid
+          item
+          xs={12}
+          container
+          justifyContent="center"
+          rowSpacing={-5}
+          paddingTop={4}
+        >
           <Link href="/purpley-welcome">
             <PurpleyButton />
           </Link>
         </Grid>
-        <Grid item xs={12} container justifyContent="center" rowSpacing={-5} paddingTop={3} paddingBottom={6}>
-       <ColourMenu />
+        <Grid
+          item
+          xs={12}
+          container
+          justifyContent="center"
+          rowSpacing={-5}
+          paddingTop={3}
+          paddingBottom={6}
+        >
+          <ColourMenu />
         </Grid>
       </Container>
     </Box>
