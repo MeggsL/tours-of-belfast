@@ -23,7 +23,7 @@ const BenchCard = () => {
       src="/img/benches.png"
       alt="Tour of Belfast"
       width={280}
-      height={250}
+      height={236}
       priority
     />
   );
@@ -35,7 +35,7 @@ const ToiletsCard = () => {
       src="/img/toilets.png"
       alt="Tour of Belfast"
       width={280}
-      height={250}
+      height={236}
       priority
     />
   );
@@ -47,7 +47,7 @@ const CafesCard = () => {
       src="/img/cozy-cafes.png"
       alt="Tour of Belfast"
       width={280}
-      height={250}
+      height={236}
       priority
     />
   );
