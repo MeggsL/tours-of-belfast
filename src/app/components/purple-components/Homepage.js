@@ -43,7 +43,7 @@ function PurpleyButton() {
         variant="contained"
         size="large"
         sx={{ pl:4, pr:4}}
-      >
+      />
         Get Started
     </ThemeProvider>
   );
