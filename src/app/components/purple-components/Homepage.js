@@ -44,8 +44,7 @@ function PurpleyButton() {
         size="large"
         sx={{ pl:4, pr:4}}
       >
-        Let's get started
-      </Button>
+        Get Started
     </ThemeProvider>
   );
 }

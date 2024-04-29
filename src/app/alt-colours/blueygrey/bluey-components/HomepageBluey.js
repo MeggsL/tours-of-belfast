@@ -45,7 +45,7 @@ function GetStartedButton() {
         sx={{pl:4, pr:4}}
 
       >
-        Let's get started
+        Get started
       </Button>
     </ThemeProvider>
   );

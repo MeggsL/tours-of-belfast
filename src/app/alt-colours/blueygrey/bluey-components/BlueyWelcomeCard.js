@@ -29,7 +29,7 @@ export default function WelcomeCard() {
           </Typography>
           <br />
           <Typography variant="body2" color={brown[800]}>
-            Once you have made your selections and hit the 'Start Tour' button,
+            Once you have made your selections and hit the Start Tour button,
             your bespoke tour map will load.
           </Typography>
           <Typography
