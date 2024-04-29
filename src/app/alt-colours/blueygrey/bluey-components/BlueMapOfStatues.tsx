@@ -1,12 +1,12 @@
 "use client";
-
+import React from "react";
 import { APIProvider, Map } from "@vis.gl/react-google-maps";
 import Container from "@mui/material/Container";
 import StatueMarkers from "../../../components/(markers)/StatueMarkers";
 import AppUser from "../../../components/(markers)/UserMarker";
 import DirectionsStatues from "../../../components/(directions)/DirectionsStatues";
 
-function BlueMapOfStatues() {
+export default function BlueMapOfStatues() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
 
   return (
@@ -27,4 +27,3 @@ function BlueMapOfStatues() {
     </APIProvider>
   );
 }
-export default BlueMapOfStatues;

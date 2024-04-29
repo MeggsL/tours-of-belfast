@@ -1,5 +1,5 @@
 "use client";
-
+import React from "react";
 import { APIProvider, Map } from "@vis.gl/react-google-maps";
 import Container from "@mui/material/Container";
 import AppUser from "../(markers)/UserMarker";
@@ -19,11 +19,10 @@ export default function PurpleMapOfLandmarksAndStatues() {
             defaultCenter={position}
             mapId={process.env.NEXT_PUBLIC_PURPLE_MAP_ID}
           >
-      <StatueMarkers />
-      <LandmarkMarkers />
-      <AppUser />
-      <SandLDirections />
-      
+            <StatueMarkers />
+            <LandmarkMarkers />
+            <AppUser />
+            <SandLDirections />
           </Map>
         </div>
       </Container>

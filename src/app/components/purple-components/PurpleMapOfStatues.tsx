@@ -1,5 +1,5 @@
 "use client";
-
+import React from "react";
 import { APIProvider, Map } from "@vis.gl/react-google-maps";
 import Container from "@mui/material/Container";
 import StatueMarkers from "../(markers)/StatueMarkers";

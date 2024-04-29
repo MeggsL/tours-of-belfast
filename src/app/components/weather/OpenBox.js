@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import Box from "@mui/material/Box";
 import { Alert, IconButton, Collapse, Button } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
