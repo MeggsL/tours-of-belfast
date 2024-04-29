@@ -1,18 +1,9 @@
 import React from "react";
-
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import PinkMapAll from "../../../peachy-components/PinkMapBLS";
-import PeachyBottomNavMaps from "../../../peachy-components/PeachyBottomNavMaps";
+import BottomNavMaps from "../../../peachy-components/PeachyBottomNavMaps";
 import "../../../peachypink.css";
-
-<html lang="en">
-  <head>
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <title>Tours of Belfast</title>
-  </head>
-  <body></body>
-</html>;
 
 export default function PinkMapOfAll() {
   return (
@@ -28,7 +19,7 @@ export default function PinkMapOfAll() {
         <PinkMapAll />
       </Grid>
       <Grid paddingBottom={3}>
-        <PeachyBottomNavMaps />
+        <BottomNavMaps />
       </Grid>
     </Box>
   );

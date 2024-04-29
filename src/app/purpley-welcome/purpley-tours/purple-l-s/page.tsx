@@ -1,9 +1,8 @@
 import React from "react";
-
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import "../../../globals.css";
-import PurpleyBottomNavMaps from "../../../components/purple-components/PurpleyBottomNavMaps";
+import BottomNavMaps from "../../../components/purple-components/PurpleyBottomNavMaps";
 import PurpleMapOfLandmarksAndStatues from "../../../components/purple-components/PurpleMapLS";
 
 <html lang="en">
@@ -28,7 +27,7 @@ export default function PurpleMapOfLandS() {
         <PurpleMapOfLandmarksAndStatues/>
       </Grid>
       <Grid paddingBottom={3}>
-        <PurpleyBottomNavMaps />
+        <BottomNavMaps />
       </Grid>
     </Box>
   );
