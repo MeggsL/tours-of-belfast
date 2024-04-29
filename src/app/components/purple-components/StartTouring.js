@@ -7,7 +7,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { useState } from "react";
 import TourOptionsForm from "./TourOptionsChecklist.js";
-import OpenBox from "../../weather/OpenBox";
+import OpenBox from "../weather/OpenBox";
 
 //the parent component of the form process
 

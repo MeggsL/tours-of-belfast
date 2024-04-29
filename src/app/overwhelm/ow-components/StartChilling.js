@@ -8,7 +8,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { useState } from "react";
 import TourOptionsForm from "./OWOptionsChecklist.js";
-import OpenBox from "../../weather/OpenBox";
+import OpenBox from "../../components/weather/OpenBox";
 
 
 //the parent component

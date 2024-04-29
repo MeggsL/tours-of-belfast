@@ -1,4 +1,5 @@
 import * as React from "react";
+import Link from "next/link";
 import Box from "@mui/material/Box";
 import FormLabel from "@mui/material/FormLabel";
 import FormControl from "@mui/material/FormControl";
@@ -12,6 +13,9 @@ import { useState } from "react";
 import { Roboto } from "next/font/google";
 import Image from "next/image";
 import "../overwhelm.css";
+import Stack from "@mui/material/Stack";
+import HomeTwoToneIcon from "@mui/icons-material/HomeTwoTone";
+import SelfImprovementTwoToneIcon from "@mui/icons-material/SelfImprovementTwoTone";
 
 const BenchCard = () => {
   return (
@@ -58,7 +62,7 @@ const roboto = Roboto({
   display: "swap",
 });
 
-//the button for the soothing lilac experience
+//button to launch the grey Overwhelm map with selection chill spots
 function ChillButton() {
   const ButtonColor = createTheme({
     palette: {
@@ -80,14 +84,47 @@ function ChillButton() {
         variant="contained"
         size="large"
         type="Submit"
-        sx={{ m: 1, pl: 6, pr: 6, pt: 2, pb: 2 }}
+        startIcon={<SelfImprovementTwoToneIcon />}
+        sx={{ m: 1, pl: 2, pr: 2, pt: 2, pb: 2 }}
       >
         Show me chill spots
       </Button>
     </ThemeProvider>
   );
 }
-export { ChillButton };
+
+//creating a grey GO HOME button
+function GreyHomeButton() {
+  const ButtonColor = createTheme({
+    palette: {
+      primary: {
+        main: grey[800],
+      },
+      secondary: {
+        main: grey[500],
+      },
+    },
+    typography: {
+      fontFamily: roboto.style.fontFamily,
+    },
+  });
+
+  return (
+    <ThemeProvider theme={ButtonColor}>
+      <Button
+        variant="contained"
+        size="large"
+        type="button"
+        startIcon={<HomeTwoToneIcon />}
+        sx={{ pl: 2, pr: 2, pt: 2, pb: 2 }}
+      >
+        Go Home
+      </Button>
+    </ThemeProvider>
+  );
+}
+
+export { ChillButton, GreyHomeButton };
 
 //the child component
 
@@ -208,9 +245,17 @@ export default function ChillOptionsForm({ onSubmit }) {
             </Grid>
           </FormGroup>
 
-          <Grid item xs={12} sx={{ mx: 8, pt: 3, pb: 3 }}>
+          <Stack
+            direction="row"
+            spacing={2}
+            justifyContent="center"
+            sx={{ pt: 3 }}
+          >
             <ChillButton />
-          </Grid>
+            <Link href="../">
+              <GreyHomeButton />
+            </Link>
+          </Stack>
         </FormControl>
       </Box>
     </form>

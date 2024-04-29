@@ -9,9 +9,9 @@ import { Roboto } from 'next/font/google';
 import Button from "@mui/material/Button";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Grid from '@mui/material/Grid'; // Grid version 1
-import "../globals.css";
-import "../page.module.css";
-import ColourMenu from "./ChangeColourMenu";
+import "../../globals.css";
+import "../../page.module.css";
+import ColourMenu from "../ChangeColourMenu";
 import { purple } from "@mui/material/colors";
 
 // setting the font

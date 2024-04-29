@@ -56,20 +56,10 @@ export default function YouMustSelect() {
     <Box maxWidth={"100%"} alignContent={"center"} sx={{ pl: 2, mx: 4, my: 4 }}>
       <Stack sx={{ width: "100%" }} spacing={3}>
         <Alert severity="error" onClose={() => {}}>
-          <AlertTitle>Don't you want to see interesting things?</AlertTitle>
-          You must select at least one tour option!
+          <AlertTitle>Please select at least one type of quiet spot</AlertTitle>
+         You may select one or all types to view on the map at once.
           <br />
-          <Grid sx={{ pt: 3, mx: 0 }}>
-            <Link href="./">
-              <Image
-                src="/img/yelling-speaker.png"
-                alt="How dare you!"
-                width={300}
-                height={280}
-                priority
-              />
-            </Link>
-          </Grid>
+
           <Grid sx={{ pt: 3, mx: 2 }}>
             <Link href="./">
               <GoBackButton />
