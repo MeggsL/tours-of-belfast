@@ -1,5 +1,6 @@
 "use client";
-import React from "react";ort { APIProvider, Map } from "@vis.gl/react-google-maps";
+import React from "react";
+import { APIProvider, Map } from "@vis.gl/react-google-maps";
 import Container from "@mui/material/Container";
 import AppUser from "../../../components/(markers)/UserMarker";
 import BuildingMarkers from "../../../components/(markers)/BuildingMarkers";
