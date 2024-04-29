@@ -1,4 +1,5 @@
 import * as React from "react";
+import Link from "next/link";
 import Box from "@mui/material/Box";
 import Image from "next/image";
 import FormLabel from "@mui/material/FormLabel";
@@ -12,8 +13,9 @@ import { useState } from "react";
 import { Roboto } from "next/font/google";
 import { blue } from "@mui/material/colors";
 import { brown } from "@mui/material/colors";
-import ColourMenuTours from "../../../components/ChangeColourMenuTours";
 import Stack from "@mui/material/Stack";
+import PlayCircleFilledWhiteTwoToneIcon from '@mui/icons-material/PlayCircleFilledWhiteTwoTone';
+import HomeTwoToneIcon from '@mui/icons-material/HomeTwoTone';
 
 const BuildingCard = () => {
   return (
@@ -60,7 +62,7 @@ const roboto = Roboto({
   display: "swap",
 });
 
-//creating a bluey button
+//creating a bluey START TOUR button
 function BlueButton() {
   const ButtonColor = createTheme({
     palette: {
@@ -82,14 +84,48 @@ function BlueButton() {
         variant="contained"
         size="large"
         type="Submit"
-        sx={{ pl: 4, pr: 4, pt: 3, pb: 3 }}
+        startIcon={<PlayCircleFilledWhiteTwoToneIcon />}
+        sx={{ pl: 2, pr: 2, pt: 3, pb: 3 }}
       >
+
         Start Tour
       </Button>
     </ThemeProvider>
   );
 }
-export { BlueButton };
+
+//creating a bluey GO HOME button
+function BlueHomeButton() {
+  const ButtonColor = createTheme({
+    palette: {
+      primary: {
+        main: blue[900],
+      },
+      secondary: {
+        main: blue[500],
+      },
+    },
+    typography: {
+      fontFamily: roboto.style.fontFamily,
+    },
+  });
+
+  return (
+    <ThemeProvider theme={ButtonColor}>
+      <Button
+        variant="contained"
+        size="large"
+        type="button"
+        startIcon={<HomeTwoToneIcon />}
+        sx={{ pl: 2, pr: 2, pt: 3, pb: 3 }}
+      >
+        
+        Go Home
+      </Button>
+    </ThemeProvider>
+  );
+}
+export { BlueButton, BlueHomeButton };
 
 //the child component of the form process
 
@@ -216,6 +252,9 @@ export default function TourOptionsForm({ onSubmit }) {
             sx={{ pt: 3 }}
           >
             <BlueButton />
+            <Link href="../">
+            <BlueHomeButton />
+            </Link>
 
           </Stack>
         </FormControl>

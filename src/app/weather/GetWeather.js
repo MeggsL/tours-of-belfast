@@ -32,13 +32,19 @@ export default function TheWeather() {
         console.log(res);
         setWeather({ data: res.data, loading: false, error: false });
       })
+
       .catch((err) => {
         setWeather({ ...weather, data: {}, error: true });
       })
-      
- 
-    
-    };
+
+};
+{/*}
+const needUmbrella = (weather) => {
+  if (weather.data.weather[0].id >= 200 && weather.data.weather[0].id <= 700)  {
+    <span>Bring your brolly!</span>
+  }
+}
+*/}
 
   return (
     <div className="App">
@@ -52,6 +58,10 @@ export default function TheWeather() {
         {weather && weather.data && weather.data.main && (
           <div>
             <div className="city-name">{weather.data.name}</div>
+            <div className="description">
+              {weather.data.weather[0].main}
+<needUmbrella />
+            </div>
 
             <div className="icon-temp">
               <img
@@ -81,10 +91,10 @@ export default function TheWeather() {
               </tr>
             </div>
 
+        
           </div>
         )}
       </div>
     </div>
   );
 }
-

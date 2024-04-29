@@ -1,4 +1,5 @@
 import * as React from "react";
+import Link from "next/link";
 import Box from "@mui/material/Box";
 import FormLabel from "@mui/material/FormLabel";
 import FormControl from "@mui/material/FormControl";
@@ -11,8 +12,9 @@ import { purple } from "@mui/material/colors";
 import { useState } from "react";
 import { Roboto } from "next/font/google";
 import Image from "next/image";
-import ColourMenuTours from "../../components/ChangeColourMenuTours";
 import Stack from "@mui/material/Stack";
+import PlayCircleFilledWhiteTwoToneIcon from "@mui/icons-material/PlayCircleFilledWhiteTwoTone";
+import HomeTwoToneIcon from "@mui/icons-material/HomeTwoTone";
 
 const BuildingCard = () => {
   return (
@@ -59,7 +61,7 @@ const roboto = Roboto({
   display: "swap",
 });
 
-//the button for the soothing lilac experience
+//lilac START TOUR button
 function PurpleButton() {
   const ButtonColor = createTheme({
     palette: {
@@ -81,14 +83,46 @@ function PurpleButton() {
         variant="contained"
         size="large"
         type="Submit"
-        sx={{ pl: 4, pr: 4, pt: 3, pb: 3 }}
+        startIcon={<PlayCircleFilledWhiteTwoToneIcon />}
+        sx={{ pl: 2, pr: 2, pt: 3, pb: 3 }}
       >
         Start Tour
       </Button>
     </ThemeProvider>
   );
 }
-export { PurpleButton };
+
+//lilac GO HOME button
+function PurpleHomeButton() {
+  const ButtonColor = createTheme({
+    palette: {
+      primary: {
+        main: purple[400],
+      },
+      secondary: {
+        main: purple[600],
+      },
+    },
+    typography: {
+      fontFamily: roboto.style.fontFamily,
+    },
+  });
+
+  return (
+    <ThemeProvider theme={ButtonColor}>
+      <Button
+        variant="contained"
+        size="large"
+        type="Submit"
+        startIcon={<HomeTwoToneIcon />}
+        sx={{ pl: 2, pr: 2, pt: 3, pb: 3 }}
+      >
+        Go Home
+      </Button>
+    </ThemeProvider>
+  );
+}
+export { PurpleButton, PurpleHomeButton };
 
 //the child component
 
@@ -215,7 +249,9 @@ export default function TourOptionsForm({ onSubmit }) {
             sx={{ pt: 3 }}
           >
             <PurpleButton />
-
+            <Link href="../../">
+              <PurpleHomeButton />
+            </Link>
           </Stack>
         </FormControl>
       </Box>

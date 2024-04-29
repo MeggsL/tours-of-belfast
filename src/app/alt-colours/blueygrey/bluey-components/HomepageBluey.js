@@ -72,7 +72,6 @@ function ChangeColourButton() {
       <Button
         variant="outlined"
         size="large"
-   //     startIcon={<FilterVintageTwoToneIcon />}
       >
        Change Colour Theme
       </Button>
@@ -116,12 +115,11 @@ export default function BlueyGreyHomepage() {
           paddingBottom={2}
           justifyContent="center"
         >
-          <Image
-            //className={styles.logo}
-            src="/img/cranes800x435.png"
+      <Image
+            src="/img/cranes356x194.png"
             alt="Samson and Goliath"
             width={356}
-            height={250}
+            height={194}
             priority
           />
         </Grid>

@@ -17,7 +17,7 @@
     align-items: center;
     width: 280px;
     height: 34vh;
-    background-color: #29b6f6;
+    background-color: #4fc3f7;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -35,18 +35,24 @@
 }
 
 .city-name {
-    font-size: 20px;
-    color: black;
+    font-size: 24px;
+    color: #1976d2;
     margin: 15px 0px 8px 0px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-kerning: auto;
 
 }
 
-.deg {
+.description {
     font-size: 18px;
     font-weight: 500;
-    color: black;
+    color: #e91e63;
+}
+
+.deg {
+    font-size: 20px;
+    font-weight: 500;
+    color: #424242;
 }
 
 .icon-temp {
@@ -54,7 +60,7 @@
     font-size: 40px;
     font-weight: 700;
     align-items: center;
-    color: black;
+    color:#424242;
 
 }
 
@@ -109,11 +115,4 @@
     font-weight: 500;
     color: blueviolet;
     text-align: center;
-}
-
-
-.description {
-    font-size: 12px;
-    font-weight: 500;
-    color: deeppink;
 }

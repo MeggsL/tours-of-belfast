@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
+import { amber } from "@mui/material/colors";
 import { brown } from "@mui/material/colors";
 import { pink } from "@mui/material/colors";
 
@@ -11,7 +12,7 @@ export default function WelcomeCard() {
     <Box sx={{ pl: 3 }}>
       <Card sx={{ minWidth: 275, mx:2, padding:2 }}>
         <CardContent>
-          <Typography variant="h5" sx={{ mb: 1.5 }} color={brown[400]}>
+          <Typography variant="h5" sx={{ mb: 1.5 }} color={amber[400]}>
             'Bout ye!
           </Typography>
           <Typography variant="body2" color={brown[800]}>

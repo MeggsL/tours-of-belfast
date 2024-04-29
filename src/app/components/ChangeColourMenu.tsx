@@ -5,6 +5,8 @@ import Button from "@mui/material/Button";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Roboto } from "next/font/google";
 import Link from "next/link";
+import PaletteTwoToneIcon from '@mui/icons-material/PaletteTwoTone';
+import { blue } from "@mui/material/colors";
 
 // setting the font
 const roboto = Roboto({
@@ -52,6 +54,7 @@ export default function ColourMenu() {
           onClick={handleClick}
           variant="outlined"
           size="large"
+          startIcon={<PaletteTwoToneIcon />}
         >
           Change colour scheme
         </Button>
@@ -72,13 +75,13 @@ export default function ColourMenu() {
         }}
       >
         <Link href="/alt-colours/peachypink">
-          <MenuItem onClick={handleClose}>Peachy Pink</MenuItem>
+          <MenuItem onClick={handleClose}><span>🟠 </span>Peachy Pink</MenuItem>
         </Link>
         <Link href="/alt-colours/blueygrey">
-          <MenuItem onClick={handleClose}>Bluey Beige</MenuItem>
+          <MenuItem onClick={handleClose}><span>🔵 </span>Bluey Beige</MenuItem>
         </Link>
         <Link href="../">
-          <MenuItem onClick={handleClose}>Lucious Lilac</MenuItem>
+          <MenuItem onClick={handleClose}><span>🟣 </span>Soothing Lilac</MenuItem>
         </Link>
       </Menu>
     </div>

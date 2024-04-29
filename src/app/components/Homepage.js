@@ -11,7 +11,6 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Grid from '@mui/material/Grid'; // Grid version 1
 import "../globals.css";
 import "../page.module.css";
-import PurpleTheme from "../components/PurpleTheme.js";
 import ColourMenu from "./ChangeColourMenu";
 import { purple } from "@mui/material/colors";
 
@@ -44,7 +43,6 @@ function PurpleyButton() {
         variant="contained"
         size="large"
         sx={{ pl:4, pr:4}}
-   //     startIcon={<SelfImprovementTwoToneIcon />}
       >
         Let's get started
       </Button>
@@ -70,7 +68,6 @@ export default function Homepage() {
           justifyContent="center"
         >
           <Image
-            //className={styles.logo}
             src="/img/home-title.png"
             alt="Tour of Belfast"
             width={356}
@@ -89,10 +86,10 @@ export default function Homepage() {
           justifyContent="center"
         >
           <Image
-            src="/img/cranes800x435.png"
+            src="/img/cranes356x194.png"
             alt="Samson and Goliath"
             width={356}
-            height={250}
+            height={194}
             priority
           />
         </Grid>

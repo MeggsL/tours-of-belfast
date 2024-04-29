@@ -67,11 +67,10 @@ export default function PeachyWelcome() {
           justifyContent="center"
         >
           <Image
-            //className={styles.logo}
             src="/img/purple-welcome.png"
             alt="Tour of Belfast"
             width={356}
-            height={200}
+            height={164}
             priority
           />
         </Grid>

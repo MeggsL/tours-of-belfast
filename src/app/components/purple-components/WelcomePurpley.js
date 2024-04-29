@@ -11,7 +11,6 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Grid from "@mui/material/Grid"; // Grid version 1
 import "../../globals.css";
 import "../../page.module.css";
-import { brown } from "@mui/material/colors";
 import { purple } from "@mui/material/colors";
 import WelcomeCard from "./PurpleyWelcomeCard";
 
@@ -44,7 +43,6 @@ function TourSelectionsButton() {
         variant="contained"
         size="large"
         sx={{padding: 2, pl:3, pr:3}}
-        //     startIcon={<SelfImprovementTwoToneIcon />}
       >
         Take me to tour selections
       </Button>
@@ -69,11 +67,10 @@ export default function PurpleyWelcome() {
           justifyContent="center"
         >
           <Image
-            //className={styles.logo}
             src="/img/purple-welcome.png"
             alt="Tour of Belfast"
             width={356}
-            height={200}
+            height={164}
             priority
           />
         </Grid>

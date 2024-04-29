@@ -16,10 +16,10 @@ export default function OpenBox() {
   const ButtonColor = createTheme({
     palette: {
       primary: {
-        main: blue[300]
+        main: blue[300],
       },
       secondary: {
-        main: blue[600]
+        main: blue[600],
       },
     },
   });
@@ -28,33 +28,31 @@ export default function OpenBox() {
     <div className="alertbox">
       <Box maxWidth={"100%"} alignContent={"center"}>
         <Collapse in={open}>
-
-            <Alert
-              severity="info"
-              action={
-                <IconButton
-                  aria-label="close"
-                  color="inherit"
-                  size="small"
-                  onClick={() => {
-                    setOpen(false);
-                  }}
-                >
-                  <CloseIcon fontSize="inherit" />
-                </IconButton>
-              }
-              sx={{ mb: 2 }}
-            >
-              <TheWeather />
-            </Alert>
-
+          <Alert
+            severity="info"
+            action={
+              <IconButton
+                aria-label="close"
+                color="inherit"
+                size="small"
+                onClick={() => {
+                  setOpen(false);
+                }}
+              >
+                <CloseIcon fontSize="inherit" />
+              </IconButton>
+            }
+            sx={{ mb: 2 }}
+          >
+            <TheWeather />
+          </Alert>
         </Collapse>
         <ThemeProvider theme={ButtonColor}>
           <Grid paddingTop={2} paddingLeft={10}>
             <Button
               disabled={open}
               variant="contained"
-              sx={{padding:2}}
+              sx={{ padding: 2 }}
               onClick={() => {
                 setOpen(true);
               }}

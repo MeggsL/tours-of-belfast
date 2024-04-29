@@ -1,4 +1,5 @@
 import * as React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import Box from "@mui/material/Box";
 import FormLabel from "@mui/material/FormLabel";
@@ -12,8 +13,9 @@ import { useState } from "react";
 import { Roboto } from "next/font/google";
 import { brown } from "@mui/material/colors";
 import { pink } from "@mui/material/colors";
-import ColourMenuTours from "../../../components/ChangeColourMenuTours";
 import Stack from "@mui/material/Stack";
+import PlayCircleFilledWhiteTwoToneIcon from "@mui/icons-material/PlayCircleFilledWhiteTwoTone";
+import HomeTwoToneIcon from "@mui/icons-material/HomeTwoTone";
 
 const BuildingCard = () => {
   return (
@@ -60,7 +62,7 @@ const roboto = Roboto({
   display: "swap",
 });
 
-//creating a pink button
+//creating a pink START TOUR button
 function PinkButton() {
   const ButtonColor = createTheme({
     palette: {
@@ -82,14 +84,48 @@ function PinkButton() {
         variant="contained"
         size="large"
         type="Submit"
-        sx={{ pl: 4, pr: 4, pt: 3, pb: 3 }}
+        startIcon={<PlayCircleFilledWhiteTwoToneIcon />}
+        sx={{ pl: 2, pr: 2, pt: 3, pb: 3 }}
       >
+      
         Start Tour
       </Button>
     </ThemeProvider>
   );
 }
-export { PinkButton };
+
+//creating a pink GO HOME button
+function PinkHomeButton() {
+  const ButtonColor = createTheme({
+    palette: {
+      primary: {
+        main: pink[600],
+      },
+      secondary: {
+        main: pink[800],
+      },
+    },
+    typography: {
+      fontFamily: roboto.style.fontFamily,
+    },
+  });
+
+  return (
+    <ThemeProvider theme={ButtonColor}>
+      <Button
+        variant="contained"
+        size="large"
+        type="button"
+        startIcon={<HomeTwoToneIcon />}
+        sx={{ pl: 2, pr: 2, pt: 3, pb: 3 }}
+      >
+       
+        Go home
+      </Button>
+    </ThemeProvider>
+  );
+}
+export { PinkButton, PinkHomeButton };
 
 //the child component of the form process
 
@@ -127,7 +163,7 @@ export default function TourOptionsForm({ onSubmit }) {
           required="true"
           margin="normal"
         >
-     <Grid
+          <Grid
             paddingTop={0}
             paddingBottom={2}
             alignItems={"center"}
@@ -207,7 +243,6 @@ export default function TourOptionsForm({ onSubmit }) {
               <Grid item xs={10}>
                 <LandmarkCard />
               </Grid>
-              
             </Grid>
           </FormGroup>
 
@@ -217,11 +252,11 @@ export default function TourOptionsForm({ onSubmit }) {
             justifyContent="center"
             sx={{ pt: 3 }}
           >
-                   <PinkButton />
+            <PinkButton />
+            <Link href="../">
+            <PinkHomeButton />
+            </Link>
           </Stack>
-
-
-         
         </FormControl>
       </Box>
     </form>
