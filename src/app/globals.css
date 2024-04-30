@@ -4,6 +4,9 @@
 
 @import "tailwindcss/utilities";
 
+#__next {
+  height: 100%;
+}
 
 :root {
   --max-width: 1100px;

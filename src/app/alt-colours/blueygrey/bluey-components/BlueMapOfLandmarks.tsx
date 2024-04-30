@@ -6,6 +6,10 @@ import LandmarkMarkers from "../../../components/(markers)/LandmarkMarkers";
 import AppUser from "../../../components/(markers)/UserMarker";
 import DirectionsLandmarks from "../../../components/(directions)/DirectionsLandmarks";
 
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=NEXT_PUBLIC_GOOGLE_MAPS_API_KEY&loading=async&callback=initMap">
+</script>
+
 export default function BlueMapOfLandmarks() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
 
