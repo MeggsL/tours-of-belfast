@@ -8,10 +8,6 @@ import LandmarkMarkers from "../../../components/(markers)/LandmarkMarkers";
 import StatueMarkers from "../../../components/(markers)/StatueMarkers";
 import AllDirections from "../../../components/(directions)/Directions-b-s-l";
 
-<script async
-    src="https://maps.googleapis.com/maps/api/js?key=NEXT_PUBLIC_GOOGLE_MAPS_API_KEY&loading=async&callback=initMap">
-</script>
-
 export default function BlueMapAll() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
 
