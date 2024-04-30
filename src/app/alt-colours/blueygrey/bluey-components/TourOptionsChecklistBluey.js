@@ -23,7 +23,7 @@ const BuildingCard = () => {
       src="/img/selection-card-buildings-bluey.png"
       alt="Tour of Belfast"
       width={280}
-      height={250}
+      height={236}
       priority
     />
   );
@@ -35,7 +35,7 @@ const StatuesCard = () => {
       src="/img/selection-card-statues-bluey.png"
       alt="Tour of Belfast"
       width={280}
-      height={250}
+      height={236}
       priority
     />
   );
@@ -47,7 +47,7 @@ const LandmarkCard = () => {
       src="/img/selection-card-monuments-bluey.png"
       alt="Tour of Belfast"
       width={280}
-      height={250}
+      height={236}
       priority
     />
   );
