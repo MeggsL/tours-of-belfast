@@ -53,6 +53,7 @@ export default function StartTour({ onSubmit }) {
 
   return (
     <Box xs={{ flexgrow: 1, height: "100%" }}>
+
       <Grid
         item
         xs={12}
@@ -85,9 +86,9 @@ export default function StartTour({ onSubmit }) {
         >
           <TourOptionsForm formData={state} onSubmit={handleFormSubmit} />
         </Grid>
-
         <OpenBox />
       </Grid>
+
     </Box>
   );
 }
