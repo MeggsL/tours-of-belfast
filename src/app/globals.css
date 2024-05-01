@@ -53,8 +53,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 200, 200, 200;
+    --background-end-rgb: 200, 200, 200;
 
     --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
     --secondary-glow: linear-gradient(
@@ -105,7 +105,8 @@ body {
   background: rgb(var(--background-end-rgb))
 }
 
-{/*}
+
+{/*} //code to create a linear gradient colour background
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -126,6 +127,7 @@ a {
   html {
     color-scheme: dark;
   }
+
 }
 
 .purpletours {

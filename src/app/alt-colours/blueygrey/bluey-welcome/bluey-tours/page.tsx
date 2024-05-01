@@ -14,7 +14,7 @@ import StartTour from "../../bluey-components/StartTouringBluey";
 export default function TakeATour() {
   return (
     <main>
-      <div>
+      <div className="body">
   <StartTour onSubmit={undefined} />
       </div>
     </main>

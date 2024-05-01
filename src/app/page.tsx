@@ -16,5 +16,11 @@ import "./page.module.css";
 </html>;
 
 export default function App() {
-  return <Homepage />;
+  return (
+    <main>
+      <div>
+        <Homepage />;
+      </div>
+    </main>
+  );
 }

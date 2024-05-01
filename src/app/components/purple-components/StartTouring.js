@@ -14,7 +14,7 @@ import OpenBox from "../weather/OpenBox";
 const SubTitle = () => {
   return (
     <Image
-      src="/img/bg-welcome-sub-title.png"
+      src="/img/pp-welcome-sub-title.png"
       alt="What would you like to see on your tour?"
       width={300}
       height={120}

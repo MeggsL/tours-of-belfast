@@ -16,7 +16,7 @@ import AndRelax from "./ow-components/StartChilling";
 export default function TakeATour() {
   return (
     <main>
-      <div>
+      <div className="body">
   <AndRelax onSubmit={undefined} />
       </div>
     </main>

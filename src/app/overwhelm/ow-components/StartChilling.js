@@ -17,9 +17,9 @@ const SubTitle = () => {
   return (
     <Image
       src="/img/take-a-break.png"
-      alt="What would you like to see on your tour?"
+      alt="How would you like to take a break?"
       width={300}
-      height={120}
+      height={184}
       priority
     />
   );

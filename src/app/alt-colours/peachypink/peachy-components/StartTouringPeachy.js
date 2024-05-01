@@ -17,7 +17,7 @@ const SubTitle = () => {
       src="/img/pp-welcome-sub-title.png"
       alt="What would you like to see on your tour?"
       width={300}
-      height={120}
+      height={184}
       priority
     />
   );

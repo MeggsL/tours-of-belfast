@@ -14,7 +14,7 @@ import PeachyWelcome from "../peachy-components/WelcomePeachy.js";
 export default function PeachyApp() {
   return (
     <main>
-      <div>
+      <div className="body">
         <PeachyWelcome />
       </div>
     </main>

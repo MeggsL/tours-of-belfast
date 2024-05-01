@@ -87,7 +87,6 @@ function PinkButton() {
         startIcon={<PlayCircleFilledWhiteTwoToneIcon />}
         sx={{ pl: 2, pr: 2, pt: 3, pb: 3 }}
       >
-      
         Start Tour
       </Button>
     </ThemeProvider>
@@ -119,7 +118,6 @@ function PinkHomeButton() {
         startIcon={<HomeTwoToneIcon />}
         sx={{ pl: 2, pr: 2, pt: 3, pb: 3 }}
       >
-       
         Go home
       </Button>
     </ThemeProvider>
@@ -247,14 +245,14 @@ export default function TourOptionsForm({ onSubmit }) {
           </FormGroup>
 
           <Stack
-            direction="row"
-            spacing={2}
+            direction={{ xs: "column", sm: "row" }}
+            spacing={{ xs: 1, sm: 2, md: 4 }}
             justifyContent="center"
             sx={{ pt: 3 }}
           >
             <PinkButton />
             <Link href="../">
-            <PinkHomeButton />
+              <PinkHomeButton />
             </Link>
           </Stack>
         </FormControl>

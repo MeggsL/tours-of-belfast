@@ -5,33 +5,59 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { brown } from "@mui/material/colors";
 import { blue } from "@mui/material/colors";
-
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
-  >
-    •
-  </Box>
-);
+import { green } from "@mui/material/colors";
+import Image from "next/image";
+import Stack from "@mui/material/Stack";
 
 export default function WelcomeCard() {
   return (
     <Box sx={{ pl: 3 }}>
       <Card sx={{ minWidth: 275, mx:2, padding:2 }}>
         <CardContent>
-          <Typography variant="h5" sx={{ mb: 1.5 }} color={brown[400]}>
-            Bowt ye!
-          </Typography>
-          <Typography variant="body2" color={brown[800]}>
+        <Typography variant="body2" color={brown[800]}>
             On the next screen you will be offered a list of attractions that
-            can be included on your tour.
+            can be included on your tour. Once you have made your selections and
+            hit the Start Tour button, your bespoke tour map will load.
           </Typography>
-          <br />
-          <Typography variant="body2" color={brown[800]}>
-            Once you have made your selections and hit the Start Tour button,
-            your bespoke tour map will load.
-          </Typography>
+
+          <Stack
+            direction={{ xs: "column", sm: "row" }}
+            spacing={{ xs: 1, sm: 2, md: 4 }}
+            justifyContent="center"
+            sx={{ pt: 3 }}
+          >
+            <Typography variant="body2" color={brown[800]}>
+              Suggested routes are highlighted in{" "}
+              <font color={blue[400]}>blue.</font> Tap on the markers for more
+              information about the attraction at that location.
+            </Typography>
+            <Image
+              src="/img/marker.png"
+              alt="A custom map marker."
+              width={43}
+              height={52}
+              priority
+            />
+          </Stack>
+
+          <Stack
+            direction={{ xs: "column", sm: "row" }}
+            spacing={{ xs: 2, sm: 4, md: 6 }}
+            justifyContent="center"
+            sx={{ pt: 3 }}
+          >
+            <Typography variant="body2" color={brown[800]}>
+              For more information on what the map symbols mean, tap the 
+              <font color={green[400]}> info button</font> on the bottom navigation bar on the map pages.
+            </Typography>
+            <Image
+              src="/img/info-button.png"
+              alt="A custom map marker."
+              width={54}
+              height={54}
+              priority
+            />
+          </Stack>
           <Typography
             sx={{ fontSize: 18, alignContent: "center" }}
             gutterBottom

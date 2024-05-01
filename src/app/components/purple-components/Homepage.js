@@ -51,7 +51,8 @@ export { PurpleyButton };
 
 export default function Homepage() {
   return (
-    <Box xs={{ flexgrow: 1, height: "100%" }}>
+    <div className="purpletours">
+    <Box xs={{ flexgrow: 1, height: "100%" }} className="body">
       <Container maxWidth="sm">
         <Grid
           container
@@ -114,5 +115,6 @@ export default function Homepage() {
         </Grid>
       </Container>
     </Box>
+    </div>
   );
 }

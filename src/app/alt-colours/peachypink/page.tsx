@@ -5,7 +5,11 @@ import PeachyPinkHomepage from "./peachy-components/HomepagePeachy.js";
 
 <html lang="en">
   <head>
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, width=device-width, no-cache"
+      http-equiv="cache-control"
+    />
     <title>Tours of Belfast</title>
   </head>
   <body></body>
@@ -13,8 +17,8 @@ import PeachyPinkHomepage from "./peachy-components/HomepagePeachy.js";
 
 export default function PeachyApp() {
   return (
-    <main className="main">
-      <div>
+    <main>
+      <div className="body">
         <PeachyPinkHomepage />
       </div>
     </main>

@@ -13,8 +13,8 @@ import BlueyWelcome from "../bluey-components/WelcomeBluey.js";
 
 export default function PeachyApp() {
   return (
-    <main className="main">
-      <div>
+    <main>
+      <div className="body">
         <BlueyWelcome />
       </div>
     </main>

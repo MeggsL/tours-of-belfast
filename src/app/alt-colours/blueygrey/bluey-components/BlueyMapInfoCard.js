@@ -6,6 +6,7 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
+import Image from "next/image";
 import Grid from "@mui/material/Grid";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
@@ -45,6 +46,32 @@ export default function MapInfoCard() {
           </Grid>
           <Typography sx={{ mx: 11 }} variant="body2">
             Historic buildings
+          </Typography>
+
+          <Grid item xs={12} sx={{ mx: 15, pt: 4 }}>
+          <Image
+                src="/img/blue-roads.png"
+                alt="Suggested route are highlighted in blue."
+                width={50}
+                height={52}
+                priority
+              />
+          </Grid>
+          <Typography sx={{ mx: 6, textAlign: 'center', pt:2 }} variant="body2">
+            Suggested tour routes are highlighted in blue.
+          </Typography>
+
+          <Grid item xs={12} sx={{ mx: 15, pt: 4 }}>
+          <Image
+                src="/img/blue-roads.png"
+                alt="Suggested route are highlighted in blue."
+                width={50}
+                height={52}
+                priority
+              />
+          </Grid>
+          <Typography sx={{ mx: 6, textAlign: 'center', pt:2 }} variant="body2">
+            Suggested tour routes are highlighted in blue.
           </Typography>
           
           <CardActions sx={{ pt: 4 }}>

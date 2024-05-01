@@ -243,8 +243,8 @@ export default function TourOptionsForm({ onSubmit }) {
             </Grid>
           </FormGroup>
           <Stack
-            direction="row"
-            spacing={2}
+            direction={{ xs: "column", sm: "row" }}
+            spacing={{ xs: 1, sm: 2, md: 4 }}
             justifyContent="center"
             sx={{ pt: 3 }}
           >

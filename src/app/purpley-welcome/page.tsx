@@ -13,8 +13,8 @@ import PurpleyWelcome from "../components/purple-components/WelcomePurpley.js";
 
 export default function PeachyApp() {
   return (
-    <main className="main">
-      <div>
+    <main>
+      <div className="body">
         <PurpleyWelcome />
       </div>
     </main>

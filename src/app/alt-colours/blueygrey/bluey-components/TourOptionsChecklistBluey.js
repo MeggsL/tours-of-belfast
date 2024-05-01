@@ -14,8 +14,8 @@ import { Roboto } from "next/font/google";
 import { blue } from "@mui/material/colors";
 import { brown } from "@mui/material/colors";
 import Stack from "@mui/material/Stack";
-import PlayCircleFilledWhiteTwoToneIcon from '@mui/icons-material/PlayCircleFilledWhiteTwoTone';
-import HomeTwoToneIcon from '@mui/icons-material/HomeTwoTone';
+import PlayCircleFilledWhiteTwoToneIcon from "@mui/icons-material/PlayCircleFilledWhiteTwoTone";
+import HomeTwoToneIcon from "@mui/icons-material/HomeTwoTone";
 
 const BuildingCard = () => {
   return (
@@ -87,7 +87,6 @@ function BlueButton() {
         startIcon={<PlayCircleFilledWhiteTwoToneIcon />}
         sx={{ pl: 2, pr: 2, pt: 3, pb: 3 }}
       >
-
         Start Tour
       </Button>
     </ThemeProvider>
@@ -119,7 +118,6 @@ function BlueHomeButton() {
         startIcon={<HomeTwoToneIcon />}
         sx={{ pl: 2, pr: 2, pt: 3, pb: 3 }}
       >
-        
         Go Home
       </Button>
     </ThemeProvider>
@@ -246,16 +244,15 @@ export default function TourOptionsForm({ onSubmit }) {
             </Grid>
           </FormGroup>
           <Stack
-            direction="row"
-            spacing={2}
+            direction={{ xs: "column", sm: "row" }}
+            spacing={{ xs: 1, sm: 2, md: 4 }}
             justifyContent="center"
             sx={{ pt: 3 }}
           >
             <BlueButton />
             <Link href="../">
-            <BlueHomeButton />
+              <BlueHomeButton />
             </Link>
-
           </Stack>
         </FormControl>
       </Box>

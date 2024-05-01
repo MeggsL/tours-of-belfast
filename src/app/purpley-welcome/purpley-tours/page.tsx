@@ -22,7 +22,7 @@ import StartTour from "../../components/purple-components/StartTouring";
 export default function TakeATour() {
   return (
     <main>
-      <div>
+      <div className="body">
   <StartTour onSubmit={undefined} />
       </div>
     </main>

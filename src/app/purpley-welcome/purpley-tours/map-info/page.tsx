@@ -15,6 +15,7 @@ import "../../../globals.css";
 
 export default function PurpleMapInfo() {
   return (
+    <div className="body">
     <Box sx={{width: 350, pt: 10  }}>
       <Grid
         item
@@ -27,5 +28,6 @@ export default function PurpleMapInfo() {
 <MapInfoCard />
       </Grid>
     </Box>
+    </div>
   );
 }
