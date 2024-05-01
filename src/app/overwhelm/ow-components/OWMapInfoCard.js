@@ -22,25 +22,25 @@ export default function MapInfoCard() {
             What do the symbols mean?
           </Typography>
           
-          <Grid item xs={12} sx={{ mx: 15, pt: 2 }}>
-            <span style={{ fontSize: "3rem" }}>🗿</span>
+          <Grid item xs={12} sx={{ mx: 16, pt: 2 }}>
+            <span style={{ fontSize: "3rem" }}>☕️</span>
           </Grid>
-          <Typography sx={{ mx: 7 }} variant="body2">
-            Landmarks and monuments
+          <Typography sx={{ mx: 12 }} variant="body2">
+           Cafes and pubs
           </Typography>
 
-          <Grid item xs={12} sx={{ mx: 15, pt: 1 }}>
-            <span style={{ fontSize: "3rem" }}>🗽</span>
+          <Grid item xs={12} sx={{ mx: 16, pt: 1 }}>
+            <span style={{ fontSize: "3rem" }}>🛋️</span>
           </Grid>
-          <Typography sx={{ mx: 10 }} variant="body2">
-            Statues and artworks
+          <Typography sx={{ mx: 15 }} variant="body2">
+            Benches
           </Typography>
 
           <Grid item xs={12} sx={{ mx: 15, pt: 4 }}>
-            <span style={{ fontSize: "3rem" }}>🏛️</span>
+            <span style={{ fontSize: "3rem" }}>🚻</span>
           </Grid>
-          <Typography sx={{ mx: 11 }} variant="body2">
-            Historic buildings
+          <Typography sx={{ mx: 13 }} variant="body2">
+            Public toilets
           </Typography>
 
           <CardActions sx={{pt:4}}>

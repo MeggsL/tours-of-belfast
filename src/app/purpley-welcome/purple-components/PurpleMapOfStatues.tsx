@@ -2,9 +2,9 @@
 import React from "react";
 import { APIProvider, Map } from "@vis.gl/react-google-maps";
 import Container from "@mui/material/Container";
-import StatueMarkers from "../(markers)/StatueMarkers";
-import AppUser from "../(markers)/UserMarker";
-import StatueDirections from "../(directions)/DirectionsStatues";
+import StatueMarkers from "../../components/(markers)/StatueMarkers";
+import AppUser from "../../components/(markers)/UserMarker";
+import StatueDirections from "../../components/(directions)/DirectionsStatues";
 
 export default function PurpleMapOfStatues() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };

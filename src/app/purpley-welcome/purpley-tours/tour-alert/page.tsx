@@ -2,7 +2,7 @@ import React from "react";
 
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import YouMustSelect from "../../../components/purple-components/PurpleyTourSelectionAlert";
+import YouMustSelect from "../../purple-components/PurpleyTourSelectionAlert";
 import "../../../globals.css";
 
 <html lang="en">

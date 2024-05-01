@@ -58,6 +58,25 @@ export default function WelcomeCard() {
               priority
             />
           </Stack>
+
+          <Stack
+            direction={{ xs: "column", sm: "row" }}
+            spacing={{ xs: 2, sm: 4, md: 6 }}
+            justifyContent="center"
+            sx={{ pt: 3 }}
+          >
+            <Typography variant="body2" color={brown[800]}>
+              If ever you are feeling overwhelmed and need a break, hit the 
+              <font color={brown[300]}> Break Time</font> button the bottom navigation bar on the map pages.
+            </Typography>
+            <Image
+              src="/img/break-time.png"
+              alt="Break Time button"
+              width={54}
+              height={54}
+              priority
+            />
+          </Stack>
           <Typography
             sx={{ fontSize: 18, alignContent: "center" }}
             gutterBottom

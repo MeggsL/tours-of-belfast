@@ -3,10 +3,7 @@ import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import { brown } from "@mui/material/colors";
-import { amber } from "@mui/material/colors";
-import { blue } from "@mui/material/colors";
-import { green } from "@mui/material/colors";
+import { brown, amber, blue, green } from "@mui/material/colors";
 import Image from "next/image";
 import Stack from "@mui/material/Stack";
 
@@ -55,6 +52,25 @@ export default function WelcomeCard() {
             <Image
               src="/img/info-button.png"
               alt="A custom map marker."
+              width={54}
+              height={54}
+              priority
+            />
+          </Stack>
+
+          <Stack
+            direction={{ xs: "column", sm: "row" }}
+            spacing={{ xs: 2, sm: 4, md: 6 }}
+            justifyContent="center"
+            sx={{ pt: 3 }}
+          >
+            <Typography variant="body2" color={brown[800]}>
+              If ever you are feeling overwhelmed and need a break, hit the 
+              <font color={brown[300]}> Break Time</font> button the bottom navigation bar on the map pages.
+            </Typography>
+            <Image
+              src="/img/break-time.png"
+              alt="Break Time button"
               width={54}
               height={54}
               priority

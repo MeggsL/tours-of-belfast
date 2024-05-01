@@ -1,7 +1,7 @@
 import React from "react";
-import "../globals.css";
+import "./purple.css";
 import "../page.module.css";
-import PurpleyWelcome from "../components/purple-components/WelcomePurpley.js";
+import PurpleyWelcome from "./purple-components/WelcomePurpley.js";
 
 <html lang="en">
   <head>

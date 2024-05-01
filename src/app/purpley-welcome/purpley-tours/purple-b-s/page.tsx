@@ -2,8 +2,8 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import "../../../globals.css";
-import BottomNavMaps from "../../../components/purple-components/PurpleyBottomNavMaps";
-import PurpleMapOfBuildingsAndStatues from "../../../components/purple-components/PurpleMapBS";
+import BottomNavMaps from "../../purple-components/PurpleyBottomNavMaps";
+import PurpleMapOfBuildingsAndStatues from "../../purple-components/PurpleMapBS";
 
 <html lang="en">
   <head>

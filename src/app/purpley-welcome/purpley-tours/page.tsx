@@ -1,15 +1,9 @@
 "use client";
 
 import React from "react";
-
 import "../../globals.css";
 import "../../page.module.css";
-//import Grid from "@mui/material/Grid";
-//import Box from "@mui/material/Box";
-//import SetTour from "../../components/ProcessTourForm";
-//import TourOptionsForm from "../../components/TourOptionsChecklist";
-//import BottomNavWelcome from "./components/BottomNavWelcome.js";
-import StartTour from "../../components/purple-components/StartTouring";
+import StartTour from "../purple-components/StartTouring";
 
 <html lang="en">
   <head>

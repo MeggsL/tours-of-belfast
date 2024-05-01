@@ -2,11 +2,12 @@
 import React from "react";
 import { APIProvider, Map } from "@vis.gl/react-google-maps";
 import Container from "@mui/material/Container";
-import LandmarkMarkers from "../(markers)/LandmarkMarkers";
-import AppUser from "../(markers)/UserMarker";
-import LandmarkDirections from "../(directions)/DirectionsLandmarks";
+import AppUser from "../../components/(markers)/UserMarker";
+import LandmarkMarkers from "../../components/(markers)/LandmarkMarkers";
+import StatueMarkers from "../../components/(markers)/StatueMarkers";
+import SandLDirections from "../../components/(directions)/Directions-s-l";
 
-export default function PurpleMapOfLandmarks() {
+export default function PurpleMapOfLandmarksAndStatues() {
   const position = { lat: 54.596747841427444, lng: -5.930042284658504 };
 
   return (
@@ -18,10 +19,10 @@ export default function PurpleMapOfLandmarks() {
             defaultCenter={position}
             mapId={process.env.NEXT_PUBLIC_PURPLE_MAP_ID}
           >
-            <AppUser />
+            <StatueMarkers />
             <LandmarkMarkers />
-            <LandmarkDirections />
-         
+            <AppUser />
+            <SandLDirections />
           </Map>
         </div>
       </Container>

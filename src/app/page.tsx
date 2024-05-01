@@ -1,5 +1,5 @@
 import React from "react";
-import Homepage from "./components/purple-components/Homepage";
+import Homepage from "./purpley-welcome/purple-components/Homepage.js";
 import "./globals.css";
 import "./page.module.css";
 

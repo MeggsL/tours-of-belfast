@@ -60,19 +60,6 @@ export default function MapInfoCard() {
           <Typography sx={{ mx: 6, textAlign: 'center', pt:2 }} variant="body2">
             Suggested tour routes are highlighted in blue.
           </Typography>
-
-          <Grid item xs={12} sx={{ mx: 15, pt: 4 }}>
-          <Image
-                src="/img/blue-roads.png"
-                alt="Suggested route are highlighted in blue."
-                width={50}
-                height={52}
-                priority
-              />
-          </Grid>
-          <Typography sx={{ mx: 6, textAlign: 'center', pt:2 }} variant="body2">
-            Suggested tour routes are highlighted in blue.
-          </Typography>
           
           <CardActions sx={{ pt: 4 }}>
             <Link href="./">

@@ -1,10 +1,9 @@
 import React from "react";
-
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import "../../../globals.css";
-import BottomNavMaps from "../../../components/purple-components/PurpleyBottomNavMaps";
-import PurpleMapOfBuildingsAndLandmarks from "../../../components/purple-components/PurpleMapBL";
+import BottomNavMaps from "../../purple-components/PurpleyBottomNavMaps";
+import PurpleMapOfBuildingsAndLandmarks from "../../purple-components/PurpleMapBL";
 
 export default function PurpleMapOfBandL() {
   return (
