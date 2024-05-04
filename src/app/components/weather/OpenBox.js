@@ -26,7 +26,7 @@ export default function OpenBox() {
 
   return (
     <div className="alertbox">
-      <Box maxWidth={"100%"} alignContent={"center"}>
+      <Box maxWidth={"80%"} alignContent={"center"}>
         <Collapse in={open}>
           <Alert
             severity="info"
@@ -48,7 +48,7 @@ export default function OpenBox() {
           </Alert>
         </Collapse>
         <ThemeProvider theme={ButtonColor}>
-          <Grid paddingTop={2} paddingLeft={10}>
+          <Grid sx={{pt: 2, pl: 8}}>
             <Button
               disabled={open}
               variant="contained"

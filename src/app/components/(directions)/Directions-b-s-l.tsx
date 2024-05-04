@@ -12,11 +12,9 @@ export default function AllDirections() {
   const [directionsRenderer, setDirectionsRenderer] =
     useState<google.maps.DirectionsRenderer>();
   const [routes, setRoutes] = useState<google.maps.DirectionsRoute[]>([]);
-  const [routeIndex, setRouteIndex] = useState(0);
+  const [routeIndex] = useState(0);
   const selected = routes[routeIndex];
   const leg = selected?.legs[0];
-  const [open, setOpen] = useState(false);
-  //const [directionsWaypoint, setDirectionsWaypoint] = useState<google.maps.DirectionsWaypoint[]>([]);
 
   useEffect(() => {
     if (!routesLibrary || !map) return;
@@ -35,11 +33,10 @@ export default function AllDirections() {
         waypoints: [
           { location: "Monument to the Unknown Woman Worker , Belfast UK" },
           { location: "Crown Liquor Saloon, Belfast UK" },
-          {location: "Crumlin Road Gaol Visitor Attraction and Conference Centre, Belfast UK" },
+          { location: "Crumlin Road Gaol Visitor Attraction and Conference Centre, Belfast UK" },
           { location: "Crumlin Road Courthouse, Belfast UK" },
           { location: "Queen's Arcade, Belfast UK" }, //to see the masts
           { location: "Belfast Cathedral, Belfast UK" },
-          //{ location: "The Merchant Hotel, Belfast UK" },
           { location: "Custom House, Belfast UK" },
           { location: "The Speaker, Belfast UK" },
           { location: "Albert Memorial Clock, Belfast UK" },
@@ -68,14 +65,10 @@ export default function AllDirections() {
   useEffect(() => {
     if (!directionsRenderer) return;
     directionsRenderer.setRouteIndex(routeIndex);
-    suppressMarkers: true;
   }, [routeIndex, directionsRenderer]);
 
   console.log(routes);
   if (!leg) return null;
-
-  //for (let i = 0; i < selected.leg.length; i++) {
-  //  const selectedSegment = i + 1;
 
   return null;
 }

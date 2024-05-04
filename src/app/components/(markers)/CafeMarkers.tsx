@@ -11,16 +11,15 @@ import cafes from "../../data/cafes";
 import { useState } from "react";
 import { brown } from "@mui/material/colors";
 
+//the cafe and pubs data points are received and handled
 type Point = google.maps.LatLngLiteral & { key: string } & { name: string } & {
   info: string;
 };
 type Props = { points: Point[] };
 
 const MapMarkers = ({ points }: Props) => {
-  const [markerRef, marker] = useAdvancedMarkerRef();
-
+  const [markerRef] = useAdvancedMarkerRef();
   const [activeMarker, setActiveMarker] = useState(null);
-
   const handleActiveMarker = (marker) => {
     if (marker === activeMarker) {
       return;
@@ -28,6 +27,7 @@ const MapMarkers = ({ points }: Props) => {
     setActiveMarker(marker);
   };
 
+    //create a custom marker and infowindow for each data point
   return (
     <>
       {/* map out the various points from the data source: overwhelm.ts */}
@@ -63,6 +63,7 @@ const MapMarkers = ({ points }: Props) => {
 };
 export { MapMarkers };
 
+//function to render out the collection of cafe and pub markers and infowindows
 function CafeMarkers() {
   return <MapMarkers points={cafes} />;
 };

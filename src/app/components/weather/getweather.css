@@ -3,39 +3,32 @@
     padding: 0;
 }
 .App {
-    width: 240px;
-    height: 34vh;
-    background-color: floralwhite;
+    min-width: 240px;
+    height: 100px;
     display: flex;
     align-items: center;
 }
 
 .weather-app {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 280px;
-    height: 34vh;
+    justify-content: left;
+    align-items: left;
+    width:fit-content;
+    padding-left: 20px;
+    min-width: 230px;
+    height: 200px;
     background-color: #4fc3f7;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(22, 21, 21, 0.1);
 }
 
 .city {
-    border: 2px solid rgb(204, 204, 204);
-    outline: none;
-    border-radius: 20px;
     font-size: 16px;
-    background-color: aliceblue;
-    padding: 6px 30px 6px 30px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
+    padding: 6px 10px 6px 10px;
     color: dimgrey;
 }
 
 .city-name {
-    font-size: 24px;
+    font-size: 18px;
     color: #1976d2;
     margin: 15px 0px 8px 0px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -44,20 +37,20 @@
 }
 
 .description {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 500;
     color: #e91e63;
 }
 
 .deg {
-    font-size: 20px;
+    font-size: 12px;
     font-weight: 500;
     color: #424242;
 }
 
 .icon-temp {
     display: flex;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 700;
     align-items: center;
     color:#424242;
@@ -67,13 +60,13 @@
 .feels-like {
     font-weight: 500;
     color: aliceblue;
-    font-size: large;
+    font-size: 16px;
     margin-top: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .degfeelslike {
-    font-size: 14px;
+    font-size: 10px;
     font-weight: 700;
     color: aliceblue;
 }
@@ -87,7 +80,7 @@
 }
 
 .degminmax {
-    font-size: 10px;
+    font-size: 8px;
     font-weight: 500;
     color: aliceblue;
 }

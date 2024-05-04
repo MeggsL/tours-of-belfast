@@ -4,10 +4,8 @@ import {
   useMapsLibrary,
   useMap,
 } from "@vis.gl/react-google-maps";
-
 import { useEffect, useState } from "react";
 import "./routes.css";
-
 
 export default function BandSDirections() {
   const map = useMap();
@@ -17,11 +15,9 @@ export default function BandSDirections() {
   const [directionsRenderer, setDirectionsRenderer] =
     useState<google.maps.DirectionsRenderer>();
   const [routes, setRoutes] = useState<google.maps.DirectionsRoute[]>([]);
-  const [routeIndex, setRouteIndex] = useState(0);
+  const [routeIndex] = useState(0);
   const selected = routes[routeIndex];
   const leg = selected?.legs[0];
-  const [open, setOpen] = useState(false);
-  //const [directionsWaypoint, setDirectionsWaypoint] = useState<google.maps.DirectionsWaypoint[]>([]);
 
   useEffect(() => {
     if (!routesLibrary || !map) return;
@@ -38,15 +34,11 @@ export default function BandSDirections() {
         origin: "Europa Buscentre, Belfast UK",
 
         waypoints: [
-          {
-            location:
-              "Crumlin Road Gaol Visitor Attraction and Conference Centre, Belfast UK",
-          }, 
+          { location: "Crumlin Road Gaol Visitor Attraction and Conference Centre, Belfast UK"}, 
           { location: "Crumlin Road Courthouse, Belfast UK" },
           { location: "Queen's Arcade, Belfast UK" }, //the masts
           { location: "Belfast Cathedral, Belfast UK" },
           { location: "Beacon of Hope, Belfast UK" },
-          //{ location: "The Merchant Hotel, Belfast UK" },
           { location: "Custom House, Belfast UK" },
           { location: "The Speaker, Belfast UK" },
           { location: "The Big Fish, Belfast UK" },
@@ -70,13 +62,10 @@ export default function BandSDirections() {
   useEffect(() => {
     if (!directionsRenderer) return;
     directionsRenderer.setRouteIndex(routeIndex);
-    suppressMarkers: true;
   }, [routeIndex, directionsRenderer]);
 
   console.log(routes);
   if (!leg) return null;
 
-
   return null;
-
 }

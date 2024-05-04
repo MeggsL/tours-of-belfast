@@ -6,7 +6,6 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Roboto } from "next/font/google";
 import Link from "next/link";
 import PaletteTwoToneIcon from '@mui/icons-material/PaletteTwoTone';
-import { blue } from "@mui/material/colors";
 
 // setting the font
 const roboto = Roboto({

@@ -9,7 +9,6 @@ import { useState } from "react";
 import TourOptionsForm from "./TourOptionsChecklistPeachy.js";
 import OpenBox from "../../../components/weather/OpenBox";
 
-
 //the parent component of the form process
 const SubTitle = () => {
   return (
@@ -25,7 +24,7 @@ const SubTitle = () => {
 export {  SubTitle };
 
 export default function StartTour({ onSubmit }) {
-  const [state, setState] = useState({}); // State for form data
+  const [state ] = useState({}); // State for form data
 
   const handleFormSubmit = (data) => {
     // Handle form submission logic here

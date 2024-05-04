@@ -1,7 +1,6 @@
 "use client";
 
 import { useMapsLibrary, useMap } from "@vis.gl/react-google-maps";
-
 import { useEffect, useState } from "react";
 import "./routes.css";
 
@@ -13,11 +12,9 @@ export default function LandmarkDirections() {
   const [directionsRenderer, setDirectionsRenderer] =
     useState<google.maps.DirectionsRenderer>();
   const [routes, setRoutes] = useState<google.maps.DirectionsRoute[]>([]);
-  const [routeIndex, setRouteIndex] = useState(0);
+  const [routeIndex] = useState(0);
   const selected = routes[routeIndex];
   const leg = selected?.legs[0];
-  const [open, setOpen] = useState(false);
-  //const [directionsWaypoint, setDirectionsWaypoint] = useState<google.maps.DirectionsWaypoint[]>([]);
 
   useEffect(() => {
     if (!routesLibrary || !map) return;
@@ -34,9 +31,7 @@ export default function LandmarkDirections() {
         origin: "Europa Buscentre, Belfast UK",
 
         waypoints: [
-          {
-            location: "Crown Liquor Saloon, Belfast UK",
-          },
+          { location: "Crown Liquor Saloon, Belfast UK" },
           { location: "Monument to the Unknown Woman Worker , Belfast UK" },
           { location: "Henry Cooke Monument, Belfast UK" },
           { location: "Albert Memorial Clock, Belfast UK" },
@@ -58,14 +53,10 @@ export default function LandmarkDirections() {
   useEffect(() => {
     if (!directionsRenderer) return;
     directionsRenderer.setRouteIndex(routeIndex);
-    suppressMarkers: true;
   }, [routeIndex, directionsRenderer]);
 
   console.log(routes);
   if (!leg) return null;
-
-  //for (let i = 0; i < selected.leg.length; i++) {
-  //  const selectedSegment = i + 1;
 
   return null;
 }

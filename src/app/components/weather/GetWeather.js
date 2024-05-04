@@ -38,16 +38,10 @@ export default function TheWeather() {
       })
 
 };
-{/*}
-const needUmbrella = (weather) => {
-  if (weather.data.weather[0].id >= 200 && weather.data.weather[0].id <= 700)  {
-    <span>Bring your brolly!</span>
-  }
-}
-*/}
+
 
   return (
-    <div className="App">
+    <div className="app">
       <div className="weather-app">
         {weather.error && (
           <div className="error-message">
@@ -64,7 +58,7 @@ const needUmbrella = (weather) => {
             </div>
 
             <div className="icon-temp">
-              <img
+              <img width={50} height={50}
                 src={"https://openweathermap.org/img/wn/10d@2x.png"}
                 alt=""
               />

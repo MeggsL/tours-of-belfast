@@ -126,7 +126,6 @@ function PinkHomeButton() {
 export { PinkButton, PinkHomeButton };
 
 //the child component of the form process
-
 export default function TourOptionsForm({ onSubmit }) {
   const [state, setState] = useState({
     buildings: false,
@@ -152,7 +151,7 @@ export default function TourOptionsForm({ onSubmit }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <Box sx={{ display: "flex" }}>
+      <Box sx={{ display: "flex", pl:2 }}>
         <FormControl
           sx={{ m: 3 }}
           fullWidth="true"
@@ -245,7 +244,7 @@ export default function TourOptionsForm({ onSubmit }) {
           </FormGroup>
 
           <Stack
-            direction={{ xs: "column", sm: "row" }}
+            direction={{ xs: "row", sm: "row" }}
             spacing={{ xs: 1, sm: 2, md: 4 }}
             justifyContent="center"
             sx={{ pt: 3 }}
